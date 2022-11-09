@@ -17,12 +17,12 @@ use App\Http\Controllers\{AgendaSpeakerController,SpeakerController};
 |
 */
 
-// Route::get('/', function () {
-//     return view('frontend.index');
-// })->name('index');
+Route::get('/', function () {
+    return view('frontend.comingsoon');
+})->name('index');
 
 
-Route::get('/', [FrontPageController::class, 'index'])->name('index');
+//Route::get('/', [FrontPageController::class, 'index'])->name('index');
 
 
 Route::get('/agenda', [FrontPageController::class, 'agenda'])->name('agenda');
