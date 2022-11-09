@@ -1,145 +1,133 @@
 @extends('frontend.layout.app')
 
 @section('content')
+    <section class="page-header">
+        <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
+        </div>
+        <div class="container">
+            <div class="page-header__inner">
+                <h2>FAQs</h2>
+                <ul class="thm-breadcrumb list-unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><span>/</span></li>
+                    <li class="active">FAQs</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--FAQs Page Start-->
 
-        <!--FAQs Page Start-->
-        <section class="paq-page">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="faq-page__single">
-                            <div class="accrodion-grp faq-one-accrodion" data-grp-name="faq-one-accrodion-1">
-                                <div class="accrodion">
-                                    <div class="accrodion-title">
-                                        <h4>Why is it important to support them</h4>
-                                    </div>
-                                    <div class="accrodion-content">
-                                        <div class="inner">
-                                            <p>There are many variations of passages the majority have suffered
-                                                alteration in some fo injected humour, or randomised words believable.
-                                            </p>
-                                        </div><!-- /.inner -->
-                                    </div>
-                                </div>
-                                <div class="accrodion active">
-                                    <div class="accrodion-title">
-                                        <h4>Start a fundraiser for yourself</h4>
-                                    </div>
-                                    <div class="accrodion-content">
-                                        <div class="inner">
-                                            <p>There are many variations of passages the majority have suffered
-                                                alteration in some fo injected humour, or randomised words believable.
-                                            </p>
-                                        </div><!-- /.inner -->
-                                    </div>
-                                </div>
-                                <div class="accrodion last-chiled">
-                                    <div class="accrodion-title">
-                                        <h4>Promoting the rights of the children</h4>
-                                    </div>
-                                    <div class="accrodion-content">
-                                        <div class="inner">
-                                            <p>There are many variations of passages the majority have suffered
-                                                alteration in some fo injected humour, or randomised words believable.
-                                            </p>
-                                        </div><!-- /.inner -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="faq-page__single">
-                            <div class="accrodion-grp faq-one-accrodion" data-grp-name="faq-one-accrodion-2">
-                                <div class="accrodion">
-                                    <div class="accrodion-title">
-                                        <h4>Capitalize on low hanging fruit to</h4>
-                                    </div>
-                                    <div class="accrodion-content">
-                                        <div class="inner">
-                                            <p>There are many variations of passages the majority have suffered
-                                                alteration in some fo injected humour, or randomised words believable.
-                                            </p>
-                                        </div><!-- /.inner -->
-                                    </div>
-                                </div>
-                                <div class="accrodion active">
-                                    <div class="accrodion-title">
-                                        <h4>DevOps. immersion along the information </h4>
-                                    </div>
-                                    <div class="accrodion-content">
-                                        <div class="inner">
-                                            <p>There are many variations of passages the majority have suffered
-                                                alteration in some fo injected humour, or randomised words believable.
-                                            </p>
-                                        </div><!-- /.inner -->
-                                    </div>
-                                </div>
-                                <div class="accrodion last-chiled">
-                                    <div class="accrodion-title">
-                                        <h4>User generated content in real time </h4>
-                                    </div>
-                                    <div class="accrodion-content">
-                                        <div class="inner">
-                                            <p>There are many variations of passages the majority have suffered
-                                                alteration in some fo injected humour, or randomised words believable.
-                                            </p>
-                                        </div><!-- /.inner -->
-                                    </div>
-                                </div>
-                            </div>
+    <section class="paq-page">
+        <div class="container">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What is IRIS?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>
+                                Infrastructure for Resilient Island States (IRIS) is a dedicated initiative co-curated by
+                                Small Developing Island States (SIDS) and Coalition for Disaster Resilient Infrastructure
+                                (CDRI) partners to promote resilient, sustainable, and inclusive infrastructure development
+                                in SIDS.
+
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!--FAQs Page End-->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            What is the need for IRIS?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
 
-        <!--Message One Start-->
-        <section class="message-one">
-            <div class="container">
-                <div class="section-title text-center">
-                    <span class="section-title__tagline">Contact with us</span>
-                    <h2 class="section-title__title">Still Have Question?</h2>
+                            SIDS face several economic, social, and environmental challenges owing to their geophysical and
+                            structural constrains. Most of these countries are prone to disastrous effects of climate change
+                            while facing unique development challenges such as remoteness to global markets, poor
+                            connectivity, lack of economies of scale, and inadequate labour-mobility. Resilient,
+                            sustainable, and inclusive infrastructure plays a key role in addressing these challenges and
+                            driving sustainable development in SIDS. Given their high-risk exposure, a necessary condition
+                            for bridging the infrastructure gap in SIDS is the availability of technical and institutional
+                            capacities to ensure that investments in infrastructure systems systematically manage current
+                            and future risks by incorporating appropriate measures.
+
+                        </div>
+                    </div>
                 </div>
-                <div class="message-one__inner">
-                    <form action="assets/inc/sendemail.php" class="comment-one__form contact-form-validated"
-                        novalidate="novalidate">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="comment-form__input-box">
-                                    <input type="text" placeholder="Your Name" name="name">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="comment-form__input-box">
-                                    <input type="email" placeholder="Email Address" name="email">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="comment-form__input-box">
-                                    <input type="text" placeholder="Phone Number" name="phone">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="comment-form__input-box">
-                                    <input type="text" placeholder="Subject" name="Subject">
-                                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingfive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                            What is the goal of IRIS?
+                        </button>
+                    </h2>
+                    <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingfive"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>The goal of iris is to support sids in achieving sustainable development through a
+                                systematic approach to resilient, sustainable, and inclusive infrastructure in sids. Iris
+                                will provide technical support on the
+                                multifaceted issues posed by infrastructure systems and promote disaster and climate
+                                resilience of
+                                infrastructure assets in sids. Iris will work with sids to identify opportunities for
+                                technical collaborations
+                                and partnerships, but it will not invest in the construction of infrastructure assets
+                                directly.
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingfour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                What is the goal of IRIS?
+                            </button>
+                        </h2>
+                        <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>The goal of iris is to support sids in achieving sustainable development through a
+                                    systematic approach to resilient, sustainable, and inclusive infrastructure in sids.
+                                    Iris will provide technical support on the
+                                    multifaceted issues posed by infrastructure systems and promote disaster and climate
+                                    resilience of
+                                    infrastructure assets in sids. Iris will work with sids to identify opportunities for
+                                    technical collaborations
+                                    and partnerships, but it will not invest in the construction of infrastructure assets
+                                    directly.
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="comment-form__input-box text-message-box">
-                                    <textarea name="message" placeholder="Write a Comment"></textarea>
-                                </div>
-                                <div class="message-one__btn-box">
-                                    <button type="submit" class="thm-btn comment-form__btn">Send us a message</button>
-                                </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingfive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                                    What is the goal of IRIS?
+                                </button>
+                            </h2>
+                            <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingfive"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>The goal of iris is to support sids in achieving sustainable development through a systematic approach to resilient, sustainable, and inclusive infrastructure in sids. Iris will provide technical support on the
+                                        multifaceted issues posed by infrastructure systems and promote disaster and climate resilience of
+                                        infrastructure assets in sids. Iris will work with sids to identify opportunities for technical collaborations
+                                        and partnerships, but it will not invest in the construction of infrastructure assets directly.
                             </div>
                         </div>
-                    </form>
+
+
+                    </div>
+
+
                 </div>
-            </div>
-        </section>
-        <!--Message One End-->
+    </section>
 @endsection

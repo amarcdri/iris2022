@@ -23,7 +23,7 @@ use App\Http\Controllers\{AgendaSpeakerController,SpeakerController};
 
 
 Route::get('/', [FrontPageController::class, 'index'])->name('index');
-
+Route::get('/Frequently-Asked-Questions ', [FrontPageController::class, 'faqs'])->name('faqs');
 
 Route::get('/agenda', [FrontPageController::class, 'agenda'])->name('agenda');
 

@@ -47,6 +47,7 @@
     <!-- template styles -->
     <link rel="stylesheet" href="front/assets/css/pifoxen.css" />
     <link rel="stylesheet" href="front/assets/css/pifoxen-responsive.css" />
+    @yield('css')
 </head>
 
 <body>
@@ -157,6 +158,7 @@
 
         <!-- template js -->
         <script src="front/assets/js/pifoxen.js"></script>
+        @yield('js')
     </body>
 
     </html>
