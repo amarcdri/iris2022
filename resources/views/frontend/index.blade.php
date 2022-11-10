@@ -89,24 +89,7 @@
                         <p class="about-two__content-text">Small Island Developing States (SIDS) are a distinct group of 58 island states that face unique social, economic and environmental vulnerabilities owing to their geophysical and structural constraints. Most of these countries are prone to the disastrous effects of climate change. Resilient, sustainable, and inclusive infrastructure plays a key role in mitigating these challenges. More investment and improved institutional capacity for infrastructure systems is urgently needed if SIDS are to maintain their sustainability and effectiveness in service delivery momentum and respond to disaster and climate change risks effectively..</p>
                     </div>
 
-                    <ul class="about-one__points list-unstyled">
-                        <li>
-                            <div class="icon">
-                                <span class="icon-confirmation"></span>
-                            </div>
-                            <div class="text">
-                                <p>Join our Team</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon">
-                                <span class="icon-confirmation"></span>
-                            </div>
-                            <div class="text">
-                                <p>Quick Fundraising</p>
-                            </div>
-                        </li>
-                    </ul>
+               
                     <ul class="about-one__points-content list-unstyled">
                         <li>
                             <p class="about-one__points-text">Lorem ipsum dolor sit ame ed consectetur nod.</p>
@@ -514,6 +497,7 @@
 <section class="gallery-one">
     <div class="gallery-one__container">
         <ul class="gallery-one__content list-unstyled">
+            
             <li class="gallery-one__single wow fadeInUp" data-wow-delay="100ms">
                 <div class="gallery-one__img-box">
                     <div class="gallery-one__img-inner">
@@ -729,8 +713,8 @@
 <section class="blog-one blog-two">
     <div class="container">
         <div class="section-title text-center">
-            <span class="section-title__tagline">From the Blog</span>
-            <h2 class="section-title__title">News & Articles</h2>
+            
+            <h2 class="section-title__title">SESSIONS</h2>
         </div>
         <div class="row">
             <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
@@ -833,60 +817,7 @@
 <!--Blog Two End-->
 
 <!--Help People Start-->
-<section class="help-people">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-5 col-lg-6">
-                <div class="help-people__left">
-                    <div class="section-title text-left">
-                        <span class="section-title__tagline">Help the people</span>
-                        <h2 class="section-title__title">Volunteers Around the World.</h2>
-                    </div>
-                    <div class="help-people__content">
-                        <p class="help-people__text">Lorem ipsum dolor sit amet, consectetur nod adipisicing
-                            elit sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                        <a href="become-volunteer.html" class="thm-btn help-people__btn">join us now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-7 col-lg-6">
-                <div class="help-people__right">
-                    <div class="help-people__map-box">
-                        <div class="help-people__map"
-                            style="background-image: url(front/assets/images/shapes/help-people-map.png);"></div>
-                        <div class="help-people__img">
-                            <img src="front/assets/images/resources/help-people-img-1.jpg" class="zoom-fade" alt="">
-                        </div>
-                        <div class="help-people__img help-people__img-2">
-                            <img src="front/assets/images/resources/help-people-img-2.jpg" class="zoom-fade" alt="">
-                        </div>
-                        <div class="help-people__img help-people__img-3">
-                            <img src="front/assets/images/resources/help-people-img-3.jpg" class="zoom-fade" alt="">
-                        </div>
-                        <div class="help-people__img help-people__img-4">
-                            <img src="front/assets/images/resources/help-people-img-4.jpg" class="zoom-fade" alt="">
-                        </div>
-                        <div class="help-people__img help-people__img-5">
-                            <img src="front/assets/images/resources/help-people-img-5.jpg" class="zoom-fade" alt="">
-                        </div>
-                        <div class="help-people__icon-1">
-                            <img src="front/assets/images/icon/help-people-icon-1.png" alt="">
-                        </div>
-                        <div class="help-people__icon-2">
-                            <img src="front/assets/images/icon/help-people-icon-2.png" alt="">
-                        </div>
-                        <div class="help-people__icon-3">
-                            <img src="front/assets/images/icon/help-people-icon-3.png" alt="">
-                        </div>
-                        <div class="help-people__icon-4">
-                            <img src="front/assets/images/icon/help-people-icon-4.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 <!--Help People End-->
 
 
