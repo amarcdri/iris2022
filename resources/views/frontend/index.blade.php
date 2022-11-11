@@ -63,20 +63,14 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
-            <h2 class="section-title__title">INFRASTRUCTURE FOR RESILIENT ISLAND STATES (IRIS)</h2>
+            <h2>INFRASTRUCTURE FOR RESILIENT ISLAND STATES (IRIS)</h2>
             </div>
-            <div class="col-xl-6">
-                <div class="about-one__left">
-                    <div class="about-one__img wow slideInLeft" data-wow-delay="100ms"
-                        data-wow-duration="2500ms">
-                        <img src="front/assets/images/resources/about-one-img-1.png" alt="">
-                        <div class="about-one__badge">
-                            <img src="front/assets/images/resources/about-one-badge.png" alt="">
-                        </div>
-                    </div>
-                </div>
+            <div class="col-xl-4">
+               
+                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/tu-uRxqrAp0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               
             </div>
-            <div class="col-xl-6">
+            <div class="col-xl-8">
                 <div class="about-one__right">
                     <div class="about-one-shape float-bob-y"><img src="front/assets/images/shapes/about-one-shape.png"
                             alt=""></div>
@@ -137,7 +131,7 @@
                     <!--Cause One Single-->
                     <div class="causes-one__single">
                         <div class="causes-one__img">
-                            <img src="front/assets/images/causes/causes-1-1.jpg" alt="">
+                            <img src="{{asset('front/assets/gallery/iris2.png')}}" alt="">
                             <div class="causes-one__category">
                                 <span>education</span>
                             </div>
@@ -166,7 +160,7 @@
                     <!--Cause One Single-->
                     <div class="causes-one__single causes-one__single-2">
                         <div class="causes-one__img">
-                            <img src="front/assets/images/causes/causes-1-2.jpg" alt="">
+                            <img src="{{asset('front/assets/gallery/iris3.png')}}" alt="">
                             <div class="causes-one__category">
                                 <span>medical</span>
                             </div>
@@ -195,7 +189,7 @@
                     <!--Cause One Single-->
                     <div class="causes-one__single causes-one__single-3">
                         <div class="causes-one__img">
-                            <img src="front/assets/images/causes/causes-1-3.jpg" alt="">
+                            <img src="{{asset('front/assets/gallery/iris4.png')}}" alt="">
                             <div class="causes-one__category">
                                 <span>Food</span>
                             </div>
@@ -224,7 +218,7 @@
                     <!--Cause One Single-->
                     <div class="causes-one__single">
                         <div class="causes-one__img">
-                            <img src="front/assets/images/gallery/gallery-1-1.jpg" alt="">
+                            <img src="{{asset('front/assets/gallery/iris5.png')}}" alt="">
                             <div class="causes-one__category">
                                 <span>education</span>
                             </div>
@@ -253,7 +247,7 @@
                     <!--Cause One Single-->
                     <div class="causes-one__single causes-one__single-2">
                         <div class="causes-one__img">
-                            <img src="front/assets/images/gallery/gallery-1-1.jpg" alt="">
+                            <img src="{{asset('front/assets/gallery/iris1.png')}}" alt="">
                             <div class="causes-one__category">
                                 <span>medical</span>
                             </div>
@@ -282,7 +276,7 @@
                     <!--Cause One Single-->
                     <div class="causes-one__single causes-one__single-3">
                         <div class="causes-one__img">
-                            <img src="front/assets/images/gallery/gallery-1-1.jpg" alt="">
+                            <img src="{{asset('front/assets/gallery/iris6.png')}}" alt="">
                             <div class="causes-one__category">
                                 <span>Food</span>
                             </div>
@@ -311,7 +305,7 @@
                     <!--Cause One Single-->
                     <div class="causes-one__single">
                         <div class="causes-one__img">
-                            <img src="front/assets/images/causes/causes-1-1.jpg" alt="">
+                            <img src="{{asset('front/assets/gallery/iris7.png')}}" alt="">
                             <div class="causes-one__category">
                                 <span>education</span>
                             </div>
@@ -340,7 +334,7 @@
                     <!--Cause One Single-->
                     <div class="causes-one__single causes-one__single-2">
                         <div class="causes-one__img">
-                            <img src="front/assets/images/causes/causes-1-2.jpg" alt="">
+                            <img src="{{asset('front/assets/gallery/iris8.png')}}" alt="">
                             <div class="causes-one__category">
                                 <span>medical</span>
                             </div>
