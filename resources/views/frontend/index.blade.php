@@ -90,14 +90,9 @@
                     </div>
 
                
-                    <ul class="about-one__points-content list-unstyled">
-                        <li>
-                            <p class="about-one__points-text">Lorem ipsum dolor sit ame ed consectetur nod.</p>
-                        </li>
-                        <li>
-                            <p class="about-one__points-text">Lorem ipsum dolor sit ame ed consectetur nod.</p>
-                        </li>
-                    </ul>
+                    <div class="fundraishing__btn-box">
+                        <a href="#" class="thm-btn fundraishing__btn">Read More</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -130,6 +125,7 @@
 
 <!--Cause Two End-->
 <section class="causes-one causes-two">
+    
     <div class="container">
         <div class="section-title text-left">
             <span class="section-title__tagline">Help the people</span>
@@ -228,7 +224,7 @@
                     <!--Cause One Single-->
                     <div class="causes-one__single">
                         <div class="causes-one__img">
-                            <img src="front/assets/images/causes/causes-1-1.jpg" alt="">
+                            <img src="front/assets/images/gallery/gallery-1-1.jpg" alt="">
                             <div class="causes-one__category">
                                 <span>education</span>
                             </div>
@@ -257,7 +253,7 @@
                     <!--Cause One Single-->
                     <div class="causes-one__single causes-one__single-2">
                         <div class="causes-one__img">
-                            <img src="front/assets/images/causes/causes-1-2.jpg" alt="">
+                            <img src="front/assets/images/gallery/gallery-1-1.jpg" alt="">
                             <div class="causes-one__category">
                                 <span>medical</span>
                             </div>
@@ -286,7 +282,7 @@
                     <!--Cause One Single-->
                     <div class="causes-one__single causes-one__single-3">
                         <div class="causes-one__img">
-                            <img src="front/assets/images/causes/causes-1-3.jpg" alt="">
+                            <img src="front/assets/images/gallery/gallery-1-1.jpg" alt="">
                             <div class="causes-one__category">
                                 <span>Food</span>
                             </div>
@@ -642,71 +638,7 @@
 <!--We Change End-->
 
 <!--Brand Two Start-->
-<section class="brand-two">
-    <div class="container">
-        <div class="brand-two__inner">
-            <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 100, "slidesPerView": 5, "autoplay": { "delay": 5000 }, "breakpoints": {
-                "0": {
-                    "spaceBetween": 30,
-                    "slidesPerView": 2
-                },
-                "375": {
-                    "spaceBetween": 30,
-                    "slidesPerView": 2
-                },
-                "575": {
-                    "spaceBetween": 30,
-                    "slidesPerView": 3
-                },
-                "767": {
-                    "spaceBetween": 50,
-                    "slidesPerView": 4
-                },
-                "991": {
-                    "spaceBetween": 50,
-                    "slidesPerView": 5
-                },
-                "1199": {
-                    "spaceBetween": 100,
-                    "slidesPerView": 5
-                }
-            }}'>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="front/assets/images/brand/brand-2-1.png" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="front/assets/images/brand/brand-2-2.png" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="front/assets/images/brand/brand-2-3.png" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="front/assets/images/brand/brand-2-4.png" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="front/assets/images/brand/brand-2-5.png" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="front/assets/images/brand/brand-2-1.png" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="front/assets/images/brand/brand-2-2.png" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="front/assets/images/brand/brand-2-3.png" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="front/assets/images/brand/brand-2-4.png" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="front/assets/images/brand/brand-2-5.png" alt="">
-                    </div><!-- /.swiper-slide -->
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 <!--Brand Two End-->
 
 <!--Blog Two Start-->

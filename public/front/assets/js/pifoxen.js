@@ -180,7 +180,7 @@
       nav: true,
       smartSpeed: 500,
       autoHeight: false,
-      autoplay: false,
+      autoplay: true,
       dots: false,
       autoplayTimeout: 10000,
       navText: [
@@ -213,7 +213,7 @@
       loop: true,
       margin: 30,
       nav: true,
-      smartSpeed: 500,
+      smartSpeed: 600,
       autoHeight: false,
       autoplay: false,
       dots: false,

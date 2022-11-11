@@ -7,9 +7,9 @@
   
         <div class="container">
             <div class="page-header__inner">
-                <h2>FAQs</h2>
+                <h4>Frequently Asked Questions</h4>
                 <ul class="thm-breadcrumb list-unstyled">
-                    <li><a href="index.html">Home</a></li>
+                <li><a href="{{route('index')}}">Home</a></li>
                     <li><span>/</span></li>
                     <li class="active">FAQs</li>
                 </ul>
