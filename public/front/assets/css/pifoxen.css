@@ -51,8 +51,8 @@
 body {
   font-family: var(--pifoxen-font);
   color: var(--pifoxen-gray);
-  font-size: 18px;
-  line-height: 34px;
+  font-size: 14px;
+  line-height: 26px;
   font-weight: 400;
 }
 
@@ -2150,16 +2150,16 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  opacity: 0.5;
-  background-color: #000000;
-  background-blend-mode: luminosity;
-  -webkit-transition: opacity 1500ms ease-in, -webkit-transform 7000ms ease;
+  /* -webkit-transform: scale(1);
+  transform: scale(1); */
+  /* opacity: 0.5;
+  background-color: #000000; */
+  /* background-blend-mode: luminosity; */
+  /* -webkit-transition: opacity 1500ms ease-in, -webkit-transform 7000ms ease;
   transition: opacity 1500ms ease-in, -webkit-transform 7000ms ease;
   transition: transform 7000ms ease, opacity 1500ms ease-in;
   transition: transform 7000ms ease, opacity 1500ms ease-in,
-    -webkit-transform 7000ms ease;
+    -webkit-transform 7000ms ease; */
   z-index: 1;
 }
 
@@ -2416,8 +2416,8 @@ ul {
 }
 
 .main-slider-two .container {
-  padding-top: 383px;
-  padding-bottom: 270px;
+  padding-top: 100px;
+  padding-bottom: 120px;
 }
 
 .main-slider-two .main-slider__content {
@@ -2530,6 +2530,7 @@ ul {
 
 .main-slider-two #main-slider-pagination {
   bottom: 139px;
+  display: none;
 }
 
 /*--------------------------------------------------------------
@@ -3095,7 +3096,7 @@ ul {
 .causes-one {
   position: relative;
   display: block;
-  padding: 120px 0 90px;
+  padding: 50px 0 50px;
   z-index: 1;
 }
 
@@ -5225,7 +5226,7 @@ ul {
 .site-footer__top {
   position: relative;
   display: block;
-  padding: 112px 0 108px;
+  padding: 50px 0 50px;
 }
 
 .footer-widget__about {
@@ -5239,7 +5240,9 @@ ul {
   display: block;
   padding-bottom: 32px;
 }
-
+.footer-widget__about-text-box p{
+  color:#a8a8a8;
+}
 .footer-donate__btn:hover {
   background-color: #fff;
   color: var(--pifoxen-black);
@@ -5639,7 +5642,7 @@ ul {
 .about-one {
   position: relative;
   display: block;
-  padding: 120px 0 120px;
+  padding: 50px 0 50px;
 }
 
 .about-one__left {
@@ -5688,7 +5691,7 @@ ul {
 .about-one__right {
   position: relative;
   display: block;
-  margin-left: 70px;
+  margin-left: 25px;
 }
 
 .about-one-shape {
@@ -5702,7 +5705,7 @@ ul {
 }
 
 .about-one__right .section-title {
-  margin-bottom: 37px;
+  margin-bottom: 10px;
 }
 
 .about-one__right .section-title__tagline::before {
@@ -5857,6 +5860,7 @@ ul {
 .causes-two {
   position: relative;
   display: block;
+  background: #f0f0f0;
 }
 
 .causes-two:before {
@@ -6990,7 +6994,7 @@ ul {
 .blog-two {
   position: relative;
   display: block;
-  padding: 120px 0 90px;
+  padding: 50px 0 50px;
   margin-top: 0;
 }
 

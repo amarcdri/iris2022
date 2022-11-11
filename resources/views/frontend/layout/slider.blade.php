@@ -21,7 +21,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="image-layer"
-                    style="background-image: url(front/assets/images/backgrounds/main-slider-2-1.jpg);">
+                    style="background-image: url(front/assets/images/backgrounds/slider02.jpg);">
                 </div>
                 <!-- /.image-layer -->
                 <div class="container">
@@ -31,9 +31,9 @@
                                 <h2>Every Good <br> Act is a Charity</h2>
                                 <p>We are here to support you every step of the way</p>
                                 <a href="about.html" class="thm-btn">Discover More</a>
-                                <div class="main-slider-two-map">
+                                {{-- <div class="main-slider-two-map">
                                     <img src="front/assets/images/shapes/main-slider-two-map.png" alt="">
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="image-layer"
-                    style="background-image: url(front/assets/images/backgrounds/main-slider-2-2.jpg);">
+                    style="background-image: url(front/assets/images/backgrounds/slider01.jpg);">
                 </div>
                 <!-- /.image-layer -->
                 <div class="container">
@@ -51,9 +51,9 @@
                                 <h2>Every Good <br> Act is a Charity</h2>
                                 <p>We are here to support you every step of the way</p>
                                 <a href="about.html" class="thm-btn">Discover More</a>
-                                <div class="main-slider-two-map">
+                                {{-- <div class="main-slider-two-map">
                                     <img src="front/assets/images/shapes/main-slider-two-map.png" alt="">
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="image-layer"
-                    style="background-image: url(front/assets/images/backgrounds/main-slider-2-3.jpg);">
+                    style="background-image: url(front/assets/images/backgrounds/slider03.jpg);">
                 </div>
                 <!-- /.image-layer -->
                 <div class="container">
@@ -71,9 +71,9 @@
                                 <h2>Every Good <br> Act is a Charity</h2>
                                 <p>We are here to support you every step of the way</p>
                                 <a href="about.html" class="thm-btn">Discover More</a>
-                                <div class="main-slider-two-map">
+                                {{-- <div class="main-slider-two-map">
                                     <img src="front/assets/images/shapes/main-slider-two-map.png" alt="">
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
