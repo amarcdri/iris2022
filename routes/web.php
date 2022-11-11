@@ -39,6 +39,7 @@ Route::get('/what-we-did-cop26',[FrontPageController::class,'cop26details'])->na
 
 Route::get('/expect-cop27',[FrontPageController::class,'cop27details'])->name('cop27details');
 
+Route::get('/about-us',[FrontPageController::class,'about'])->name('about');
 
 // Route::get('/', function () {
 //     return view('welcome');

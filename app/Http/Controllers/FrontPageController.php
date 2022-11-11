@@ -25,6 +25,14 @@ class FrontPageController extends Controller
         return view ('frontend.faqs');
 
     }
+
+
+    public function about(){
+
+        return view('frontend.about');
+    }
+
+
     public function cop26details()
     {
         return view ('frontend.cop26details');
