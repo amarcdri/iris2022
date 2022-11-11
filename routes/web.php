@@ -40,6 +40,10 @@ Route::get('/what-we-did-cop26',[FrontPageController::class,'cop26details'])->na
 Route::get('/expect-cop27',[FrontPageController::class,'cop27details'])->name('cop27details');
 
 
+Route::get('/iris-eoi',[FrontPageController::class,'irisEoi'])->name('iris.eoi');
+Route::post('/iris-eoi-post',[FrontPageController::class,'irisEoiPost'])->name('iris.eoi.post');
+
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
