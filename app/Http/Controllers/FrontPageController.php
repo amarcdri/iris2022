@@ -19,6 +19,12 @@ class FrontPageController extends Controller
         return view ('frontend.index', compact('agendas'));
     }
 
+
+    public function faqs(){
+
+        return view ('frontend.faqs');
+
+    }
     public function cop26details()
     {
         return view ('frontend.cop26details');

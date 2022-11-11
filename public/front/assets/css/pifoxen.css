@@ -17,17 +17,17 @@
 # Common
 --------------------------------------------------------------*/
 :root {
-  --pifoxen-font: "DM Sans", sans-serif;
-  --pifoxen-font-two: "Fredoka One", cursive;
+  --pifoxen-font: 'Roboto';
+  --pifoxen-font-two: 'Roboto';
   --pifoxen-gray: #727272;
   --pifoxen-gray-rgb: 114, 114, 114;
   --pifoxen-white: #ffffff;
   --pifoxen-white-rgb: 255, 255, 255;
   --pifoxen-black: #343434;
   --pifoxen-black-rgb: 52, 52, 52;
-  --pifoxen-base: #ff5528;
+  --pifoxen-base: #007aff;
   --pifoxen-base-rgb: 255, 85, 40;
-  --pifoxen-primary: #ffa415;
+  --pifoxen-primary: #2eabd8;
   --pifoxen-primary-rgb: 255, 164, 21;
   --pifoxen-secondary: #26cc8c;
   --pifoxen-secondary-rgb: 38, 204, 140;
@@ -258,7 +258,7 @@ ul {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  background-color: var(--pifoxen-base);
+  background-color: #2eabd8;
   padding-left: 4px;
   padding-right: 30px;
   padding-top: 4px;
@@ -272,7 +272,7 @@ ul {
 .donate-btn i {
   height: 35px;
   width: 35px;
-  background-color: var(--pifoxen-white);
+  background-color: #2eabd8;
   border-radius: 50%;
   color: var(--pifoxen-base);
   text-align: center;
@@ -589,6 +589,7 @@ ul {
   position: relative;
   padding: 0 80px;
   z-index: 91;
+  line-height: 15px;
 }
 
 .main-menu-wrapper {
@@ -610,7 +611,7 @@ ul {
 .main-menu-wrapper__logo {
   position: relative;
   float: left;
-  padding-top: 20px;
+  padding-top: 5px;
   padding-bottom: 5px;
   margin-right: 60px;
 }
@@ -712,6 +713,7 @@ ul {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-top:-114px;
 }
 
 .main-menu-wrapper__search-cat {
@@ -5548,7 +5550,7 @@ ul {
 }
 
 .feature-two__title {
-  font-size: 40px;
+  font-size: 30px;
   line-height: 48px;
   margin-bottom: 31px;
 }
@@ -8489,8 +8491,8 @@ ul {
 .page-header {
   position: relative;
   display: block;
-  padding: 119px 0 118px;
-  background-color: var(--pifoxen-black);
+  padding: 15px 0 15px;
+  background-color: #2596be;
   z-index: 1;
 }
 

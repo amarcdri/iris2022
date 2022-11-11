@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 
@@ -47,6 +48,7 @@
     <!-- template styles -->
     <link rel="stylesheet" href="front/assets/css/pifoxen.css" />
     <link rel="stylesheet" href="front/assets/css/pifoxen-responsive.css" />
+    @yield('css')
 </head>
 
 <body>
@@ -157,6 +159,7 @@
 
         <!-- template js -->
         <script src="front/assets/js/pifoxen.js"></script>
+        @yield('js')
     </body>
 
     </html>
