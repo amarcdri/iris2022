@@ -29,7 +29,7 @@
                         <div class="feature-two__img feature-two__img-2">
                             <img src="front/assets/images/resources/feature-2-1.jpg" alt="">
                             <div class="feature-two__content">
-                                <h3 class="feature-two__title"><a href="become-volunteer.html">Sterngthened knowledge and Partnerships for intergrating resilience <br>
+                                <h3 class="feature-two__title"><a href="become-volunteer.html">Strengthened knowledge and Partnerships for intergrating resilience <br>
                                         in SIDS  <br> infrastructure</a></h3>
                                 <a href="become-volunteer.html" class="feature-two__arrow"><span
                                         class="icon-right-arrow"></span></a>
@@ -63,7 +63,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
-            <h3 class="donation-details__title">INFRASTRUCTURE FOR RESILIENT ISLAND STATES (IRIS)</h3>
+            <h3 class="donation-details__title">{{$iris->title}}</h3>
             </div>
             <div class="col-xl-5">
                
@@ -81,9 +81,7 @@
                     </div>
                     <div class="about-one__content">
 
-                        <p class="about-two__content-text">Small Island Developing States (SIDS) are a distinct group of 58 island states that face unique social, economic and environmental vulnerabilities owing to their geophysical and structural constraints. Most of these countries are prone to the disastrous effects of climate change. Resilient, sustainable, and inclusive infrastructure plays a key role in mitigating these challenges. More investment and improved institutional capacity for infrastructure systems is urgently needed if SIDS are to maintain their sustainability and effectiveness in service delivery momentum and respond to disaster and climate change risks effectively.</br>
-                           
-                            Against this backdrop, CDRI with support from Member Countries and organizations is in the process of setting up Infrastructure for Resilient Island States (IRIS), a dedicated initiative for Small Island Developing States (SIDS) that provides quality technical and financial services to make SIDS infrastructure resilient to climate change and disaster events. Aligned with the policy direction of the SIDS Accelerated Modalities of Action (SAMOA Pathway), the goal of IRIS will be to support SIDS in achieving sustainable development through a systematic approach to resilient, sustainable, and inclusive infrastructure in SIDS.
+                        <p class="about-two__content-text">{{$iris->subtitle}}
 
 
                         </p>
@@ -288,29 +286,53 @@
          <h3 class="donation-details__title">EVENTS</h3>
         </div>
         <div class="row">
+            @foreach($agendas as $key => $agenda)
+            @php
+            $date='';
+            $time='';
+            $stime='';
+            $etime='';
+            $date=\Carbon\Carbon::parse($agenda->startdate)->format('M j, Y');
+            $hdate=\Carbon\Carbon::parse($agenda->startdate)->format('j M, Y');
+            $stime=\Carbon\Carbon::parse($agenda->startdate)->format('g:i A');
+            $etime=\Carbon\Carbon::parse($agenda->enddate)->format('g:i A');
+            $time=$stime.' - '.$etime;
+           @endphp 
+          
             <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
                 <!--Blog One single-->
                 <div class="blog-one__single">
                     <div class="blog-one__img">
-                        <img src="front/assets/images/blog/blog-1-1.jpg" alt="">
+                        <img src="{{asset($agenda->image)}}" alt="">
                         <div class="blog-one__date">
-                            <p>26 oct</p>
+                            <p>{{$hdate}}</p>
                         </div>
-                        <a href="blog-details.html">
+                        <a href="{{asset($agenda->slugurl)}}">
                             <span class="news-one__plus"></span>
                         </a>
                     </div>
                     <div class="blog-one__content">
-                        <ul class="list-unstyled blog-one__meta">
-                            <li><a href="blog-details.html"><i class="far fa-user-circle"></i> Admin</a></li>
+                        {{-- <ul class="list-unstyled blog-one__meta">
+                            <li><a href="blog-details.html"><i class="far fa-user-circle"></i> <i class="fa fa-calendar" aria-hidden="true"> </i>&nbsp; {{$date}}</a></li>
                             <li><a href="blog-details.html"><i class="far fa-comments"></i> 2 Comments</a>
                             </li>
-                        </ul>
+                             <br/><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp; {{$time}}&nbsp;{{'EET'}}<br/>
+
+                 
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; {{$agenda->venue}} 
+                        </ul> --}}
+
+                <div class="post-prev-info">
+                    {{-- 17<sup>TH</sup> NOVEMBER 2022 | 02:00 - 03:00 | {{$agenda->venue}} --}}
+                    {{-- <i class="fa fa-calendar" aria-hidden="true"> </i>&nbsp; {{$date}} <br/> --}}
+                    <i class="fa fa-clock" aria-hidden="true"></i>&nbsp; {{$time}}&nbsp;{{'EET'}}<br/>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; {{$agenda->venue}} 
+                      
+                  </div>
                         <h3 class="blog-one__title">
-                            <a href="blog-details.html">Start a Fundraiser for
-                                Yourself</a>
+                            <a href="blog-details.html">{{$agenda->title}}</a>
                         </h3>
-                        <p class="blog-one__text">Aellentesque porttitor lacus quis enim varius sed efficitur...
+                        <p class="blog-one__text" style="text-align:left">{{$agenda->subtitle}}
                         </p>
                         <div class="blog-one__bottom">
                             <a href="blog-details.html" class="blog-one__btn">Read More</a>
@@ -320,68 +342,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
-                <!--Blog One single-->
-                <div class="blog-one__single">
-                    <div class="blog-one__img">
-                        <img src="front/assets/images/blog/blog-1-2.jpg" alt="">
-                        <div class="blog-one__date">
-                            <p>26 oct</p>
-                        </div>
-                        <a href="blog-details.html">
-                            <span class="news-one__plus"></span>
-                        </a>
-                    </div>
-                    <div class="blog-one__content">
-                        <ul class="list-unstyled blog-one__meta">
-                            <li><a href="blog-details.html"><i class="far fa-user-circle"></i> Admin</a></li>
-                            <li><a href="blog-details.html"><i class="far fa-comments"></i> 2 Comments</a>
-                            </li>
-                        </ul>
-                        <h3 class="blog-one__title">
-                            <a href="blog-details.html">School Counseling for Children</a>
-                        </h3>
-                        <p class="blog-one__text">Aellentesque porttitor lacus quis enim varius sed efficitur...
-                        </p>
-                        <div class="blog-one__bottom">
-                            <a href="blog-details.html" class="blog-one__btn">Read More</a>
-                            <a href="blog-details.html" class="blog-one__arrow"><span
-                                    class="icon-right-arrow"></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
-                <!--Blog One single-->
-                <div class="blog-one__single">
-                    <div class="blog-one__img">
-                        <img src="front/assets/images/blog/blog-1-3.jpg" alt="">
-                        <div class="blog-one__date">
-                            <p>26 oct</p>
-                        </div>
-                        <a href="blog-details.html">
-                            <span class="news-one__plus"></span>
-                        </a>
-                    </div>
-                    <div class="blog-one__content">
-                        <ul class="list-unstyled blog-one__meta">
-                            <li><a href="blog-details.html"><i class="far fa-user-circle"></i> Admin</a></li>
-                            <li><a href="blog-details.html"><i class="far fa-comments"></i> 2 Comments</a>
-                            </li>
-                        </ul>
-                        <h3 class="blog-one__title">
-                            <a href="blog-details.html">Growing Up children in Charity Care</a>
-                        </h3>
-                        <p class="blog-one__text">Aellentesque porttitor lacus quis enim varius sed efficitur...
-                        </p>
-                        <div class="blog-one__bottom">
-                            <a href="blog-details.html" class="blog-one__btn">Read More</a>
-                            <a href="blog-details.html" class="blog-one__arrow"><span
-                                    class="icon-right-arrow"></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+          
         </div>
     </div>
 </section>

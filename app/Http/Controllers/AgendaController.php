@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Agenda;
-//use App\Models\ContentType;
+use App\Models\ContentType;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
@@ -24,7 +24,8 @@ class AgendaController extends Controller
     public function addagenda()
     {
         $sequence = Agenda::pluck('sequence')->toArray();
-        return view('admin.addagenda',compact('sequence'));
+        $contenttype=ContentType::all();
+        return view('admin.addagenda',compact('sequence','contenttype'));
        // $contenttype=ContentType::all();
        // return view('admin.addagenda',compact('sequence','contenttype'));
     }
@@ -87,6 +88,7 @@ class AgendaController extends Controller
             }
             $agendas->startdate=$request->startdate;
             $agendas->enddate=$request->enddate;
+            $agendas->ctid=$request->contenttype;
             $agendas->eventtype=$request->eventtype;
             $agendas->author=$request->author;
             $agendas->venue=$request->venue;
@@ -128,8 +130,8 @@ class AgendaController extends Controller
     public function editagenda($id)
     {
         $agendas=Agenda::findOrFail($id);
-       // $contenttype=ContentType::all();
-        return view('admin.editagenda',compact('agendas'));
+       $contenttype=ContentType::all();
+        return view('admin.editagenda',compact('agendas','contenttype'));
     }
     
     public function editagendapost(Request $request, $id)
@@ -189,6 +191,7 @@ class AgendaController extends Controller
             }
             $agendas->startdate=$request->startdate;
             $agendas->enddate=$request->enddate;
+            $agendas->ctid=$request->contenttype;
             $agendas->eventtype=$request->eventtype;
             $agendas->author=$request->author;
             $agendas->venue=$request->venue;

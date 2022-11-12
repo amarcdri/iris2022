@@ -4893,7 +4893,7 @@ ul {
 }
 
 .blog-one__title {
-  font-size: 24px;
+  font-size: 16px;
   line-height: 34px;
   margin-top: 3px;
   margin-bottom: 12px;
@@ -4910,7 +4910,7 @@ ul {
 }
 
 .blog-one__text {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 30px;
   margin: 0;
 }

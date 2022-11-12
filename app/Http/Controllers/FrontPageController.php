@@ -47,10 +47,11 @@ class FrontPageController extends Controller
    
     public function index()
     {
-        $agendas=Agenda::where('published','=',1)->where('eventtype','=',1)->ORDERBY('startdate','ASC')->get();
+        $agendas=Agenda::where('published','=',1)->where('eventtype','=',1)->where('ctid','=',2)->ORDERBY('startdate','ASC')->get();
+        $iris=Agenda::where('published','=',1)->where('id','=',13)->where('ctid','=',1)->ORDERBY('startdate','ASC')->first();
         //return view('admin.page', compact('agendas'));
         
-        return view ('frontend.index', compact('agendas'));
+        return view ('frontend.index', compact('agendas','iris'));
     }
 
 
@@ -79,7 +80,7 @@ class FrontPageController extends Controller
 
     public function agenda()
     {
-        $agenda_infod=Agenda::where('published', 1)->ORDERBY('startdate','ASC')->get();
+        $agenda_infod=Agenda::where('published', 1)->where('ctid','=',2)->ORDERBY('startdate','ASC')->get();
         
 
         return view ('frontend.agenda',compact('agenda_infod'));

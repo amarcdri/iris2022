@@ -65,6 +65,23 @@
                             <div class="alert alert-danger">{{ $message }}</div>
                            @enderror
 
+                           <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label">Content Type</label>
+                            <div class="col-sm-10">
+                                <select class="custom-select form-control" id="contenttype" name="contenttype" required>
+                                    <option value="0">Select Content Type</option>
+                                    @foreach ($contenttype as $ct)
+                                    <option value="{{ $ct->id }}">{{ $ct->name }}</option>
+                                    @endforeach
+                                   
+                                   
+                                  </select>
+                            </div>
+                        </div>
+                        @error('contenttype')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                       @enderror
+
 
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label">Image</label>
