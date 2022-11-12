@@ -1,5 +1,6 @@
+@extends('frontend.layout.app')
 
-
+@section('content')
 
     <section class="page-header">
   
