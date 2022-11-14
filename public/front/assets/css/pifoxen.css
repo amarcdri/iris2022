@@ -5082,7 +5082,7 @@ ul {
   background-color: var(--pifoxen-base);
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  padding: 60px 60px 52px;
+  padding: 29px 8px 35px;
 }
 
 .feature-one__single-2 {
@@ -5153,10 +5153,10 @@ ul {
 }
 
 .feature-one__text {
-  font-size: 16px;
+  font-size: 14px;
   color: var(--pifoxen-white);
   font-weight: 500;
-  line-height: 30px;
+  line-height: 22px;
   margin: 0;
 }
 

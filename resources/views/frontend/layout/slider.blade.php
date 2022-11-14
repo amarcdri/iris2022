@@ -19,26 +19,7 @@
 "delay": 5000
 }}'>
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="image-layer"
-                    style="background-image: url(front/assets/images/backgrounds/slider02.jpg);">
-                </div>
-                <!-- /.image-layer -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="main-slider__content">
-                                <h2>Every Good <br> Act is a Charity</h2>
-                                <p>We are here to support you every step of the way</p>
-                                <a href="about.html" class="thm-btn">Discover More</a>
-                                {{-- <div class="main-slider-two-map">
-                                    <img src="front/assets/images/shapes/main-slider-two-map.png" alt="">
-                                </div> --}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+     
             <div class="swiper-slide">
                 <div class="image-layer"
                     style="background-image: url(front/assets/images/backgrounds/slider01.jpg);">
@@ -50,7 +31,7 @@
                             <div class="main-slider__content">
                                 <h2>Every Good <br> Act is a Charity</h2>
                                 <p>We are here to support you every step of the way</p>
-                                <a href="about.html" class="thm-btn">Discover More</a>
+                                <a href="about.html" class="thm-btn">Call for Proposal</a>
                                 {{-- <div class="main-slider-two-map">
                                     <img src="front/assets/images/shapes/main-slider-two-map.png" alt="">
                                 </div> --}}
@@ -59,26 +40,7 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide">
-                <div class="image-layer"
-                    style="background-image: url(front/assets/images/backgrounds/slider03.jpg);">
-                </div>
-                <!-- /.image-layer -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="main-slider__content">
-                                <h2>Every Good <br> Act is a Charity</h2>
-                                <p>We are here to support you every step of the way</p>
-                                <a href="about.html" class="thm-btn">Discover More</a>
-                                {{-- <div class="main-slider-two-map">
-                                    <img src="front/assets/images/shapes/main-slider-two-map.png" alt="">
-                                </div> --}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+         
         </div>
         <!-- If we need navigation buttons -->
         <div class="swiper-pagination" id="main-slider-pagination"></div>
