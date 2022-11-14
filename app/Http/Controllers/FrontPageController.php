@@ -158,6 +158,12 @@ class FrontPageController extends Controller
 
     }
 
+    public function irisOutcome($id)
+    {
+        $pages=Agenda::where('published', 1)->where('id','=',$id)->first();
+        return view('frontend.page',compact('pages'));
+    }
+
 
 }
 
