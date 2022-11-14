@@ -50,7 +50,7 @@ class FrontPageController extends Controller
     {
         $agendas=Agenda::where('published','=',1)->where('eventtype','=',1)->where('ctid','=',2)->ORDERBY('startdate','ASC')->get();
         $iris=Agenda::where('published','=',1)->where('id','=',13)->where('ctid','=',1)->ORDERBY('startdate','ASC')->first();
-        $galleries=Gallery::where('published','=',1)->ORDERBY('sequence','ASC')->first();
+        $galleries=Gallery::where('published','=',1)->ORDERBY('sequence','ASC')->get();
         //return view('admin.page', compact('agendas'));
         
         return view ('frontend.index', compact('agendas','iris','galleries'));
