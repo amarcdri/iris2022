@@ -29,6 +29,7 @@
 
                         <div class="donation-details__content">
                             <h3 class="donation-details__title">{{$pages->title}}</h3>
+                            <p class="donation-details__text-1">{{$pages->subtitle}}</p>
                             <p class="donation-details__text-1">{{$pages->description}}</p>
                         </div>
 
