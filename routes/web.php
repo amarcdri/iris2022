@@ -20,6 +20,8 @@ use App\Http\Controllers\{AgendaSpeakerController,SpeakerController,GalleryContr
 
 Route::get('/', [FrontPageController::class, 'index'])->name('index');
 Route::get('/eoi',[FrontPageController::class,'eoi'])->name('eoi');
+
+Route::get('/team',[FrontPageController::class,'team'])->name('team');
 Route::get('/faqs', [FrontPageController::class, 'faqs'])->name('faqs');
 Route::get('/about-us',[FrontPageController::class,'about'])->name('about');
 Route::get('/eoi-iris',[FrontPageController::class,'irisEoi'])->name('iris.eoi');

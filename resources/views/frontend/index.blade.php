@@ -79,19 +79,19 @@
 
 
                     </div>
-                    <div class="about-one__content">
-
-                        <p class="about-two__content-text">{{$iris->subtitle}}
-
-
-                        </p>
-                       
+                    <div class="about">
+                   
+                        <p class="about-two__content-text">{{$iris->subtitle}}</p>
+                        <div id="more">
+                            {!!$iris->description!!} 
+                        </div>
+                        <button class="btn btn-primary btn-sm" onclick="myFunction()" id="myBtn">Read More</button >
                             
                     </div>
 
                
                     <div class="fundraishing__btn-box text-center">
-                        <a href="#" class="thm-btn fundraishing__btn">Read More</a>
+                      
                     </div>
                 </div>
             </div>
@@ -115,20 +115,125 @@
             <div class="col-xl-12">
                 <div class="causes-one__carousel owl-theme owl-carousel">
                     <!--Cause One Single-->
-                    @foreach($galleries as $gkey => $gallery)
                     <div class="causes-one__single">
                         <div class="causes-one__img">
-                            <img src="{{asset($gallery->image)}}" alt="">
+                            <img src="{{asset('front/assets/gallery/iris2.png')}}" alt="">
                             <div class="causes-one__category">
                                
                             </div>
                         </div>
                    
-                    </div> 
-                    @endforeach
-                   
-                    
+                    </div>
+                    <!--Cause One Single-->
+                    <div class="causes-one__single causes-one__single-2">
+                        <div class="causes-one__img">
+                            <img src="{{asset('front/assets/gallery/iris3.png')}}" alt="">
+                            <div class="causes-one__category">
+               
+                            </div>
+                        </div>
                   
+                    </div>
+                    <!--Cause One Single-->
+                    <div class="causes-one__single causes-one__single-3">
+                        <div class="causes-one__img">
+                            <img src="{{asset('front/assets/gallery/iris4.png')}}" alt="">
+                            <div class="causes-one__category">
+                          
+                            </div>
+                        </div>
+                
+                    </div>
+                    <!--Cause One Single-->
+                    <div class="causes-one__single">
+                        <div class="causes-one__img">
+                            <img src="{{asset('front/assets/gallery/iris5.png')}}" alt="">
+                            <div class="causes-one__category">
+                  
+                            </div>
+                        </div>
+                   
+                    </div>
+                    <!--Cause One Single-->
+                    <div class="causes-one__single causes-one__single-2">
+                        <div class="causes-one__img">
+                            <img src="{{asset('front/assets/gallery/iris1.png')}}" alt="">
+                            <div class="causes-one__category">
+                       
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <!--Cause One Single-->
+                    <div class="causes-one__single causes-one__single-3">
+                        <div class="causes-one__img">
+                            <img src="{{asset('front/assets/gallery/iris6.png')}}" alt="">
+                            <div class="causes-one__category">
+                      
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <!--Cause One Single-->
+                    <div class="causes-one__single">
+                        <div class="causes-one__img">
+                            <img src="{{asset('front/assets/gallery/iris7.png')}}" alt="">
+                            <div class="causes-one__category">
+                        
+                            </div>
+                        </div>
+                 
+                    </div>
+                    <!--Cause One Single-->
+                    <div class="causes-one__single causes-one__single-2">
+                        <div class="causes-one__img">
+                            <img src="{{asset('front/assets/gallery/iris8.png')}}" alt="">
+                            <div class="causes-one__category">
+                           
+                            </div>
+                        </div>
+                   
+                    </div>
+                    <!--Cause One Single-->
+                    <div class="causes-one__single causes-one__single-3">
+                        <div class="causes-one__img">
+                            <img src="front/assets/images/causes/causes-1-3.jpg" alt="">
+                            <div class="causes-one__category">
+                     
+                            </div>
+                        </div>
+                 
+                    </div>
+                    <!--Cause One Single-->
+                    <div class="causes-one__single">
+                        <div class="causes-one__img">
+                            <img src="front/assets/images/causes/causes-1-1.jpg" alt="">
+                            <div class="causes-one__category">
+                  
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <!--Cause One Single-->
+                    <div class="causes-one__single causes-one__single-2">
+                        <div class="causes-one__img">
+                            <img src="front/assets/images/causes/causes-1-2.jpg" alt="">
+                            <div class="causes-one__category">
+                    
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!--Cause One Single-->
+                    <div class="causes-one__single causes-one__single-3">
+                        <div class="causes-one__img">
+                            <img src="front/assets/images/causes/causes-1-3.jpg" alt="">
+                            <div class="causes-one__category">
+                                <span>Food</span>
+                            </div>
+                        </div>
+                 
+                    </div>
                 </div>
             </div>
         </div>
@@ -180,7 +285,7 @@
         <div class="section-title">
          <h3 class="donation-details__title">EVENTS</h3>
         </div>
-        <div class="row">
+        {{-- <div class="row">
             @foreach($agendas as $key => $agenda)
             @php
             $date='';
@@ -208,8 +313,8 @@
                     </div>
                     <div class="blog-one__content">
                         {{-- <ul class="list-unstyled blog-one__meta">
-                            <li><a href="blog-details.html"><i class="far fa-user-circle"></i> <i class="fa fa-calendar" aria-hidden="true"> </i>&nbsp; {{$date}}</a></li>
-                            <li><a href="blog-details.html"><i class="far fa-comments"></i> 2 Comments</a>
+                            <li><a href="#"><i class="far fa-user-circle"></i> <i class="fa fa-calendar" aria-hidden="true"> </i>&nbsp; {{$date}}</a></li>
+                            <li><a href="#"><i class="far fa-comments"></i> 2 Comments</a>
                             </li>
                              <br/><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp; {{$time}}&nbsp;{{'EET'}}<br/>
 
@@ -217,28 +322,66 @@
                             <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; {{$agenda->venue}} 
                         </ul> --}}
 
-                <div class="post-prev-info">
+                {{-- <div class="post-prev-info">
                     {{-- 17<sup>TH</sup> NOVEMBER 2022 | 02:00 - 03:00 | {{$agenda->venue}} --}}
                     {{-- <i class="fa fa-calendar" aria-hidden="true"> </i>&nbsp; {{$date}} <br/> --}}
-                    <i class="fa fa-clock" aria-hidden="true"></i>&nbsp; {{$time}}&nbsp;{{'EET'}}<br/>
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; {{$agenda->venue}} 
-                      
+                    {{-- <i class="fa fa-clock" aria-hidden="true"></i>&nbsp; {{$time}}&nbsp;{{'EET'}}<br/>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; {{$agenda->venue}}  --}}
+{{--                       
                   </div>
                         <h3 class="blog-one__title">
-                            <a href="blog-details.html">{{$agenda->title}}</a>
+                            <a href="#">{{$agenda->title}}</a>
                         </h3>
                         <p class="blog-one__text" style="text-align:left">{{$agenda->subtitle}}
                         </p>
                         <div class="blog-one__bottom">
-                            <a href="blog-details.html" class="blog-one__btn">Read More</a>
-                            <a href="blog-details.html" class="blog-one__arrow"><span
+                            <a href="#" class="blog-one__btn">Read More</a>
+                            <a href="#" class="blog-one__arrow"><span
                                     class="icon-right-arrow"></span></a>
                         </div>
                     </div>
+                </div> --}}
+            {{-- </div>
+            @endforeach
+           --}}
+          
+
+        {{-- </div> --}}
+
+
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 wow slideInLeft animated" data-wow-delay="100ms" data-wow-duration="2500ms" style="visibility: visible; animation-duration: 2500ms; animation-delay: 100ms; animation-name: slideInLeft;">
+                <!--Feature One Single-->
+                <div class="feature-one__single">
+                  
+                        <img src="assets/images/resources/donation-details-content-img-1.jpg" alt="">
+                
+                    <div class="feature-one__content">
+                        <h4 class="feature-one__title">Sponsor an Entire Project</h4>
+                        <i class="fa fa-calendar one__text" aria-hidden="true"> </i>
+
+                        <p class="feature-one__text">There are many variations of available but the majority
+                            have suffered alteration.</p>
+                    </div>
+                    <a href="#" class="feature-one__btn">More</a>
                 </div>
             </div>
-            @endforeach
-          
+            <div class="col-xl-6 col-lg-6 wow slideInRight animated" data-wow-delay="100ms" data-wow-duration="2500ms" style="visibility: visible; animation-duration: 2500ms; animation-delay: 100ms; animation-name: slideInRight;">
+                <!--Feature One Single-->
+                <div class="feature-one__single feature-one__single-2">
+                    <div class="feature-one__icon">
+                        <img src="front/assets/images/causes/causes-1-3.jpg" alt="" style="height:200px;">
+                    </div>
+                    <div class="feature-one__content">
+                        <h4 class="feature-one__title">Look at the Popular Causes</h4>
+                        <i class="fa fa-calendar one__text" aria-hidden="true"> </i>
+
+                        <p class="feature-one__text">There are many variations of available but the majority
+                            have suffered alteration.</p>
+                    </div>
+                    <a href="#" class="feature-one__btn">More</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -247,6 +390,25 @@
 <!--Help People Start-->
 
 <!--Help People End-->
+@yield('js')
+<script>
+    function myFunction() {
+      
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+        
+        if (btnText.innerHTML === "Read more") {
+            moreText.style.display = "inline";
+            btnText.innerHTML = "Read less"; 
+        } else {
+            moreText.style.display = "none";
+            btnText.innerHTML = "Read more"; 
+        }
+    }
+    </script>
 
-
+    @yield('css')
+    <style>
+#more {display: none;}
+</style>
         @endsection

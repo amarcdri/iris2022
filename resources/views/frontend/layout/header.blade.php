@@ -52,8 +52,20 @@
                        
                         </li>
                         <li>
-                            <a href="{{route('about')}}">About</a>
-                           
+                            <a href="{{route('about')}}" class="dropdown">About</a>
+                            <ul>
+                              
+                               
+                              
+                                <li class="dropdown">
+                                    <a href="#">Vision</a>
+                                    <ul>
+                                        <li><a href="testimonials.html">English</a></li>
+                                        <li><a href="testimonials.html">English</a></li>
+                                        <li><a href="testimonials.html">English</a></li>
+                                    </ul>
+
+                                </ul>    
                         </li>
                         <li>
                             <a href="#">Events</a>
