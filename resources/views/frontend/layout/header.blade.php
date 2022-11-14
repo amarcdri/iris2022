@@ -70,7 +70,7 @@
                 </div>
                 <div class="main-menu-wrapper__right">
                     
-                         <a href="https://cdri.world/iris-eoi"  target="_blank" class="donate-btn main-header-one__btn"> <i class="fa fa-arrow-right"></i> EXPRESSION OF INTEREST</a>
+                         <a href="https://cdri.world/iris-eoi"  target="_blank" class="donate-btn main-header-one__btn"> <i class="fa fa-arrow-right"></i> Call for Purposal - 2022-23</a>
                 </div>
             </div>
         </nav>
