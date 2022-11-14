@@ -9961,13 +9961,24 @@ ul {
   border-top: 4px solid var(--pifoxen-primary);
 }
 
+.contact-info__custom {
+  position: relative;
+  display: block;
+  background-color: var(--pifoxen-base);
+  border-radius: var(--pifoxen-bdr-radius);
+  padding: 10px 5px 12px 9px;
+  margin-bottom: 30px;
+}
+
+
+
 /*--------------------------------------------------------------
 ## Donations Details
 --------------------------------------------------------------*/
 .donations-details {
   position: relative;
   display: block;
-  padding: 120px 0 120px;
+  padding: 30px 0 3px;
 }
 
 .donation-details__left {
@@ -10134,7 +10145,7 @@ ul {
 
 .donation-details__text-1 {
   margin: 0;
-  padding-bottom: 44px;
+  padding-bottom: 10px;
 }
 
 .donation-details__text-2 {
@@ -11592,10 +11603,26 @@ ul {
   margin-bottom: 20px;
 }
 
+.contact-info__customtitle {
+  font-size: 20px;
+  color: var(--pifoxen-white);
+  line-height: 24px;
+  margin-bottom: 7px;
+}
+
+
+
 .contact-info__text {
   font-size: 16px;
   color: var(--pifoxen-white);
   line-height: 30px;
+  margin: 0;
+}
+
+.contact-info__customtext {
+  font-size: 14px;
+  color: var(--pifoxen-white);
+  line-height: 20px;
   margin: 0;
 }
 

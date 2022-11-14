@@ -55,6 +55,11 @@ class FrontPageController extends Controller
     }
 
 
+    public function eoi(){
+        return view('frontend.eoi');
+    }
+
+
     public function faqs(){
 
         return view ('frontend.faqs');
