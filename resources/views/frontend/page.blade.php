@@ -9,11 +9,11 @@
 
         <div class="container">
             <div class="page-header__inner">
-                <h4>CALL FOR PROPOSALS 2022-23</h4>
+                <h4>{{$pages->title}}</h4>
                 <ul class="thm-breadcrumb list-unstyled">
                     <li><a href="{{ route('index') }}">Home</a></li>
                     <li><span>/</span></li>
-                    <li> CALL FOR PROPOSALS 2022-23</li>
+                    <li> {{$pages->title}}</li>
                 </ul>
             </div>
         </div>
@@ -29,7 +29,7 @@
 
                         <div class="donation-details__content">
                             <h3 class="donation-details__title">{{$pages->title}}</h3>
-                            <p class="donation-details__text-1">{!!$pages->description!!}</p>
+                            <p class="donation-details__text-1">{{$pages->description}}</p>
                         </div>
 
 
