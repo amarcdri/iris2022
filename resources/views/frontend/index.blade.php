@@ -115,125 +115,20 @@
             <div class="col-xl-12">
                 <div class="causes-one__carousel owl-theme owl-carousel">
                     <!--Cause One Single-->
+                    @foreach($galleries as $gkey => $gallery)
                     <div class="causes-one__single">
                         <div class="causes-one__img">
-                            <img src="{{asset('front/assets/gallery/iris2.png')}}" alt="">
+                            <img src="{{asset($gallery->image)}}" alt="">
                             <div class="causes-one__category">
                                
                             </div>
                         </div>
                    
-                    </div>
-                    <!--Cause One Single-->
-                    <div class="causes-one__single causes-one__single-2">
-                        <div class="causes-one__img">
-                            <img src="{{asset('front/assets/gallery/iris3.png')}}" alt="">
-                            <div class="causes-one__category">
-               
-                            </div>
-                        </div>
-                  
-                    </div>
-                    <!--Cause One Single-->
-                    <div class="causes-one__single causes-one__single-3">
-                        <div class="causes-one__img">
-                            <img src="{{asset('front/assets/gallery/iris4.png')}}" alt="">
-                            <div class="causes-one__category">
-                          
-                            </div>
-                        </div>
-                
-                    </div>
-                    <!--Cause One Single-->
-                    <div class="causes-one__single">
-                        <div class="causes-one__img">
-                            <img src="{{asset('front/assets/gallery/iris5.png')}}" alt="">
-                            <div class="causes-one__category">
-                  
-                            </div>
-                        </div>
+                    </div> 
+                    @endforeach
                    
-                    </div>
-                    <!--Cause One Single-->
-                    <div class="causes-one__single causes-one__single-2">
-                        <div class="causes-one__img">
-                            <img src="{{asset('front/assets/gallery/iris1.png')}}" alt="">
-                            <div class="causes-one__category">
-                       
-                            </div>
-                        </div>
                     
-                    </div>
-                    <!--Cause One Single-->
-                    <div class="causes-one__single causes-one__single-3">
-                        <div class="causes-one__img">
-                            <img src="{{asset('front/assets/gallery/iris6.png')}}" alt="">
-                            <div class="causes-one__category">
-                      
-                            </div>
-                        </div>
-                    
-                    </div>
-                    <!--Cause One Single-->
-                    <div class="causes-one__single">
-                        <div class="causes-one__img">
-                            <img src="{{asset('front/assets/gallery/iris7.png')}}" alt="">
-                            <div class="causes-one__category">
-                        
-                            </div>
-                        </div>
-                 
-                    </div>
-                    <!--Cause One Single-->
-                    <div class="causes-one__single causes-one__single-2">
-                        <div class="causes-one__img">
-                            <img src="{{asset('front/assets/gallery/iris8.png')}}" alt="">
-                            <div class="causes-one__category">
-                           
-                            </div>
-                        </div>
-                   
-                    </div>
-                    <!--Cause One Single-->
-                    <div class="causes-one__single causes-one__single-3">
-                        <div class="causes-one__img">
-                            <img src="front/assets/images/causes/causes-1-3.jpg" alt="">
-                            <div class="causes-one__category">
-                     
-                            </div>
-                        </div>
-                 
-                    </div>
-                    <!--Cause One Single-->
-                    <div class="causes-one__single">
-                        <div class="causes-one__img">
-                            <img src="front/assets/images/causes/causes-1-1.jpg" alt="">
-                            <div class="causes-one__category">
                   
-                            </div>
-                        </div>
-                    
-                    </div>
-                    <!--Cause One Single-->
-                    <div class="causes-one__single causes-one__single-2">
-                        <div class="causes-one__img">
-                            <img src="front/assets/images/causes/causes-1-2.jpg" alt="">
-                            <div class="causes-one__category">
-                    
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <!--Cause One Single-->
-                    <div class="causes-one__single causes-one__single-3">
-                        <div class="causes-one__img">
-                            <img src="front/assets/images/causes/causes-1-3.jpg" alt="">
-                            <div class="causes-one__category">
-                                <span>Food</span>
-                            </div>
-                        </div>
-                 
-                    </div>
                 </div>
             </div>
         </div>

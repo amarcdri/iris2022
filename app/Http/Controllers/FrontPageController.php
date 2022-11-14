@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Agenda;
 use App\Models\Speaker;
 use App\Models\AgendaSpeaker;
+use App\Models\Gallery;
 use App\Models\{Country,IrisEoi,IrisEoiCoverage,IrisEoiThematic,IrisEoiSector};
 
 class FrontPageController extends Controller
@@ -49,9 +50,10 @@ class FrontPageController extends Controller
     {
         $agendas=Agenda::where('published','=',1)->where('eventtype','=',1)->where('ctid','=',2)->ORDERBY('startdate','ASC')->get();
         $iris=Agenda::where('published','=',1)->where('id','=',13)->where('ctid','=',1)->ORDERBY('startdate','ASC')->first();
+        $galleries=Gallery::where('published','=',1)->ORDERBY('sequence','ASC')->first();
         //return view('admin.page', compact('agendas'));
         
-        return view ('frontend.index', compact('agendas','iris'));
+        return view ('frontend.index', compact('agendas','iris','galleries'));
     }
 
 
