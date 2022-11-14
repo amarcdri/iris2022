@@ -9964,7 +9964,8 @@ ul {
 .contact-info__custom {
   position: relative;
   display: block;
-  background-color: var(--pifoxen-base);
+  /* background-color: var(--pifoxen-base); */
+  background-color: #2596be;
   border-radius: var(--pifoxen-bdr-radius);
   padding: 10px 5px 12px 9px;
   margin-bottom: 30px;
@@ -11678,4 +11679,21 @@ ul {
   border: none;
   height: 540px;
   width: 100%;
+}
+
+.cfp-details{
+  text-transform: uppercase;
+  padding-left: 18px;
+}
+
+li.clfpi {
+  color: white;
+}
+
+a.cfpa {
+  color: white;
+}
+
+a.cfpa:hover {
+  color: black;
 }

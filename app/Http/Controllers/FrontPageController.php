@@ -51,8 +51,6 @@ class FrontPageController extends Controller
         $agendas=Agenda::where('published','=',1)->where('eventtype','=',1)->where('ctid','=',2)->ORDERBY('startdate','ASC')->get();
         $iris=Agenda::where('published','=',1)->where('id','=',13)->where('ctid','=',1)->ORDERBY('startdate','ASC')->first();
         $galleries=Gallery::where('published','=',1)->ORDERBY('sequence','ASC')->get();
-        //return view('admin.page', compact('agendas'));
-        
         return view ('frontend.index', compact('agendas','iris','galleries'));
     }
 
@@ -63,60 +61,28 @@ class FrontPageController extends Controller
 
 
     public function faqs(){
-
         return view ('frontend.faqs');
-
     }
 
 
     public function about(){
-
-        return view('frontend.about');
+      return view('frontend.about');
     }
 
-
-    public function cop26details()
-    {
-        return view ('frontend.cop26details');
-    }
-
-    public function cop27details()
-    {
-        return view ('frontend.cop27details');
-    }
 
     public function agenda()
     {
         $agenda_infod=Agenda::where('published', 1)->where('ctid','=',2)->ORDERBY('startdate','ASC')->get();
-        
-
         return view ('frontend.agenda',compact('agenda_infod'));
     }
 
-    public function sessiondetail(Request $request,$id){
-        $sessions=Agenda::where('id','=',$id)->where('published','=',1)->get();
-        $agendaspeakers=AgendaSpeaker::where('agendaid',$id)->orderBy('sequence', 'ASC')->get();
-        return view('frontend.session',compact('sessions','agendaspeakers'));
-
+    public function irisCfp()
+    {
+        $cfps=Agenda::where('published', 1)->where('ctid','=',1)->where('id','=',14)->ORDERBY('startdate','ASC')->first();
+        return view('frontend.callforproposal',compact('cfps'));
     }
 
-
-    public function speakerdetail($slug){
-        $speakers=Speaker::where('slug','=',$slug)->where('published','=',1)->get();;
-       // $speakerdetail=Speaker::where('slug','=',$slug)->get();
-     return view('frontend.speaker-detail',compact('speakers'));
-
-    }
-
-
-    
-    public function allsession(){
-        $agendas=Agenda::where('published','=',1)->ORDERBY('startdate','ASC')->get();
-       
-     return view('frontend.allsession',compact('agendas'));
-
-    }
-
+  
 
     public function irisEoi()
     {
@@ -126,7 +92,7 @@ class FrontPageController extends Controller
         $iris_eoi_sub_sectors=IrisEoiSector::where('status','=',1)->get();
         $iris_eoi_thematics=IrisEoiThematic::where('status','=',1)->get();
         return view('frontend.iris_eoi', compact('countries','iris_eoi_coverages','iris_eoi_sub_sectors','iris_eoi_thematics'));
-        //return view('frontend.iris_eoi');
+        
     }
 
     public function irisEoiPost(Request $request)
