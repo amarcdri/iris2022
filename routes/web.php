@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FrontPageController;
 use App\Http\Controllers\AgendaController;
-use App\Http\Controllers\{AgendaSpeakerController,SpeakerController};
+use App\Http\Controllers\{AgendaSpeakerController,SpeakerController,GalleryController};
 
 /*
 |--------------------------------------------------------------------------
@@ -81,6 +81,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/addagendaspeaker/{id}',[AgendaSpeakerController::class,'addagendaspeaker'])->name('add.agenda.speaker');
     Route::post('/addagendaspeakerpost/{id}',[AgendaSpeakerController::class,'addagendaspeakerpost'])->name('add.agenda.speaker.post');
 
+    
+
       });
 
   });
@@ -96,6 +98,20 @@ Route::prefix('admin')->group(function () {
     Route::post('/editspeakerpost/{id}',[SpeakerController::class,'editspeakerpost'])->name('edit.speaker.post');
 
     });
+
+});
+
+/**********************add gallery ********************* */
+Route::prefix('admin')->group(function () {
+  Route::middleware('auth:admin')->group(function () {
+
+  Route::get('/gallery',[GalleryController::class,'gallery'])->name('gallery');
+  Route::get('/addgallery',[GalleryController::class,'addgallery'])->name('add.gallery');
+  Route::post('/addgallerypost',[GalleryController::class,'addgallerypost'])->name('add.gallery.post');
+  Route::get('/editgallery/{id}',[GalleryController::class,'editgallery'])->name('edit.gallery');
+  Route::post('/editgallerypost/{id}',[GalleryController::class,'editgallerypost'])->name('edit.gallery.post');
+
+  });
 
 });
 
