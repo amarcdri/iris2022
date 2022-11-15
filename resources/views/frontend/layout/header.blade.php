@@ -52,7 +52,7 @@
                        
                         </li>
                         <li>
-                            <a href="{{route('about')}}" class="dropdown">About</a>
+                            <a href="#" class="dropdown">About</a>
                             <ul>
                               
                                
@@ -60,17 +60,17 @@
                                 <li class="dropdown">
                                     <a href="#">Vision</a>
                                     <ul>
-                                        <li><a href="testimonials.html">English</a></li>
-                                        <li><a href="testimonials.html">English</a></li>
-                                        <li><a href="testimonials.html">English</a></li>
+                                        <li><a href="{{asset('./upload/pages/IRIS_Vision.pdf')}}">English</a></li>
+                                        {{-- <li><a href="testimonials.html">English</a></li>
+                                        <li><a href="testimonials.html">English</a></li> --}}
                                     </ul>
 
                                 </ul>    
                         </li>
                         <li>  <a href="#" class="dropdown">Governance</a> 
                             <ul>
-                                <li><a href="#">IRIS PMU</a></li>
-                                <li><a href="#">Steering Committee</a></li>
+                                <li><a href="{{route('page.details','pmu-iris')}}">IRIS PMU</a></li>
+                                <li><a href="{{route('page.details','steering-committee-iris')}}">Steering Committee</a></li>
                             </ul>
                         </li>
                         <li>
