@@ -31,13 +31,13 @@
                             <div class="volunteers-one__img">
                                 <img src="{{asset($pmuteam->image)}}" alt="">
                                 <div class="volunteers-one__social">
-                                    @if($pmuteam->twitter != 'NULL' && $pmuteam->twitter != '')
+                                    @if($pmuteam->twitter != 'NULL')
                                     <a href="{{$pmuteam->twitter}}"><i class="fab fa-twitter"></i></a>
                                     @endif
-                                    @if($pmuteam->facebook != 'NULL' && $pmuteam->twitter != '')
+                                    @if($pmuteam->facebook != 'NULL')
                                     <a href="{{$pmuteam->facebook}}"><i class="fab fa-facebook"></i></a>
                                     @endif
-                                    @if($pmuteam->linkedin != 'NULL' && $pmuteam->twitter != '')
+                                    @if($pmuteam->linkedin != 'NULL')
                                     <a href="{{$pmuteam->linkedin}}"><i class="fab fa-linkedin"></i></a>
                                     @endif
                                     {{-- <a href="{{$pmuteam->twitter}}"><i class="fab fa-instagram"></i></a> --}}
