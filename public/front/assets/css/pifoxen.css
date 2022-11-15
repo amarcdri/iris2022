@@ -4209,6 +4209,24 @@ margin-bottom: 6px;
   z-index: -1;
 }
 
+.fundraishing__btn-box1 {
+  margin-top: 30px;
+}
+
+.contact-info__custom1{
+background: #b91c26;
+padding: 11px;
+border-radius: 10px;
+}
+
+.contact-info__custom1:hover{
+background: #2596be;
+padding: 11px;
+border-radius: 10px;
+border: 2px solid #0000001f;
+box-shadow: 4px 5px #888888;
+}
+
 /*--------------------------------------------------------------
 # Quality Work
 --------------------------------------------------------------*/

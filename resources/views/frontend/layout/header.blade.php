@@ -78,7 +78,7 @@
                        
                         </li>
                         <li>
-                            <a href="{{route('faqs')}}">Faqs</a>
+                            <a href="{{route('page.detail','frequently-asked-questions')}}">Faqs</a>
                          
                         </li>
                        

@@ -267,11 +267,23 @@
             </div>
            
             @endforeach
+            
         </div>
 
+        <div class="row">
+            <div class="col-xl-12 text-center">
+            <div class="fundraishing__btn-box1">
+
+                <a href="{{route('iris.events')}}" class="thm-btn fundraishing__btn">View All</a>
+    
+            </div>
+            </div>
+        </div>
        
 
     </div>
+
+    
 </section>
 <!--Blog Two End-->
 
