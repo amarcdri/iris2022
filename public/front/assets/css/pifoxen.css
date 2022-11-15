@@ -25,7 +25,8 @@
   --pifoxen-white-rgb: 255, 255, 255;
   --pifoxen-black: #343434;
   --pifoxen-black-rgb: 52, 52, 52;
-  --pifoxen-base: #007aff;
+  /* --pifoxen-base: #007aff; */
+  --pifoxen-base: #2eabd8;
   --pifoxen-base-rgb: 255, 85, 40;
   --pifoxen-primary: #2eabd8;
   --pifoxen-primary-rgb: 255, 164, 21;

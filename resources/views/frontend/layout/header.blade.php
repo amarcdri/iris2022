@@ -74,7 +74,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Events</a>
+                            <a href="{{route('events')}}">Events</a>
                        
                         </li>
                         <li>
