@@ -26,7 +26,7 @@
                     @foreach($pmuteams as $pkey => $pmuteam)
                         
                     
-                    <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="col-xl-4 col-lg-4 col-md-6">
                         <!--Volunteers One Single-->
                         <div class="volunteers-one__single">
                             <div class="volunteers-one__img">
