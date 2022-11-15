@@ -2258,7 +2258,7 @@ ul {
 
 .main-slider .swiper-slide-active p {
   visibility: visible;
-  opacity: 0.6;
+  opacity: 3.6;
   -webkit-transform: translateY(0) translateX(0);
   transform: translateY(0) translateX(0);
 }
@@ -2426,8 +2426,8 @@ ul {
 }
 
 .main-slider-two h2 {
-  font-size: 100px;
-  line-height: 100px;
+  font-size: 63px;
+  line-height: 30px;
 }
 
 .main-slider-two p {

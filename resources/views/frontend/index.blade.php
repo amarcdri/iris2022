@@ -85,7 +85,7 @@
                         <div id="more">
                             {!!$iris->description!!} 
                         </div>
-                        <button class="btn btn-primary btn-sm" onclick="myFunction()" id="myBtn">Read More</button >
+                        <button class="btn btn-primary btn-sm" onclick="myFunction()" id="myBtn">Read more</button >
                             
                     </div>
 
