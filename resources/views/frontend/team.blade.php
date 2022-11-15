@@ -12,7 +12,7 @@
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="{{route('index')}}">Home</a></li>
                         <li><span>/</span></li>
-                        <li class="active">Team</li>
+                        <li class="active">Project Management team</li>
                     </ul>
                 </div>
             </div>
@@ -25,8 +25,7 @@
                 <div class="row">
                     @foreach($pmuteams as $pkey => $pmuteam)
                         
-                    
-                    <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="col-xl-3 col-lg-3 col-md-6">
                         <!--Volunteers One Single-->
                         <div class="volunteers-one__single">
                             <div class="volunteers-one__img">
