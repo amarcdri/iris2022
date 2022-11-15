@@ -243,41 +243,34 @@
 
         {{-- </div> --}}
 
+      
+            
+      
+
 
         <div class="row">
+            @foreach($events as $ekey => $event)
             <div class="col-xl-6 col-lg-6 wow slideInLeft animated" data-wow-delay="100ms" data-wow-duration="2500ms" style="visibility: visible; animation-duration: 2500ms; animation-delay: 100ms; animation-name: slideInLeft;">
                 <!--Feature One Single-->
                 <div class="feature-one__single">
                   
-                        <img src="assets/images/resources/donation-details-content-img-1.jpg" alt="">
+                        <img src="{{asset($event->image)}}" alt="">
                 
                     <div class="feature-one__content">
-                        <h4 class="feature-one__title">Sponsor an Entire Project</h4>
+                        <h4 class="feature-one__title">{{$event->title}}</h4>
                         <i class="fa fa-calendar one__text" aria-hidden="true"> </i>
 
-                        <p class="feature-one__text">There are many variations of available but the majority
-                            have suffered alteration.</p>
+                        <p class="feature-one__text">{{$event->subtitle}}</p>
                     </div>
-                    <a href="#" class="feature-one__btn">More</a>
+                    <a href="{{$event->slug}}" class="feature-one__btn">More</a>
                 </div>
             </div>
-            <div class="col-xl-6 col-lg-6 wow slideInRight animated" data-wow-delay="100ms" data-wow-duration="2500ms" style="visibility: visible; animation-duration: 2500ms; animation-delay: 100ms; animation-name: slideInRight;">
-                <!--Feature One Single-->
-                <div class="feature-one__single feature-one__single-2">
-                    <div class="feature-one__icon">
-                        <img src="front/assets/images/causes/causes-1-3.jpg" alt="" style="height:200px;">
-                    </div>
-                    <div class="feature-one__content">
-                        <h4 class="feature-one__title">Look at the Popular Causes</h4>
-                        <i class="fa fa-calendar one__text" aria-hidden="true"> </i>
-
-                        <p class="feature-one__text">There are many variations of available but the majority
-                            have suffered alteration.</p>
-                    </div>
-                    <a href="#" class="feature-one__btn">More</a>
-                </div>
-            </div>
+           
+            @endforeach
         </div>
+
+       
+
     </div>
 </section>
 <!--Blog Two End-->

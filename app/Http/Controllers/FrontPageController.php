@@ -49,10 +49,10 @@ class FrontPageController extends Controller
    
     public function index()
     {
-        $agendas=Agenda::where('published','=',1)->where('eventtype','=',1)->where('ctid','=',2)->ORDERBY('startdate','ASC')->get();
+        $events=Agenda::where('published','=',1)->where('eventtype','=',1)->where('ctid','=',2)->ORDERBY('startdate','ASC')->get();
         $iris=Agenda::where('published','=',1)->where('id','=',13)->where('ctid','=',1)->ORDERBY('startdate','ASC')->first();
         $galleries=Gallery::where('published','=',1)->ORDERBY('sequence','ASC')->get();
-        return view ('frontend.index', compact('agendas','iris','galleries'));
+        return view ('frontend.index', compact('events','iris','galleries'));
     }
 
 
