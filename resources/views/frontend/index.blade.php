@@ -15,9 +15,9 @@
                         <div class="feature-two__img">
                             <img src="front/assets/images/resources/feature-2-1.jpg" alt="">
                             <div class="feature-two__content">
-                                <h3 class="feature-two__title"><a href="{{route('iris.page','15')}}">Improved resilience<br>    of SIDS infrastructure <br>to climate change and disaster Risk
+                                <h3 class="feature-two__title"><a href="{{route('improved-resilience-sids-infrastructure')}}">Improved resilience<br>    of SIDS infrastructure <br>to climate change and disaster Risk
                                      </a></h3>
-                                <a href="{{route('iris.page','15')}}" class="feature-two__arrow"><span
+                                <a href="{{route('improved-resilience-sids-infrastructure')}}" class="feature-two__arrow"><span
                                         class="icon-right-arrow"></span></a>
                             </div>
                         </div>
@@ -29,9 +29,9 @@
                         <div class="feature-two__img feature-two__img-2">
                             <img src="front/assets/images/resources/feature-2-1.jpg" alt="">
                             <div class="feature-two__content">
-                                <h3 class="feature-two__title"><a href="{{route('iris.page','16')}}">Strengthened knowledge and Partnerships for intergrating resilience <br>
+                                <h3 class="feature-two__title"><a href="{{route('strengthened-knowledge-and-Partnerships-sids-infrastructure')}}">Strengthened knowledge and Partnerships for intergrating resilience <br>
                                         in SIDS  <br> infrastructure</a></h3>
-                                <a href="{{route('iris.page','16')}}" class="feature-two__arrow"><span
+                                <a href="{{route('strengthened-knowledge-and-Partnerships-sids-infrastructure')}}" class="feature-two__arrow"><span
                                         class="icon-right-arrow"></span></a>
                             </div>
                         </div>
@@ -43,9 +43,9 @@
                         <div class="feature-two__img feature-two__img-3">
                             <img src="front/assets/images/resources/feature-2-1.jpg" alt="">
                             <div class="feature-two__content">
-                                <h3 class="feature-two__title"><a href="{{route('iris.page','17')}}">Gender <br> equality <br>
+                                <h3 class="feature-two__title"><a href="{{route('gender-equality-and-disability-sids-infrastructure')}}">Gender <br> equality <br>
                                         and disability inclusion promoted through resilient SIDS infrastructure</a></h3>
-                                <a href="{{route('iris.page','17')}}" class="feature-two__arrow"><span
+                                <a href="{{route('gender-equality-and-disability-sids-infrastructure')}}" class="feature-two__arrow"><span
                                         class="icon-right-arrow"></span></a>
                             </div>
                         </div>
