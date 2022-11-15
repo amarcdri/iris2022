@@ -45,8 +45,8 @@
                                 </div>
                             </div>
                             <div class="volunteers-one__content">
-                                <h4 class="volunteers-one__name">{{$pmu->speakername}}</h4>
-                                <p class="volunteers-one__title">{{$pmu->designation}}</p>
+                                <h4 class="volunteers-one__name">{{$pmuteam->speakername}}</h4>
+                                <p class="volunteers-one__title">{{$pmuteam->designation}}</p>
                             </div>
                         </div>
                     </div>

@@ -90,7 +90,7 @@ class FrontPageController extends Controller
 
     public function irisPmu()
     {
-        $pmuteams=Speaker::where('published', 1)->where('stype','=',1)->where('published','=',1)->ORDERBY('sequence','ASC')->first();
+        $pmuteams=Speaker::where('published', 1)->where('stype','=',1)->where('published','=',1)->ORDERBY('sequence','ASC')->get();
         return view('frontend.team',compact('pmuteams'));
     }
 
