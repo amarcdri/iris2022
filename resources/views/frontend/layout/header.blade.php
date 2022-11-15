@@ -67,6 +67,12 @@
 
                                 </ul>    
                         </li>
+                        <li>  <a href="#" class="dropdown">Governance</a> 
+                            <ul>
+                                <li><a href="#">IRIS PMU</a></li>
+                                <li><a href="#">Steering Committee</a></li>
+                            </ul>
+                        </li>
                         <li>
                             <a href="#">Events</a>
                        
