@@ -19,6 +19,25 @@
         </div>
     </section>
     <!--Page Header End-->
+    @if($pages->detailedimage!='')
+    <section class="donations-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12">
+                    <div class="donation-details__left">
+
+                        <div class="donation-details__content">
+                            <img src="{{asset($pages->detailedimage)}}" class="iris-img" style="width:100%; height:400px;">
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    @endif
 
     <!--Donations Details Start-->
     <section class="donations-details">
