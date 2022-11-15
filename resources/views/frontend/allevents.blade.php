@@ -47,36 +47,36 @@
                             <div class="blog-one__date">
                                 <p>{{$hdate}}</p>
                             </div>
-                            <a href="{{asset($agenda->slugurl)}}">
+                            <a href="{{asset($agenda->slug)}}">
                                 <span class="news-one__plus"></span>
                             </a>
                         </div>
                         <div class="blog-one__content">
-                            <ul class="list-unstyled blog-one__meta">
-                                <li><a href="#"><i class="far fa-user-circle"></i> <i class="fa fa-calendar" aria-hidden="true"> </i>&nbsp; {{$date}}</a></li>
-                                <li><a href="#"><i class="far fa-comments"></i> 2 Comments</a>
-                                </li>
+                            {{-- <ul class="list-unstyled blog-one__meta">
+                                <li><a href="#">
+                                   
+                                    <i class="fa fa-calendar" aria-hidden="true"> </i>&nbsp; {{$date}}</a></li><br/>
+                              
                                  <br/><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp; {{$time}}&nbsp;{{'EET'}}<br/>
     
                      
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; {{$agenda->venue}} 
-                            </ul>
+                            </ul> --}}
     
-                    <div class="post-prev-info">
-                        {{-- 17<sup>TH</sup> NOVEMBER 2022 | 02:00 - 03:00 | {{$agenda->venue}} --}}
+                    {{-- <div class="post-prev-info">
                         <i class="fa fa-calendar" aria-hidden="true"> </i>&nbsp; {{$date}} <br/>
                         <i class="fa fa-clock" aria-hidden="true"></i>&nbsp; {{$time}}&nbsp;{{'EET'}}<br/>
                         <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; {{$agenda->venue}} 
                        
-                      </div>
+                      </div> --}}
                             <h3 class="blog-one__title">
-                                <a href="#">{{$agenda->title}}</a>
+                                <a href="{{asset($agenda->slug)}}">{{$agenda->title}}</a>
                             </h3>
                             <p class="blog-one__text" style="text-align:left">{{$agenda->subtitle}}
                             </p>
                             <div class="blog-one__bottom">
-                                <a href="#" class="blog-one__btn">Read More</a>
-                                <a href="#" class="blog-one__arrow"><span
+                                <a href="{{asset($agenda->slug)}}" class="blog-one__btn">Read More</a>
+                                <a href="{{asset($agenda->slug)}}" class="blog-one__arrow"><span
                                         class="icon-right-arrow"></span></a>
                             </div>
                         </div>
