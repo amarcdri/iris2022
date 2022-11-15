@@ -74,7 +74,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="{{route('events')}}">Events</a>
+                            <a href="{{route('iris.events')}}">Events</a>
                        
                         </li>
                         <li>
