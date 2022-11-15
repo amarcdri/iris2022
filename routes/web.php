@@ -25,6 +25,7 @@ Route::get('/team',[FrontPageController::class,'team'])->name('team');
 Route::get('/faqs', [FrontPageController::class, 'faqs'])->name('faqs');
 Route::get('/about-us',[FrontPageController::class,'about'])->name('about');
 Route::get('/eoi-iris',[FrontPageController::class,'irisEoi'])->name('iris.eoi');
+Route::get('/events',[FrontPageController::class,'events'])->name('iris.events');
 Route::post('/iris-eoi-post',[FrontPageController::class,'irisEoiPost'])->name('iris.eoi.post');
 Route::get('/call-for-proposals-iris',[FrontPageController::class,'irisCfp'])->name('iris.call.proposal');
 Route::get('/pages/{id}',[FrontPageController::class,'irisOutcome'])->name('iris.page');

@@ -88,6 +88,13 @@ class FrontPageController extends Controller
         return view('frontend.callforproposal',compact('cfps'));
     }
 
+    public function events()
+    {
+        $agendas=Agenda::where('published', 1)->where('ctid','=',1)->ORDERBY('startdate','DESC')->get();
+        return view('frontend.allevents',compact('agendas'));
+    }
+
+
   
 
     public function irisEoi()
