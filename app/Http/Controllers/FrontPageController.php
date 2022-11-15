@@ -10,6 +10,7 @@ use App\Models\Speaker;
 use App\Models\AgendaSpeaker;
 use App\Models\Gallery;
 use App\Models\{Country,IrisEoi,IrisEoiCoverage,IrisEoiThematic,IrisEoiSector};
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class FrontPageController extends Controller
 {
@@ -163,6 +164,21 @@ class FrontPageController extends Controller
         $pages=Agenda::where('published', 1)->where('id','=',$id)->first();
         return view('frontend.page',compact('pages'));
     }
+
+    public function pagedetail($name)
+    {
+
+        try {
+
+            $pages=Agenda::where('slug','=',$name)->where('published','=',1)->firstOrFail();
+
+          } catch (ModelNotFoundException $exception) {
+
+             return back()->withError($exception->getMessage())->withInput();
+          }
+          return view('frontend.page',compact('pages'));
+    }
+
 
 
 }
