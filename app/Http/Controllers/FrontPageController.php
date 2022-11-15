@@ -90,7 +90,7 @@ class FrontPageController extends Controller
 
     public function events()
     {
-        $agendas=Agenda::where('published', 1)->where('ctid','=',1)->ORDERBY('startdate','DESC')->get();
+        $agendas=Agenda::where('published', 1)->where('ctid','=',2)->ORDERBY('startdate','DESC')->get();
         return view('frontend.allevents',compact('agendas'));
     }
 
