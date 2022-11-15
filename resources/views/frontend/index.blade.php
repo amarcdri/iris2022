@@ -258,7 +258,7 @@
                 
                     <div class="feature-one__content">
                         <h4 class="feature-one__title">{{$event->title}}</h4>
-                        <i class="fa fa-calendar one__text" aria-hidden="true"> </i>
+                        {{-- <i class="fa fa-calendar one__text" aria-hidden="true"> </i> --}}
 
                         <p class="feature-one__text">{{$event->subtitle}}</p>
                     </div>

@@ -69,7 +69,7 @@
                         </li>
                         <li class="dropdown"> <a href="#" >Governance</a> 
                             <ul>
-                                <li><a href="{{route('page.detail','pmu-iris')}}">IRIS PMU</a></li>
+                                <li><a href="{{route('iris.pmu')}}">IRIS PMU</a></li>
                                 <li><a href="{{route('page.detail','steering-committee-iris')}}">Steering Committee</a></li>
                             </ul>
                         </li>

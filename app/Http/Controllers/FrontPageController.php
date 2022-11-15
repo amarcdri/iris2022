@@ -88,6 +88,12 @@ class FrontPageController extends Controller
         return view('frontend.callforproposal',compact('cfps'));
     }
 
+    public function irisPmu()
+    {
+        $pmuteams=Speaker::where('published', 1)->where('stype','=',1)->where('published','=',1)->ORDERBY('sequence','ASC')->first();
+        return view('frontend.team',compact('pmuteams'));
+    }
+
     public function events()
     {
         $agendas=Agenda::where('published', 1)->where('ctid','=',2)->ORDERBY('startdate','DESC')->get();
