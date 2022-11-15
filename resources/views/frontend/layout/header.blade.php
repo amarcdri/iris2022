@@ -82,7 +82,7 @@
                          
                         </li>
                        
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="{{route('page.detail','contact-us')}}" target="_blank">Contact</a></li>
                     </ul>
              
                 </div>
