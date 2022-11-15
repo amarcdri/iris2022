@@ -816,6 +816,7 @@ ul {
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 .main-menu .main-menu__list > li > a::before,
@@ -4105,6 +4106,12 @@ ul {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
   }
+  .feature-two__title {
+    font-size: 24px !important;
+line-height: 33px !important;
+margin-bottom: 6px;
+  }
+
 }
 
 /*--------------------------------------------------------------

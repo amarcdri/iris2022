@@ -79,29 +79,20 @@
             <div class="mobile-nav__content">
                 <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
-                <div class="logo-box">
-                    <a href="index.html" aria-label="logo image"><img src="{{asset('front/assets/images/resources/logo-2.png" alt="')}}"/></a>
-                </div>
-                <!-- /.logo-box -->
+           
                 <div class="mobile-nav__container"></div>
                 <!-- /.mobile-nav__container -->
 
-                <ul class="mobile-nav__contact list-unstyled">
-                    <li>
-                        <i class="fa fa-envelope"></i>
-                        <a href="mailto:needhelp@packageName__.com">needhelp@pifoxen.com</a>
-                    </li>
-                    <li>
-                        <i class="fa fa-phone-alt"></i>
-                        <a href="tel:666-888-0000">666 888 0000</a>
-                    </li>
-                </ul><!-- /.mobile-nav__contact -->
-                <div class="mobile-nav__top">
+           
+                <div class="mobile-nav__top" style="margin-top:20px;">
                     <div class="mobile-nav__social">
-                        <a href="#" class="fab fa-twitter"></a>
-                        <a href="#" class="fab fa-facebook-square"></a>
-                        <a href="#" class="fab fa-pinterest-p"></a>
-                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="https://twitter.com/cdri_world"  target="_
+                        blank" class="fab fa-twitter"></a>
+                        <a href="https://www.facebook.com/CDRI.world/"  target="_
+                        blank" class="fab fa-facebook-square"></a>
+                        <a href="https://www.linkedin.com/company/coalition-for-disaster-resilient-infrastructure/"  target="_
+                        blank" class="fab fa-linkedin"></a>
+                        <a href="https://www.youtube.com/channel/UCh44NgGlVNdx0rtwel9OFvA" target="_blank" class="fab fa-youtube"></a>
                     </div><!-- /.mobile-nav__social -->
                 </div><!-- /.mobile-nav__top -->
 
@@ -112,7 +103,7 @@
         </div>
         <!-- /.mobile-nav__wrapper -->
 
-        <div class="search-popup">
+        {{-- <div class="search-popup">
             <div class="search-popup__overlay search-toggler"></div>
             <!-- /.search-popup__overlay -->
             <div class="search-popup__content">
@@ -125,7 +116,7 @@
                 </form>
             </div>
             <!-- /.search-popup__content -->
-        </div>
+        </div> --}}
         <!-- /.search-popup -->
 
         <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
