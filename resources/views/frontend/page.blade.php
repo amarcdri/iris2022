@@ -19,7 +19,7 @@
         </div>
     </section>
     <!--Page Header End-->
-    @if($pages->detailedimage!='')
+    @if($pages->detailedimage!='NULL')
     <section class="donations-details">
         <div class="container">
             <div class="row">

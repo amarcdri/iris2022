@@ -39,8 +39,8 @@
                             <span class="icon-call"></span>
                         </div>
                         <div class="main-menu-wrapper__call-number">
-                            <p>Call Anytime</p>
-                            <h5><a href="tel:13073330079">+ 1 (307) 333-0079</a></h5>
+                            {{-- <p>Call Anytime</p>
+                            <h5><a href="tel:13073330079">+ 1 (307) 333-0079</a></h5> --}}
                         </div>
                     </div>
                 </div>
@@ -51,8 +51,8 @@
                             <a href="{{route('index')}}">Home</a>
                        
                         </li>
-                        <li>
-                            <a href="#" class="dropdown">About</a>
+                        <li class="dropdown">
+                            <a href="#">About</a>
                             <ul>
                               
                                
@@ -60,14 +60,14 @@
                                 <li class="dropdown">
                                     <a href="#">Vision</a>
                                     <ul>
-                                        <li><a href="{{asset('./upload/pages/IRIS_Vision.pdf')}}">English</a></li>
+                                        <li><a href="{{asset('./upload/pages/IRIS_Vision.pdf')}}" target="_blank">English</a></li>
                                         {{-- <li><a href="testimonials.html">English</a></li>
                                         <li><a href="testimonials.html">English</a></li> --}}
                                     </ul>
 
                                 </ul>    
                         </li>
-                        <li>  <a href="#" class="dropdown">Governance</a> 
+                        <li class="dropdown"> <a href="#" >Governance</a> 
                             <ul>
                                 <li><a href="{{route('page.detail','pmu-iris')}}">IRIS PMU</a></li>
                                 <li><a href="{{route('page.detail','steering-committee-iris')}}">Steering Committee</a></li>
