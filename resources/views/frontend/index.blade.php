@@ -254,7 +254,7 @@
                 <!--Feature One Single-->
                 <div class="feature-one__single">
                   
-                        <img src="{{asset($event->image)}}" alt="">
+                        <img src="{{asset($event->image)}}" alt="" style="height:160px;">
                 
                     <div class="feature-one__content">
                         <h4 class="feature-one__title">{{$event->title}}</h4>
