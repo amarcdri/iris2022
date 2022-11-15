@@ -29,9 +29,9 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="main-slider__content">
-                                <h2>Every Good <br> Act is a Charity</h2>
-                                <p>We are here to support you every step of the way</p>
-                                <a href="about.html" class="thm-btn">Call for Proposal</a>
+                                <h2>Call for Proposals 2022-23</h2>
+                                <p>Submit Expression of Interest application by 15 February 2023</p>
+                                <a href="#" class="thm-btn">Call for Proposals</a>
                                 {{-- <div class="main-slider-two-map">
                                     <img src="front/assets/images/shapes/main-slider-two-map.png" alt="">
                                 </div> --}}
