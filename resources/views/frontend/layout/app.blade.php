@@ -9,7 +9,17 @@
     <link rel="icon" type="image/x-icon"  href="{{asset('front/assets/favicon-16x16.png')}}"/>
    
     <link rel="manifest" href="{{asset('front/assets/images/favicons/site.webmanifest')}}"/>
-    <meta name="description" content="Pifoxen HTML Template For Donation" />
+    <meta name="description" content="IRIS-Call-for-Proposals" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F37GG9C49X"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-F37GG9C49X');
+    </script>
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -275,11 +275,12 @@ ul {
   width: 35px;
   background-color: #2eabd8;
   border-radius: 50%;
-  color: var(--pifoxen-base);
+  /* color: var(--pifoxen-base); */
+  color: white;
   text-align: center;
   line-height: 35px;
   display: inline-block;
-  margin-right: 16px;
+  margin-right: 10px;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }

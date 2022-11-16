@@ -100,7 +100,7 @@
                 </div>
                 
                 <div class="main-menu-wrapper__right">
-                         <a href="{{route('iris.call.proposal')}}"  target="_blank" class="donate-btn main-header-one__btn">&nbsp;&nbsp;Call for Proposals&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right"></i> </a>
+                         <a href="{{route('iris.call.proposal')}}"  target="_blank" class="donate-btn main-header-one__btn">&nbsp;&nbsp;&nbsp;&nbsp;Call for Proposals&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right"></i> </a>
                 </div>
             </div>
         </nav>
