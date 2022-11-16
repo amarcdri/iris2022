@@ -22,7 +22,7 @@
      
             <div class="swiper-slide">
                 <div class="image-layer"
-                    style="background-image: url(front/assets/images/backgrounds/slider01.jpg);">
+                    style="background-image: url(front/assets/images/backgrounds/slider-call-for-proposal.jpg);">
                 </div>
                 <!-- /.image-layer -->
                 <div class="container">
