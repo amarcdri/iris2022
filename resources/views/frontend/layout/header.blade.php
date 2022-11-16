@@ -51,7 +51,7 @@
                             <a href="{{route('index')}}">Home</a>
                        
                         </li>
-                        <li class="dropdown">
+                        {{-- <li class="dropdown">
                             <a href="#">About</a>
                             <ul>
                               
@@ -61,11 +61,15 @@
                                     <a href="#">Vision</a>
                                     <ul>
                                         <li><a href="{{asset('./upload/pages/IRIS_Vision.pdf')}}" target="_blank">English</a></li>
-                                        {{-- <li><a href="testimonials.html">English</a></li>
-                                        <li><a href="testimonials.html">English</a></li> --}}
+                                       
                                     </ul>
 
                                 </ul>    
+                        </li> --}}
+                        <li class="dropdown"> <a href="#" >Vision</a> 
+                            <ul>
+                                <li><a href="{{asset('./upload/pages/IRIS_Vision.pdf')}}" target="_blank">English</a></li>
+                            </ul>
                         </li>
                         <li class="dropdown"> <a href="#" >Governance</a> 
                             <ul>
