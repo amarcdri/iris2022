@@ -5604,10 +5604,18 @@ box-shadow: 4px 5px #888888;
   z-index: 3;
 }
 
-.feature-two__title {
+/* .feature-two__title {
   font-size: 30px;
   line-height: 48px;
   margin-bottom: 31px;
+} */
+
+.feature-two__title {
+  font-size: 27px;
+  line-height: 46px;
+  margin-bottom: 31px;
+  text-align: center;
+  padding: 13px 12px 2px 15px;
 }
 
 .feature-two__title a {

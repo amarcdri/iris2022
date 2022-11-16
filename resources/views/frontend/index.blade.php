@@ -15,7 +15,7 @@
                         <div class="feature-two__img">
                             <img src="front/assets/images/resources/feature-2-1.jpg" alt="">
                             <div class="feature-two__content">
-                                <h3 class="feature-two__title"><a href="{{route('page.detail','improved-resilience-sids-infrastructure')}}">Improved Resilience <br/>of SIDS infrastructure to Climate Change and Disaster Risks
+                                <h3 class="feature-two__title"><a href="{{route('page.detail','improved-resilience-sids-infrastructure')}}">Improved Resilience of SIDS infrastructure to Climate Change and Disaster Risks
                                      </a></h3>
                                 <a href="{{route('page.detail','improved-resilience-sids-infrastructure')}}" class="feature-two__arrow"><span
                                         class="icon-right-arrow"></span></a>

@@ -57,7 +57,7 @@
                             <a href="{{route('index')}}">Home</a>
                        
                         </li>
-                        {{-- <li class="dropdown">
+                        <li class="dropdown">
                             <a href="#">About</a>
                             <ul>
                               
@@ -69,14 +69,16 @@
                                         <li><a href="{{asset('./upload/pages/IRIS_Vision.pdf')}}" target="_blank">English</a></li>
                                        
                                     </ul>
+                                </li>
+                                <li><a href="{{asset('./upload/pages/IRIS_Call_for_Proposal.pdf')}}" target="_blank">Brochure</a></li>
 
                                 </ul>    
-                        </li> --}}
-                        <li class="dropdown"> <a href="#" >Vision</a> 
+                        </li>
+                        {{-- <li class="dropdown"> <a href="#" >About</a> 
                             <ul>
                                 <li><a href="{{asset('./upload/pages/IRIS_Vision.pdf')}}" target="_blank">English</a></li>
                             </ul>
-                        </li>
+                        </li> --}}
                         
                         <li  @if(Route::currentRouteName() === 'iris.pmu') class="dropdown current" @else class="dropdown" @endif> <a href="#" >Governance</a> 
                             <ul>
