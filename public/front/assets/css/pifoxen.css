@@ -5573,21 +5573,13 @@ box-shadow: 4px 5px #888888;
   border-radius: var(--pifoxen-bdr-radius);
 }
 
-/* .feature-two__img-2:before {
+.feature-two__img-2:before {
   background-color: rgba(var(--pifoxen-base-rgb), 0.8);
-} */
-
-/* .feature-two__img-3:before {
-  background-color: rgba(var(--pifoxen-primary-rgb), 0.8);
-} */
-.feature-two__img-2:before{
-  background-color: #315218;
 }
+
 .feature-two__img-3:before {
-  background-color: #2E68B3;
+  background-color: rgba(var(--pifoxen-primary-rgb), 0.8);
 }
-
-
 
 .feature-two__content {
   position: absolute;
