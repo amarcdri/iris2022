@@ -59,10 +59,10 @@
                         <p class="site-footer__bottom-text">© Copyright 2022 <a href="https://www.cdri.world/" target="_blank">CDRI</a>. All Rights Reserved 
                         </p>
                         <div class="site-footer__social">
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.facebook.com/CDRI.world/" target="_blank""><i class="fab fa-facebook"></i></a>
+                            <a href="https://twitter.com/cdri_world" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/coalition-for-disaster-resilient-infrastructure/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.youtube.com/channel/UCh44NgGlVNdx0rtwel9OFvA" target="_blank"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
