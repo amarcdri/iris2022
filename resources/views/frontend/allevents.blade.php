@@ -48,27 +48,11 @@
                                 <p>{{$hdate}}</p>
                             </div>
                             <a href="{{asset($agenda->slug)}}">
-                                <span class="news-one__plus"></span>
+                                {{-- <span class="news-one__plus"></span> --}}
                             </a>
                         </div>
                         <div class="blog-one__content">
-                            {{-- <ul class="list-unstyled blog-one__meta">
-                                <li><a href="#">
-                                   
-                                    <i class="fa fa-calendar" aria-hidden="true"> </i>&nbsp; {{$date}}</a></li><br/>
-                              
-                                 <br/><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp; {{$time}}&nbsp;{{'EET'}}<br/>
-    
-                     
-                                <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; {{$agenda->venue}} 
-                            </ul> --}}
-    
-                    {{-- <div class="post-prev-info">
-                        <i class="fa fa-calendar" aria-hidden="true"> </i>&nbsp; {{$date}} <br/>
-                        <i class="fa fa-clock" aria-hidden="true"></i>&nbsp; {{$time}}&nbsp;{{'EET'}}<br/>
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; {{$agenda->venue}} 
-                       
-                      </div> --}}
+                          
                             <h3 class="blog-one__title">
                                 <a href="{{asset($agenda->slug)}}">{{$agenda->title}}</a>
                             </h3>

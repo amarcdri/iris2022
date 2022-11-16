@@ -180,73 +180,7 @@
         <div class="section-title">
          <h3 class="donation-details__title">EVENTS</h3>
         </div>
-        {{-- <div class="row">
-            @foreach($agendas as $key => $agenda)
-            @php
-            $date='';
-            $time='';
-            $stime='';
-            $etime='';
-            $date=\Carbon\Carbon::parse($agenda->startdate)->format('M j, Y');
-            $hdate=\Carbon\Carbon::parse($agenda->startdate)->format('j M, Y');
-            $stime=\Carbon\Carbon::parse($agenda->startdate)->format('g:i A');
-            $etime=\Carbon\Carbon::parse($agenda->enddate)->format('g:i A');
-            $time=$stime.' - '.$etime;
-           @endphp 
-          
-            <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
-                <!--Blog One single-->
-                <div class="blog-one__single">
-                    <div class="blog-one__img">
-                        <img src="{{asset($agenda->image)}}" alt="">
-                        <div class="blog-one__date">
-                            <p>{{$hdate}}</p>
-                        </div>
-                        <a href="{{asset($agenda->slugurl)}}">
-                            <span class="news-one__plus"></span>
-                        </a>
-                    </div>
-                    <div class="blog-one__content">
-                        {{-- <ul class="list-unstyled blog-one__meta">
-                            <li><a href="#"><i class="far fa-user-circle"></i> <i class="fa fa-calendar" aria-hidden="true"> </i>&nbsp; {{$date}}</a></li>
-                            <li><a href="#"><i class="far fa-comments"></i> 2 Comments</a>
-                            </li>
-                             <br/><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp; {{$time}}&nbsp;{{'EET'}}<br/>
-
-                 
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; {{$agenda->venue}} 
-                        </ul> --}}
-
-                {{-- <div class="post-prev-info">
-                    {{-- 17<sup>TH</sup> NOVEMBER 2022 | 02:00 - 03:00 | {{$agenda->venue}} --}}
-                    {{-- <i class="fa fa-calendar" aria-hidden="true"> </i>&nbsp; {{$date}} <br/> --}}
-                    {{-- <i class="fa fa-clock" aria-hidden="true"></i>&nbsp; {{$time}}&nbsp;{{'EET'}}<br/>
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; {{$agenda->venue}}  --}}
-{{--                       
-                  </div>
-                        <h3 class="blog-one__title">
-                            <a href="#">{{$agenda->title}}</a>
-                        </h3>
-                        <p class="blog-one__text" style="text-align:left">{{$agenda->subtitle}}
-                        </p>
-                        <div class="blog-one__bottom">
-                            <a href="#" class="blog-one__btn">Read More</a>
-                            <a href="#" class="blog-one__arrow"><span
-                                    class="icon-right-arrow"></span></a>
-                        </div>
-                    </div>
-                </div> --}}
-            {{-- </div>
-            @endforeach
-           --}}
-          
-
-        {{-- </div> --}}
-
-      
-            
-      
-
+       
 
         <div class="row">
             @foreach($events as $ekey => $event)
