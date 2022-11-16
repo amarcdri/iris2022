@@ -8,7 +8,7 @@
            
             <div class="container">
                 <div class="page-header__inner">
-                    <h4>Team</h4>
+                    {{-- <h4>Team</h4> --}}
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="{{route('index')}}">Home</a></li>
                         <li><span>/</span></li>

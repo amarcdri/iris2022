@@ -9,7 +9,7 @@
         <meta content="CDRI" name="description" />
         <meta content="CDRI" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{ asset('admin/assets/images/favicon.ico')}}">
+        <link rel="shortcut icon" href="{{ asset('admin/assets/images/favicon-16x16.png')}}">
 
         <!-- Bootstrap Css -->
         <link href="{{ asset('admin/assets/css/bootstrap.min.css')}}" id="bootstrap-style" rel="stylesheet" type="text/css" />

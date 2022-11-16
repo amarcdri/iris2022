@@ -10,7 +10,7 @@
         <meta content="Themesdesign" name="author" />
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{asset('admin/assets/images/favicon.ico')}}">
+        <link rel="shortcut icon" href="{{asset('admin/assets/images/favicon-16x16.png')}}">
         <!-- jquery.vectormap css -->
         <link href="{{asset('admin/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css')}}" rel="stylesheet" type="text/css" />
         <!-- DataTables -->
