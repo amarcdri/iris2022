@@ -38,4 +38,24 @@ class Handler extends ExceptionHandler
             //
         });
     }
+
+    public function render($request, Throwable $e)
+    {
+        $msg = $e->getMessage();
+        $status = $e->getCode()==200?2:0;
+        if(config('app.debug') == false && $status == 0) {
+            $msg = "Something went wrong";
+        }
+        if($request->ajax()) {
+            $response = [
+                'status' => 0,
+                'msg' => $msg
+            ];
+            $status = $e->getCode()==0?500:$e->getCode();
+            
+            return response()->json($response, $status);
+        }
+
+        return parent::render($request, $e);
+    }
 }

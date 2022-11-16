@@ -57,6 +57,7 @@
     <!-- template styles -->
     <link rel="stylesheet" href="{{asset('front/assets/css/pifoxen.css')}}"/>
     <link rel="stylesheet" href="{{asset('front/assets/css/pifoxen-responsive.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/custom.css')}}"/>
     
     @yield('css')
 </head>
@@ -154,15 +155,11 @@
         <script src="{{asset('front/assets/vendors/vegas/vegas.min.js')}}"></script>
         <script src="{{asset('front/assets/vendors/jquery-ui/jquery-ui.js')}}"></script>
         <script src="{{asset('front/assets/vendors/timepicker/timePicker.js')}}"></script>
-
-
-
-
         <!-- template js -->
         <script src="{{asset('front/assets/js/pifoxen.js')}}"></script>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.js"></script>
-
+        <script src="{{asset('js/app.js')}}"></script>
+        <script src="{{asset('js/custom.js')}}"></script>
+        
         @yield('js')
     </body>
 
