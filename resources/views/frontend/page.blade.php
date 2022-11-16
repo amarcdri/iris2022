@@ -20,7 +20,7 @@
     </section>
     <!--Page Header End-->
     @if($pages->detailedimage!='NULL')
-    <section class="donations-details">
+    <section class="blog-one blog-two">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12 col-lg-12">
