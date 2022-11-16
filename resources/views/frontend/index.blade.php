@@ -271,7 +271,7 @@
         </div>
 
         <div class="row">
-            <div class="col-xl-12 text-center">
+            <div class="col-xl-12 text-center wow slideInLeft animated" data-wow-delay="100ms" data-wow-duration="2500ms" style="visibility: visible; animation-duration: 2500ms; animation-delay: 100ms; animation-name: slideInRight;">
             <div class="fundraishing__btn-box1">
 
                 <a href="{{route('iris.events')}}" class="thm-btn fundraishing__btn">View All</a>
