@@ -34,14 +34,14 @@
                             <div class="volunteers-one__img">
                                 <img src="{{asset($pmuteam->image)}}" alt="">
                                 <div class="volunteers-one__social">
-                                    @if($pmuteam->twitter != 'NULL')
-                                    <a href="{{$pmuteam->twitter}}"><i class="fab fa-twitter"></i></a>
+                                    {{-- @if($pmuteam->twitter != 'NULL')
+                                    <a href="{{$pmuteam->twitter}}" target="_blank"><i class="fab fa-twitter"></i></a>
                                     @endif
                                     @if($pmuteam->facebook != 'NULL')
-                                    <a href="{{$pmuteam->facebook}}"><i class="fab fa-facebook"></i></a>
-                                    @endif
+                                    <a href="{{$pmuteam->facebook}}" target="_blank"><i class="fab fa-facebook"></i></a>
+                                    @endif --}}
                                     @if($pmuteam->linkedin != 'NULL')
-                                    <a href="{{$pmuteam->linkedin}}"><i class="fab fa-linkedin"></i></a>
+                                    <a href="{{$pmuteam->linkedin}}" target="_blank"><i class="fab fa-linkedin"></i></a>
                                     @endif
                                     {{-- <a href="{{$pmuteam->twitter}}"><i class="fab fa-instagram"></i></a> --}}
                                 </div>
