@@ -44,6 +44,12 @@
                         </div>
                     </div>
                 </div>
+               @php 
+               $current_url=explode('/',url()->current());
+               $size=sizeof($current_url)-1;
+               $menu_url='';
+               $menu_url=$current_url[$size];
+               @endphp
                 <div class="main-menu-wrapper__main-menu">
                     <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                     <ul class="main-menu__list">
@@ -83,15 +89,16 @@
                             <a href="{{route('iris.events')}}">Events</a>
                        
                         </li>
-                        <li @if(Route::currentRouteName() === 'frequently-asked-questions') class="current" @endif>
+                        <li @if($menu_url === 'frequently-asked-questions') class="current" @endif>
                             <a href="{{route('page.detail','frequently-asked-questions')}}">Faqs</a>
                          
                         </li>
                        
-                        <li  @if(Route::currentRouteName() === 'contact-us') class="current" @endif><a href="{{route('page.detail','contact-us')}}">Contact</a></li>
+                        <li  @if($menu_url === 'contact-us') class="current" @endif><a href="{{route('page.detail','contact-us')}}">Contact</a></li>
                     </ul>
              
                 </div>
+                
                 <div class="main-menu-wrapper__right">
                          <a href="{{route('iris.call.proposal')}}"  target="_blank" class="donate-btn main-header-one__btn">&nbsp;&nbsp;Call for Proposals&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right"></i> </a>
                 </div>
