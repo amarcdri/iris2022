@@ -71,27 +71,28 @@
                                 <li><a href="{{asset('./upload/pages/IRIS_Vision.pdf')}}" target="_blank">English</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"> <a href="#" >Governance</a> 
+                        
+                        <li  @if(Route::currentRouteName() === 'iris.pmu') class="dropdown current" @else class="dropdown" @endif> <a href="#" >Governance</a> 
                             <ul>
                                 <li><a href="{{route('iris.pmu')}}">IRIS PMU</a></li>
                                 <li><a href="{{route('page.detail','steering-committee-iris')}}">Steering Committee</a></li>
                             </ul>
                         </li>
-                        <li>
+                        
+                        <li @if(Route::currentRouteName() === 'iris.events') class="current" @endif>
                             <a href="{{route('iris.events')}}">Events</a>
                        
                         </li>
-                        <li>
+                        <li @if(Route::currentRouteName() === 'frequently-asked-questions') class="current" @endif>
                             <a href="{{route('page.detail','frequently-asked-questions')}}">Faqs</a>
                          
                         </li>
                        
-                        <li><a href="{{route('page.detail','contact-us')}}" target="_blank">Contact</a></li>
+                        <li  @if(Route::currentRouteName() === 'contact-us') class="current" @endif><a href="{{route('page.detail','contact-us')}}" target="_blank">Contact</a></li>
                     </ul>
              
                 </div>
                 <div class="main-menu-wrapper__right">
-                    
                          <a href="{{route('iris.call.proposal')}}"  target="_blank" class="donate-btn main-header-one__btn">&nbsp;&nbsp;Call for Proposals&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right"></i> </a>
                 </div>
             </div>

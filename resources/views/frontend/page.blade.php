@@ -27,7 +27,7 @@
                     <div class="donation-details__left">
 
                         <div class="donation-details__content">
-                            <img src="{{asset($pages->detailedimage)}}" class="iris-img" style="width:100%; height:400px;">
+                            <img src="{{asset($pages->detailedimage)}}" class="iris-img" style="width:100%; height:500px;">
                         </div>
 
 
