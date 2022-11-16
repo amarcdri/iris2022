@@ -88,7 +88,7 @@
                          
                         </li>
                        
-                        <li  @if(Route::currentRouteName() === 'contact-us') class="current" @endif><a href="{{route('page.detail','contact-us')}}" target="_blank">Contact</a></li>
+                        <li  @if(Route::currentRouteName() === 'contact-us') class="current" @endif><a href="{{route('page.detail','contact-us')}}">Contact</a></li>
                     </ul>
              
                 </div>
