@@ -145,20 +145,18 @@ class FrontPageController extends Controller
         }
         $input = $request->all();
         $iris_eoi = IrisEoi::create($input);
-        
+        $iris_eoi->eoi_no = "IRIS/".date("Ymd")."/".$iris_eoi->id;
         if($request->file('endorsement_letter')) {
             $iris_eoi->endorsement_letter = $this->upload($request->file('endorsement_letter'), $this->iris_eoi_upload_path, $iris_eoi->id, $request->file('endorsement_letter')->getClientOriginalName().'_'.$iris_eoi->id);
-            $iris_eoi->save();
         }
         if($request->file('add_info1')) {
             $iris_eoi->add_info1 = $this->upload($request->file('add_info1'), $this->iris_eoi_upload_path, $iris_eoi->id, $request->file('add_info1')->getClientOriginalName().'_'.$iris_eoi->id);
-            $iris_eoi->save();
         }
 
         if($request->file('add_info2')) {
             $iris_eoi->add_info2 = $this->upload($request->file('add_info2'), $this->iris_eoi_upload_path, $iris_eoi->id, $request->file('add_info2')->getClientOriginalName().'_'.$iris_eoi->id);
-            $iris_eoi->save();
         }
+        $iris_eoi->save();
 
         Mail::to('pawan.umrao@cdri.world')->send(new SendMail([
             'subject' => 'IRIS-EOI Registration',
@@ -169,11 +167,12 @@ class FrontPageController extends Controller
             'page' => 'email.eoi',
             'content' => [
                 'name' => $input['title']." ".$input['first_name']." ".$input['last_name'],
+                'eoi_no' => $iris_eoi->eoi_no,
             ]
         ]));
         return response()->json([
             'status' => 1,
-            'msg' => 'EOI registration submitted successfully'
+            'msg' => 'EOI registration submitted successfully with EOI Number '.$iris_eoi->eoi_no
         ]);
 
 

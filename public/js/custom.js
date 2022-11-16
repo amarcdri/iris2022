@@ -50,7 +50,7 @@ function submitForm(form, url, redirect_url) {
                 if (rslt.msg) {
                     Swal.fire({
                         icon: 'success',
-                        title: 'Success',
+                        title: 'Thank you',
                         text: rslt.msg,
                         allowOutsideClick: false
                     }).then(function() {
