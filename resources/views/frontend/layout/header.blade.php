@@ -70,7 +70,7 @@
                                        
                                     </ul>
                                 </li>
-                                <li><a href="{{asset('./upload/pages/IRIS_Call_for_Proposal.pdf')}}" target="_blank">Brochure</a></li>
+                                <li><a href="{{asset('./upload/pages/IRIS_Brochure.pdf')}}" target="_blank">Brochure</a></li>
 
                                 </ul>    
                         </li>
