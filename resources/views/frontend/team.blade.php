@@ -12,7 +12,7 @@
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="{{route('index')}}">Home</a></li>
                         <li><span>/</span></li>
-                        <li class="active">Project Management team</li>
+                        <li class="active">Project Management Unit</li>
                     </ul>
                 </div>
             </div>
@@ -20,8 +20,11 @@
         <!--Page Header End-->
 
         <!--Volunteers Page Start-->
-        <section class="volunteers-one">
+        <section class="blog-one blog-two">
             <div class="container">
+                <div class="section-title">
+             <h3 class="donation-details__title">PROJECT MANAGEMENT TEAM</h3>
+            </div>
                 <div class="row">
                     @foreach($pmuteams as $pkey => $pmuteam)
                         
