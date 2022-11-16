@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Validator;
 
 use Illuminate\Http\Request;
 use App\Models\Agenda;
+use App\Models\Speaker;
+use App\Models\AgendaSpeaker;
 use App\Models\Gallery;
 use App\Models\{Country,IrisEoi,IrisEoiCoverage,IrisEoiThematic,IrisEoiSector};
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -110,7 +112,7 @@ class FrontPageController extends Controller
         $iris_eoi_coverages=IrisEoiCoverage::where('status','=',1)->get();
         $iris_eoi_sub_sectors=IrisEoiSector::where('status','=',1)->get();
         $iris_eoi_thematics=IrisEoiThematic::where('status','=',1)->get();
-        return view('frontend.eoi', compact('countries','iris_eoi_coverages','iris_eoi_sub_sectors','iris_eoi_thematics'));
+        return view('frontend.iris_eoi', compact('countries','iris_eoi_coverages','iris_eoi_sub_sectors','iris_eoi_thematics'));
         
     }
 
@@ -130,7 +132,7 @@ class FrontPageController extends Controller
             'project_name'=>'required',
             'lead_country'=>'required',
             'govern_agency'=>'required',
-            'govern_agency_email'=>'required|email',
+            'govern_agency_email'=>'required',
             'govern_agency_profile'=>'required',
             'coverage'=>'required',
             'regions'=>'required_if:coverage,==,2',
@@ -142,50 +144,31 @@ class FrontPageController extends Controller
             'endorsement_letter'=>'required|mimes:pdf|max:10240',
             'add_info1'=>'mimes:pdf|max:10240',
             'add_info2'=>'mimes:pdf|max:10240',
-        ], [
-            'govern_agency.required' => 'Applicant government agency field is required',
-            'govern_agency_email.required' => 'Government agency email field is required',
-            'govern_agency_profile.required' => 'Applicant government agency profile field is required',
-            'sectors.required' => 'At least one infrastructure sectors is required',
-            'thematic_area.required' => 'At least one thematic area is required',
-            'proposal_need.required' => 'Need for proposal field is required',
-            'complementarity.required' => 'Alignment and complementarity with IRIS outcomes & others SIDS initiatives field is required',
-            'endorsement_letter.required' => 'Letter of endorsement field is required',
         ]);
 
         if ($validator->fails()) {
             return response()->json(['validation_errors' => $validator->errors()]);
         }
         $input = $request->all();
+       
         $iris_eoi = IrisEoi::create($input);
-        $iris_eoi->eoi_no = "IRIS/".date("Ymd")."/".$iris_eoi->id;
         if($request->file('endorsement_letter')) {
             $iris_eoi->endorsement_letter = $this->upload($request->file('endorsement_letter'), $this->iris_eoi_upload_path, $iris_eoi->id, $request->file('endorsement_letter')->getClientOriginalName().'_'.$iris_eoi->id);
+            $iris_eoi->save();
         }
         if($request->file('add_info1')) {
             $iris_eoi->add_info1 = $this->upload($request->file('add_info1'), $this->iris_eoi_upload_path, $iris_eoi->id, $request->file('add_info1')->getClientOriginalName().'_'.$iris_eoi->id);
+            $iris_eoi->save();
         }
 
         if($request->file('add_info2')) {
             $iris_eoi->add_info2 = $this->upload($request->file('add_info2'), $this->iris_eoi_upload_path, $iris_eoi->id, $request->file('add_info2')->getClientOriginalName().'_'.$iris_eoi->id);
+            $iris_eoi->save();
         }
-        $iris_eoi->save();
 
-        Mail::to('pawan.umrao@cdri.world')->send(new SendMail([
-            'subject' => 'IRIS-EOI Registration',
-            'from_email' => 'info@cdri.world',
-            'from_name' => 'IRIS',
-            'reply_to_email' => 'do-not-reply@cdri.world',
-            'reply_to_name' => 'do-not-reply',
-            'page' => 'email.eoi',
-            'content' => [
-                'name' => $input['title']." ".$input['first_name']." ".$input['last_name'],
-                'eoi_no' => $iris_eoi->eoi_no,
-            ]
-        ]));
         return response()->json([
             'status' => 1,
-            'msg' => 'EOI registration submitted successfully with EOI Number '.$iris_eoi->eoi_no
+            // 'msg' => 'Travel itinerary submitted successfully'
         ]);
 
 
