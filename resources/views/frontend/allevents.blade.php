@@ -23,7 +23,7 @@
     <section class="blog-one blog-two">
         <div class="container">
             <div class="section-title">
-             <h3 class="donation-details__title">EVENTS</h3>
+             <h3 class="donation-details__title">Events</h3>
             </div>
             <div class="row">
                 @foreach($agendas as $key => $agenda)

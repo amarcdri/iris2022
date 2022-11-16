@@ -12,7 +12,7 @@
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="{{route('index')}}">Home</a></li>
                         <li><span>/</span></li>
-                        <li class="active">Project Management Unit</li>
+                        <li class="active">Project Management Unit Team</li>
                     </ul>
                 </div>
             </div>
@@ -23,7 +23,7 @@
         <section class="blog-one blog-two">
             <div class="container">
                 <div class="section-title">
-             <h3 class="donation-details__title">PROJECT MANAGEMENT TEAM</h3>
+             <h3 class="donation-details__title">Project Management Unit</h3>
             </div>
                 <div class="row">
                     @foreach($pmuteams as $pkey => $pmuteam)
