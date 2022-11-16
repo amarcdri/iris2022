@@ -31,14 +31,14 @@
                                         enctype="multipart/form-data" autocomplete="on">
                                         @csrf
                                         @method('post')
-                                        <div class="card mt-3 border-info">
+                                        <div class="card mt-3 border-info shadow-lg">
                                             <div class="card-header bg-info text-white">
                                                 Nodal Person
                                             </div>
                                             <div class="card-body row">
                                                 <div class="col-md-4 mb-3">
-                                                    <label class="">Title </label><span class="text-danger">*</span>
-                                                    <select class="form-control bg-white" name="title">
+                                                    <label class="label">Title </label><span class="text-danger">*</span>
+                                                    <select class="form-control bg-white" name="title" id="title">
                                                         <option value="">Select</option>
                                                         <option value="Dr.">Dr</option>
                                                         <option value="Prof.">Prof</option>
@@ -50,24 +50,22 @@
                                                 </div>
 
                                                 <div class="col-md-4 mb-3">
-                                                    <label class="f-12">First Name</label><span
+                                                    <label class="label">First Name</label><span
                                                         class="text-danger">*</span>
-                                                    <input type="text" class="form-control bg-white" placeholder=""
-                                                        name="first_name">
+                                                    <input type="text" class="form-control bg-white" placeholder="" name="first_name" id="first_name">
                                                     <span class="msg first_name"></span>
                                                 </div>
 
                                                 <div class="col-md-4 mb-3">
-                                                    <label class="">Last Name</label><span
+                                                    <label class="label">Last Name</label><span
                                                         class="text-danger">*</span>
-                                                    <input type="text" class="form-control bg-white" placeholder=""
-                                                        name="last_name">
+                                                    <input type="text" class="form-control bg-white" placeholder="" name="last_name" id="last_name">
                                                     <span class="msg last_name"></span>
                                                 </div>
 
                                                 <div class="col-md-4 mb-3">
-                                                    <label class="">Gender</label><span class="text-danger">*</span>
-                                                    <select class="form-control bg-white" name="gender">
+                                                    <label class="label">Gender</label><span class="text-danger">*</span>
+                                                    <select class="form-control bg-white" name="gender" id="gender">
                                                         <option value="">Select</option>
                                                         <option value="male">Male</option>
                                                         <option value="female">Female</option>
@@ -77,9 +75,8 @@
                                                 </div>
 
                                                 <div class="col-md-4 mb-3">
-                                                    <label class="">Email</label><span class="text-danger">*</span>
-                                                    <input type="email" class="form-control bg-white" placeholder=""
-                                                        name="email">
+                                                    <label class="label">Email</label><span class="text-danger">*</span>
+                                                    <input type="email" class="form-control bg-white" placeholder="" name="email" id="email">
                                                     <span class="msg email"></span>
                                                 </div>
 
@@ -90,23 +87,23 @@
                                                     </div> --}}
 
                                                 <div class="col-md-4 mb-3">
-                                                    <label class="">Mobile</label><span class="text-danger">*</span>
+                                                    <label class="label">Mobile</label><span class="text-danger">*</span>
 
-                                                    <input type="text" class="form-control bg-white" placeholder=""
-                                                        name="mobile">
+                                                    <input type="text" class="form-control bg-white" placeholder="" name="mobile" id="mobile">
                                                     <span class="msg mobile"></span>
                                                 </div>
 
-
                                                 <div class="col-md-4 mb-3">
-                                                    <label class="">Designation</label><span
+                                                    <label class="label">Designation</label><span
                                                         class="text-danger">*</span>
-                                                    <input type="text" class="form-control bg-white" name="designation">
+
+                                                    <input type="text" class="form-control bg-white" name="designation"
+                                                        id="designation">
                                                     <span class="msg designation"></span>
                                                 </div>
 
                                                 <div class="col-md-4 mb-3">
-                                                    <label class="">Organization/Affiliation</label><span
+                                                    <label class="label">Organization/Affiliation</label><span
                                                         class="text-danger">*</span>
 
                                                     <input type="text" class="form-control bg-white" name="organization"
@@ -115,7 +112,7 @@
                                                 </div>
 
                                                 <div class="col-md-4 mb-3">
-                                                    <label class="">Country</label><span class="text-danger">*</span>
+                                                    <label class="label">Country</label><span class="text-danger">*</span>
                                                     <select class="form-control bg-white" id="country" name="country">
                                                         <option value="">Select </option>
                                                         @foreach ($countries as $val)
@@ -128,13 +125,13 @@
 
                                             </div>
                                         </div>
-                                        <div class="card mt-3 border-info">
+                                        <div class="card mt-3 border-info shadow-lg">
                                             <div class="card-header bg-info text-white">
                                                 Proposal
                                             </div>
                                             <div class="card-body row">
                                                 <div class="col-md-6 mb-3">
-                                                    <label class="">Name of Project</label><span
+                                                    <label class="label">Name of Project</label><span
                                                         class="text-danger">*</span>
 
                                                     <input type="text" class="form-control bg-white"
@@ -143,7 +140,7 @@
                                                 </div>
 
                                                 <div class="col-md-6 mb-3">
-                                                    <label class="">Lead Country</label><span
+                                                    <label class="label">Lead Country</label><span
                                                         class="text-danger">*</span>
                                                     <select class="form-control bg-white" id="lead_country"
                                                         name="lead_country">
@@ -157,7 +154,7 @@
                                                 </div>
 
                                                 <div class="col-md-6 mb-3">
-                                                    <label class="">Applicant Government Agency</label><span
+                                                    <label class="label">Applicant Government Agency</label><span
                                                         class="text-danger">*</span>
 
                                                     <input type="text" class="form-control bg-white"
@@ -166,7 +163,7 @@
                                                 </div>
 
                                                 <div class="col-md-6 mb-3">
-                                                    <label class="">Government Agency Email</label><span
+                                                    <label class="label">Government Agency Email</label><span
                                                         class="text-danger">*</span>
 
                                                     <input type="text" class="form-control bg-white"
@@ -175,14 +172,14 @@
                                                 </div>
 
                                                 <div class="col-md-12 mb-3">
-                                                    <label class="">Applicant Government Agency Profile</label><span
+                                                    <label class="label">Applicant Government Agency Profile</label><span
                                                         class="text-danger">*</span>
                                                     <textarea class="form-control bg-white" name="govern_agency_profile" id="govern_agency_profile" rows="5"></textarea>
                                                     <span class="msg govern_agency_profile"></span>
                                                 </div>
 
                                                 <div class="col-md-6 mb-3">
-                                                    <label class="">Other Participating Government Agencies (if
+                                                    <label class="label">Other Participating Government Agencies (if
                                                         any)</label>
 
                                                     <input type="text" class="form-control bg-white"
@@ -191,16 +188,16 @@
                                                 </div>
 
                                                 <div class="col-md-6 mb-3">
-                                                    <label class="">Implementing Partners (if any)</label>
+                                                    <label class="label">Implementing Partners (if any)</label>
 
                                                     <input type="text" class="form-control bg-white"
                                                         name="implement_partner" id="implement_partner">
-                                                    <span class="msg agency"></span>
+                                                    <span class="msg implement_partner"></span>
                                                 </div>
 
 
                                                 <div class="col-md-6 mb-3">
-                                                    <label class="">Coverage</label><span
+                                                    <label class="label">Coverage</label><span
                                                         class="text-danger">*</span>
                                                     <select class="form-control bg-white" id="coverage" name="coverage"
                                                         onchange='CheckRegional(this.value);'>
@@ -210,11 +207,11 @@
                                                                 {{ $iris_eoi_coverage->name }} </option>
                                                         @endforeach
                                                     </select>
-                                                    <span class="msg country"></span>
+                                                    <span class="msg coverage"></span>
                                                 </div>
 
                                                 <div class="col-md-6 mb-3" style="display:none" id="regional">
-                                                    <label class="">Regions (Separated by Commas)</label>
+                                                    <label class="label">Regions (Separated by Commas)</label>
 
                                                     <input type="text" class="form-control bg-white" name="regions"
                                                         id="regions">
@@ -223,7 +220,7 @@
 
 
                                                 <div class="col-md-12 mb-3">
-                                                    <label class="">Infrastructure Sectors</label><span
+                                                    <label class="label">Infrastructure Sectors</label><span
                                                         class="text-danger">*</span>&nbsp;(tick one or more)
                                                     <div class="col-12 row">
                                                         @foreach ($iris_eoi_sub_sectors as $key => $iris_eoi_sub_sector)
@@ -242,7 +239,7 @@
                                                 </div>
 
                                                 <div class="col-md-12 mb-3">
-                                                    <label class="">Thematic Areas</label><span
+                                                    <label class="label">Thematic Areas</label><span
                                                         class="text-danger">*</span>&nbsp;(tick one or more)
                                                     <div class="col-12 row">
                                                         @foreach ($iris_eoi_thematics as $key => $iris_eoi_thematic)
@@ -263,21 +260,21 @@
 
 
                                                 <div class="col-md-12 mb-3">
-                                                    <label class="">Need for Proposal</label><span
+                                                    <label class="label">Need for Proposal</label><span
                                                         class="text-danger">*</span>
                                                     <textarea class="form-control bg-white" name="proposal_need" id="proposal_need" rows="5"></textarea>
                                                     <span class="msg proposal_need"></span>
                                                 </div>
 
                                                 <div class="col-md-12 mb-3">
-                                                    <label class="">Proposed Action</label><span
+                                                    <label class="label">Proposed Action</label><span
                                                         class="text-danger">*</span>
                                                     <textarea class="form-control bg-white" name="proposed_action" id="proposed_action" rows="5"></textarea>
                                                     <span class="msg proposed_action"></span>
                                                 </div>
 
                                                 <div class="col-md-12 mb-3">
-                                                    <label class="">Alignment and Complementarity with IRIS outcomes
+                                                    <label class="label">Alignment and Complementarity with IRIS outcomes
                                                         & others SIDS initiatives<span class="text-danger">*</span></label>
                                                     <textarea class="form-control bg-white" name="complementarity" id="complementarity" rows="5"></textarea>
                                                     <span class="msg complementarity"></span>
@@ -286,7 +283,7 @@
 
 
                                                 <div class="col-md-6 mb-3">
-                                                    <label class="">Letter of endorsement</label>
+                                                    <label class="label">Letter of endorsement</label>
                                                     <br />
                                                     <i>
                                                         <font style="color:#2596be;"> (Max. size 10 MB, Allowed Formats:
@@ -298,7 +295,7 @@
                                                 </div>
 
                                                 <div class="col-md-6 mb-3">
-                                                    <label class="">Additional Information 1 (if any)</label>
+                                                    <label class="label">Additional Information 1 (if any)</label>
                                                     <br />
                                                     <i>
                                                         <font style="color:#2596be;"> (Max. size 10 MB, Allowed Formats:
@@ -311,7 +308,7 @@
                                                 </div>
 
                                                 <div class="col-md-6 mb-3">
-                                                    <label class="">Additional Information 2 (if any)</label>
+                                                    <label class="label">Additional Information 2 (if any)</label>
                                                     <br />
                                                     <i>
                                                         <font style="color:#2596be;"> (Max. size 10 MB, Allowed Formats:
@@ -321,10 +318,6 @@
                                                         class="form-control bg-white">
                                                     <span class="msg add_info2"></span>
                                                 </div>
-
-
-
-
                                             </div>
                                         </div>
                                         <div class="form-group mt-3 text-center">
@@ -346,7 +339,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -354,39 +346,17 @@
 
 @section('css')
 <style>
-    fieldset.scheduler-border {
-        border: 1px groove #ddd !important;
-        padding: 0 1.4em 1.4em 1.4em !important;
-        margin: 0 0 1.5em 0 !important;
-        -webkit-box-shadow: 0px 0px 0px 0px #000;
-        box-shadow: 0px 0px 0px 0px #000;
-    }
-
-    legend.scheduler-border {
-        font-size: 1.2em !important;
-        font-weight: bold !important;
-        text-align: left !important;
-    }
-
-    .hr-text {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .hr-text:before,
-    .hr-text:after {
-        content: "";
-        flex: 1 1;
-        border-bottom: 1px solid rgb(110, 108, 108);
-        margin: auto;
-    }
-
-    .hide {
-        display: none;
-    }
+.bg-info, .btn-info {
+    background-color: #2eabd8!important;
+}
+.border-info {
+    border-color: #2eabd8!important;
+}
+.label {
+    font-weight: bold
+}
 </style>
 @endsection
-
 @section('js')
     <script>
         function CheckRegional(val) {
@@ -401,97 +371,7 @@
 
         }
 
-        //  Toast: Start
-        var Toast = Swal.mixin({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-                toast.addEventListener('mouseenter', Swal.stopTimer)
-                toast.addEventListener('mouseleave', Swal.resumeTimer)
-            },
-        });
-        // Toast: End
-
-        function redirect(url) {
-            window.location = url;
-        }
-
-        function submitForm(form, url, redirect_url) {
-            $(".msg").html("");
-            var method = 'get';
-            var fd = '';
-            if (form) {
-                method = 'post';
-                $("#" + form + "_btn_spinner").removeClass('d-none');
-                $("#" + form + "_btn_submit").addClass('d-none');
-                fd = new FormData($("#" + form)[0]);
-            }
-            $.ajax({
-                url: url,
-                type: method,
-                data: fd,
-                contentType: false,
-                processData: false,
-                success: function(rslt) {
-                    $("#" + form + "_btn_spinner").addClass('d-none');
-                    $("#" + form + "_btn_submit").removeClass('d-none');
-                    if (rslt.validation_errors) {
-                        let first_key = "";
-                        $.each(rslt.validation_errors, function(key, value) {
-                            if (!first_key) {
-                                first_key = key;
-                            }
-                            $("#" + key).addClass("is-invalid");
-                            $("." + key).addClass("text-danger");
-                            $("." + key).html(value);
-                            $("#" + first_key).focus();
-                        });
-                    } else if (rslt.status == 1) {
-                        if (rslt.msg) {
-                            Toast.fire({
-                                icon: 'success',
-                                title: 'Success',
-                                text: rslt.msg,
-                            }).then(function() {
-                                if (redirect_url) {
-                                    window.location = redirect_url;
-                                }
-                            });
-                        } else if (redirect_url) {
-                            window.location = redirect_url;
-                        }
-                    } else if (rslt.status == 2) {
-                        Toast.fire({
-                            icon: 'warning',
-                            title: 'Warning',
-                            text: rslt.msg
-                        });
-                    } else {
-                        Toast.fire({
-                            icon: 'error',
-                            title: 'Error',
-                            text: rslt.msg
-                        });
-                    }
-                },
-                error: function(e, status) {
-                    var response = JSON.parse(e.responseText);
-                    alert(response);
-                    return false;
-                    $("#" + form + "_btn_spinner").addClass('d-none');
-                    $("#" + form + "_btn_submit").removeClass('d-none');
-                    Toast.fire({
-                        icon: 'error',
-                        title: "Error",
-                        text: response.msg
-                    });
-                }
-            });
-            return false;
-        }
+        
 
         $(document).ready(function() {
             $('textarea').each(function() {
