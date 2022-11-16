@@ -31,7 +31,7 @@
                             <div class="main-slider__content">
                                 <h2>Call for Proposals 2022-23</h2>
                                 <p>Submit Expression of Interest application by 15 February 2023</p>
-                                <a href="#" class="thm-btn">Call for Proposals</a>
+                                <a href="{{route('page.detail','call-for-proposals-iris')}}" class="thm-btn">Call for Proposals</a>
                                 {{-- <div class="main-slider-two-map">
                                     <img src="front/assets/images/shapes/main-slider-two-map.png" alt="">
                                 </div> --}}
