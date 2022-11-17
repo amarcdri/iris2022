@@ -185,11 +185,12 @@ class FrontPageController extends Controller
             'content' => [
                 'name' => $input['title']." ".$input['first_name']." ".$input['last_name'],
                 'eoi_no' => $iris_eoi->eoi_no,
+                '$eoi_project'=>$input['project_name']
             ]
         ]));
         return response()->json([
             'status' => 1,
-            'msg' => 'EoI has been submitted successfully. The reference number is '.$iris_eoi->eoi_no.' Kindly take a note of reference for future purpose.'
+            'msg' => 'You EoI with reference number is '.$iris_eoi->eoi_no.' has been submitted successfully. Kindly note the reference   number for future enquiry.'
         ]);
 
 

@@ -6,20 +6,15 @@
     </head>
     <body>
         Dear {{$name}},<br>
-        <h3>
-            Thank you
-        </h3>
         <p>
-            Your EOI form in IRIS has been submited successfully.
-        </p>
-        <p>
-            <strong>{{$eoi_no}}</strong> is the reference number for future enquiry.
+            This is to confirm that you EoI titled <strong>{{$eoi_project}}</strong> has been successfully submitted under IRIS. The EoI reference number is {{$eoi_no}}. 
+            {{-- The proposal is being examined for preliminary eligibility requirements. --}}
         </p>
         <p>
             In case of any queries, kindly contact Riya Rahiman, Lead Specialist - IRIS (<a href="mailto:iris@cdri.world">iris@cdri.world</a>).
         </p>
         <p>
-            With Best Regards,<br>
+            With Regards,<br>
             CDRI
         </p>
     </body>
