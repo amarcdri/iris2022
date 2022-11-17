@@ -27,7 +27,7 @@
                             <div class="container">
                                 <div class="col-md-12">
                                     <form id="form" class="form"
-                                        onsubmit="return submitForm(this.id, '{{ route('iris.eoi.post') }}', '{{ route('faqs') }}');"
+                                        onsubmit="return submitForm(this.id, '{{ route('iris.eoi.post') }}', '{{ route('page.detail','thank-you') }}');"
                                         enctype="multipart/form-data" autocomplete="on">
                                         @csrf
                                         @method('post')
