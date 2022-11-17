@@ -38,7 +38,8 @@ class FrontPageController extends Controller
             // Get just ext
             $extension = $file->getClientOriginalExtension();
             // Filename to store
-            $fileNameToStore = $name.'.'.$extension;
+           // $fileNameToStore = $name.'.'.$extension;
+            $fileNameToStore = $name;
             // Upload Image
             $path = $file->storeAs($path, $fileNameToStore);
             $returned_path = $fileNameToStore;
@@ -51,11 +52,11 @@ class FrontPageController extends Controller
 
     public function genfilename($file,$id)
     {
-        //$newfilename=$filename->getClientOriginalName();
-        $filename = pathinfo($file, PATHINFO_FILENAME);
-        $filename=$id.'-'.$filename;
+        $fileoriginalname=$file->getClientOriginalName();
+        $filename = pathinfo($fileoriginalname, PATHINFO_FILENAME);
+        $filename=$id.'_'.$filename;
         $extension=$file->getClientOriginalExtension();
-        $nfilename=$filename.$extension;
+        $nfilename=$filename.'.'.$extension;
         return $nfilename;
 
         //$newfilename=$filename->getClientOriginalName().'_'.$iris_eoi->id
