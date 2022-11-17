@@ -96,7 +96,7 @@
                          
                         </li>
                        
-                        <li  @if($menu_url === 'contact-us') class="current" @endif><a href="{{route('page.detail','contact-us')}}">Contact</a></li>
+                        {{-- <li  @if($menu_url === 'contact-us') class="current" @endif><a href="{{route('page.detail','contact-us')}}">Contact</a></li> --}}
                     </ul>
              
                 </div>
