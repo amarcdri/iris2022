@@ -208,7 +208,7 @@ class FrontPageController extends Controller
         ]));
         return response()->json([
             'status' => 1,
-            'msg' => 'You EoI with reference number is '.$iris_eoi->eoi_no.' has been submitted successfully. Kindly note the reference   number for future enquiry.'
+            'msg' => 'EoI with reference number is '.$iris_eoi->eoi_no.' has been submitted successfully. Kindly note the reference   number for future enquiry.'
         ]);
 
 
