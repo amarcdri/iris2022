@@ -716,6 +716,7 @@ ul {
   -ms-flex-align: center;
   align-items: center;
   margin-top:-114px;
+  margin-right:-20px;
 }
 
 .main-menu-wrapper__search-cat {
@@ -11757,4 +11758,9 @@ a.cfpa {
 
 a.cfpa:hover {
   color: black;
+}
+
+.container.cleft {
+  padding-left: 0px;
+
 }

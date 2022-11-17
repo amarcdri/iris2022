@@ -162,7 +162,7 @@ class FrontPageController extends Controller
         $input['sectors'] = implode(",", $input['sectors']);
         $input['thematic_area'] = implode(",", $input['thematic_area']);
         $iris_eoi = IrisEoi::create($input);
-        $iris_eoi->eoi_no = "IRIS/".date("Ymd")."/".$iris_eoi->id;
+        $iris_eoi->eoi_no = "IRIS/".$iris_eoi->id."/2022-23";
         if($request->file('endorsement_letter')) {
             $iris_eoi->endorsement_letter = $this->upload($request->file('endorsement_letter'), $this->iris_eoi_upload_path, $iris_eoi->id, $request->file('endorsement_letter')->getClientOriginalName().'_'.$iris_eoi->id);
         }
@@ -176,7 +176,7 @@ class FrontPageController extends Controller
         $iris_eoi->save();
 
         Mail::to('pawan.umrao@cdri.world')->send(new SendMail([
-            'subject' => 'IRIS-EOI Submission',
+            'subject' => 'IRIS-EOI Registration',
             'from_email' => 'info@cdri.world',
             'from_name' => 'IRIS',
             'reply_to_email' => 'do-not-reply@cdri.world',
@@ -189,7 +189,7 @@ class FrontPageController extends Controller
         ]));
         return response()->json([
             'status' => 1,
-            'msg' => 'EOI submission has been successfully completed with EOI Number: '.$iris_eoi->eoi_no,
+            'msg' => 'EoI has been submitted successfully. The reference number is '.$iris_eoi->eoi_no.' Kindly take a note of reference for future purpose.'
         ]);
 
 
