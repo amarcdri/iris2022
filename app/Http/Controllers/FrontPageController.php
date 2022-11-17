@@ -38,7 +38,7 @@ class FrontPageController extends Controller
             // Get just ext
             $extension = $file->getClientOriginalExtension();
             // Filename to store
-            $fileNameToStore = $name . '.' . $extension;
+            $fileNameToStore = $name.'.'.$extension;
             // Upload Image
             $path = $file->storeAs($path, $fileNameToStore);
             $returned_path = $fileNameToStore;
@@ -47,6 +47,18 @@ class FrontPageController extends Controller
             }
         }
         return $returned_path;
+    }
+
+    public function genfilename($file,$id)
+    {
+        //$newfilename=$filename->getClientOriginalName();
+        $filename = pathinfo($file, PATHINFO_FILENAME);
+        $filename=$id.'-'.$filename;
+        $extension=$file->getClientOriginalExtension();
+        $nfilename=$filename.$extension;
+        return $nfilename;
+
+        //$newfilename=$filename->getClientOriginalName().'_'.$iris_eoi->id
     }
    
     public function index()
@@ -164,14 +176,18 @@ class FrontPageController extends Controller
         $iris_eoi = IrisEoi::create($input);
         $iris_eoi->eoi_no = "IRIS/".$iris_eoi->id."/2022-23";
         if($request->file('endorsement_letter')) {
-            $iris_eoi->endorsement_letter = $this->upload($request->file('endorsement_letter'), $this->iris_eoi_upload_path, $iris_eoi->id, $request->file('endorsement_letter')->getClientOriginalName().'_'.$iris_eoi->id);
+            $endorse_file_name=$this->genfilename($request->file('endorsement_letter'),$iris_eoi->id);
+            $iris_eoi->endorsement_letter = $this->upload($request->file('endorsement_letter'), $this->iris_eoi_upload_path, $iris_eoi->id, $endorse_file_name);
         }
         if($request->file('add_info1')) {
-            $iris_eoi->add_info1 = $this->upload($request->file('add_info1'), $this->iris_eoi_upload_path, $iris_eoi->id, $request->file('add_info1')->getClientOriginalName().'_'.$iris_eoi->id);
+            $add_info1_file_name=$this->genfilename($request->file('add_info1'),$iris_eoi->id);
+            $iris_eoi->add_info1 = $this->upload($request->file('add_info1'), $this->iris_eoi_upload_path, $iris_eoi->id, $add_info1_file_name);
         }
 
         if($request->file('add_info2')) {
-            $iris_eoi->add_info2 = $this->upload($request->file('add_info2'), $this->iris_eoi_upload_path, $iris_eoi->id, $request->file('add_info2')->getClientOriginalName().'_'.$iris_eoi->id);
+            $add_info2_file_name=$this->genfilename($request->file('add_info2'),$iris_eoi->id);
+            $iris_eoi->add_info2 = $this->upload($request->file('add_info2'), $this->iris_eoi_upload_path, $iris_eoi->id,$add_info2_file_name);
+            //$request->file('add_info2')->getClientOriginalName().'_'.$iris_eoi->id
         }
         $iris_eoi->save();
 
