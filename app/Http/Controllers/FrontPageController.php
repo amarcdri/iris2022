@@ -185,7 +185,7 @@ class FrontPageController extends Controller
             'content' => [
                 'name' => $input['title']." ".$input['first_name']." ".$input['last_name'],
                 'eoi_no' => $iris_eoi->eoi_no,
-                '$eoi_project'=>$input['project_name']
+                'eoi_project'=>$input['project_name']
             ]
         ]));
         return response()->json([
