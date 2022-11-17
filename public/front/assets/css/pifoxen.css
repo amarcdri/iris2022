@@ -11758,3 +11758,8 @@ a.cfpa {
 a.cfpa:hover {
   color: black;
 }
+
+.container.cleft {
+  padding-left: 0px;
+
+}
