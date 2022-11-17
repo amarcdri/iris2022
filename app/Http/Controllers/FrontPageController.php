@@ -173,21 +173,21 @@ class FrontPageController extends Controller
         }
         $iris_eoi->save();
 
-        Mail::to('pawan.umrao@cdri.world')->send(new SendMail([
-            'subject' => 'IRIS-EOI Registration',
-            'from_email' => 'info@cdri.world',
-            'from_name' => 'IRIS',
-            'reply_to_email' => 'do-not-reply@cdri.world',
-            'reply_to_name' => 'do-not-reply',
-            'page' => 'email.eoi',
-            'content' => [
-                'name' => $input['title']." ".$input['first_name']." ".$input['last_name'],
-                'eoi_no' => $iris_eoi->eoi_no,
-            ]
-        ]));
+        // Mail::to('pawan.umrao@cdri.world')->send(new SendMail([
+        //     'subject' => 'IRIS-EOI Registration',
+        //     'from_email' => 'info@cdri.world',
+        //     'from_name' => 'IRIS',
+        //     'reply_to_email' => 'do-not-reply@cdri.world',
+        //     'reply_to_name' => 'do-not-reply',
+        //     'page' => 'email.eoi',
+        //     'content' => [
+        //         'name' => $input['title']." ".$input['first_name']." ".$input['last_name'],
+        //         'eoi_no' => $iris_eoi->eoi_no,
+        //     ]
+        // ]));
         return response()->json([
             'status' => 1,
-            'msg' => 'EOI registration submitted successfully with EOI Number '.$iris_eoi->eoi_no
+            'msg' => 'EoI has been submitted successfully. The reference number is '.$iris_eoi->eoi_no.' Kindly take a note of reference for future purpose.'
         ]);
 
 
