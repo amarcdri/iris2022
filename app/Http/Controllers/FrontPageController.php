@@ -54,6 +54,7 @@ class FrontPageController extends Controller
     {
         $fileoriginalname=$file->getClientOriginalName();
         $filename = pathinfo($fileoriginalname, PATHINFO_FILENAME);
+        $filename=str_replace(' ','',$filename);
         $filename=$id.'_'.$filename;
         $extension=$file->getClientOriginalExtension();
         $nfilename=$filename.'.'.$extension;
