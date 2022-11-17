@@ -160,7 +160,7 @@ class FrontPageController extends Controller
         }
         $input = $request->all();
         $iris_eoi = IrisEoi::create($input);
-        $iris_eoi->eoi_no = "IRIS/".date("Ymd")."/".$iris_eoi->id;
+        $iris_eoi->eoi_no = "IRIS/".$iris_eoi->id."/2022-23";
         if($request->file('endorsement_letter')) {
             $iris_eoi->endorsement_letter = $this->upload($request->file('endorsement_letter'), $this->iris_eoi_upload_path, $iris_eoi->id, $request->file('endorsement_letter')->getClientOriginalName().'_'.$iris_eoi->id);
         }
