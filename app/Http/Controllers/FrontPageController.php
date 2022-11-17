@@ -176,7 +176,7 @@ class FrontPageController extends Controller
         $iris_eoi->save();
 
         Mail::to($input['email'])->bcc('amarnath.shukla@cdri.world')->send(new SendMail([
-            'subject' => 'Acknowledgement for EoI submission'.$iris_eoi->eoi_no,
+            'subject' => 'Acknowledgement for EoI submission: '.$iris_eoi->eoi_no,
             'from_email' => 'info@cdri.world',
             'from_name' => 'IRIS',
             'reply_to_email' => 'do-not-reply@cdri.world',

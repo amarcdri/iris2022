@@ -262,7 +262,7 @@
 
                                                 <div class="col-md-12 mb-3">
                                                     <label class="label">Need for Proposal</label><span
-                                                        class="text-danger">*</span><small>(Max limit 500 words)</small>
+                                                        class="text-danger">*</span> <small>(Max limit 500 words)</small>
                                                     <textarea class="form-control bg-white" name="proposal_need" id="proposal_need" rows="5" onkeyup="wordLimit(this, 500)"></textarea>
                                                     <p><span id="proposal_need_word_left">500</span> words left.</p>
                                                     <span class="msg proposal_need"></span>
@@ -270,7 +270,7 @@
 
                                                 <div class="col-md-12 mb-3">
                                                     <label class="label">Proposed Action</label><span
-                                                        class="text-danger">*</span><small>(Max limit 500 words)</small>
+                                                        class="text-danger">*</span> <small>(Max limit 500 words)</small>
                                                     <textarea class="form-control bg-white" name="proposed_action" id="proposed_action" rows="5" onkeyup="wordLimit(this, 500)"></textarea>
                                                     <p><span id="proposed_action_word_left">500</span> words left.</p>
                                                     <span class="msg proposed_action"></span>
@@ -278,7 +278,7 @@
 
                                                 <div class="col-md-12 mb-3">
                                                     <label class="label">Alignment and Complementarity with IRIS outcomes
-                                                        & others SIDS initiatives<span class="text-danger">*</span></label><small>(Max limit 500 words)</small>
+                                                        & others SIDS initiatives<span class="text-danger">*</span></label> <small>(Max limit 500 words)</small>
                                                     <textarea class="form-control bg-white" name="complementarity" id="complementarity" rows="5" onkeyup="wordLimit(this, 500)"></textarea>
                                                     <p><span id="complementarity_word_left">500</span> words left.</p>
                                                     <span class="msg complementarity"></span>
