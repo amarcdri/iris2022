@@ -172,9 +172,10 @@
                                                 </div>
 
                                                 <div class="col-md-12 mb-3">
-                                                    <label class="label">Applicant Government Agency Profile</label><span
-                                                        class="text-danger">*</span>
-                                                    <textarea class="form-control bg-white" name="govern_agency_profile" id="govern_agency_profile" rows="5"></textarea>
+                                                    <label class="label">Applicant Government Agency Profile</label><span class="text-danger">*</span> <small>(Max limit 500 words)</small>
+                                                    <textarea class="form-control bg-white" name="govern_agency_profile" id="govern_agency_profile" rows="5" onkeyup="wordLimit(this, 500)"></textarea>
+                                                    {{-- <p>You have <span id="govern_agency_profile_display_count">0</span> words.</p> --}}
+                                                    <p><span id="govern_agency_profile_word_left">500</span> words left.</p>
                                                     <span class="msg govern_agency_profile"></span>
                                                 </div>
 
@@ -228,7 +229,7 @@
                                                                 <div class="form-check">
                                                                     <label class="form-check-label">
                                                                         <input type="checkbox" class="form-check-input"
-                                                                            name="sectors" id="sectors"
+                                                                            name="sectors[]" id="sectors"
                                                                             value="{{ $iris_eoi_sub_sector->id }}">{{ $iris_eoi_sub_sector->name }}
                                                                     </label>
                                                                 </div>
@@ -247,7 +248,7 @@
                                                                 <div class="form-check">
                                                                     <label class="form-check-label">
                                                                         <input type="checkbox" class="form-check-input"
-                                                                            name="thematic_area" id="thematic_area"
+                                                                            name="thematic_area[]" id="thematic_area"
                                                                             value="{{ $iris_eoi_thematic->id }}">{{ $iris_eoi_thematic->name }}
                                                                     </label>
                                                                 </div>
@@ -262,21 +263,24 @@
                                                 <div class="col-md-12 mb-3">
                                                     <label class="label">Need for Proposal</label><span
                                                         class="text-danger">*</span>
-                                                    <textarea class="form-control bg-white" name="proposal_need" id="proposal_need" rows="5"></textarea>
+                                                    <textarea class="form-control bg-white" name="proposal_need" id="proposal_need" rows="5" onkeyup="wordLimit(this, 500)"></textarea>
+                                                    <p><span id="proposal_need_word_left">500</span> words left.</p>
                                                     <span class="msg proposal_need"></span>
                                                 </div>
 
                                                 <div class="col-md-12 mb-3">
                                                     <label class="label">Proposed Action</label><span
                                                         class="text-danger">*</span>
-                                                    <textarea class="form-control bg-white" name="proposed_action" id="proposed_action" rows="5"></textarea>
+                                                    <textarea class="form-control bg-white" name="proposed_action" id="proposed_action" rows="5" onkeyup="wordLimit(this, 500)"></textarea>
+                                                    <p><span id="proposed_action_word_left">500</span> words left.</p>
                                                     <span class="msg proposed_action"></span>
                                                 </div>
 
                                                 <div class="col-md-12 mb-3">
                                                     <label class="label">Alignment and Complementarity with IRIS outcomes
                                                         & others SIDS initiatives<span class="text-danger">*</span></label>
-                                                    <textarea class="form-control bg-white" name="complementarity" id="complementarity" rows="5"></textarea>
+                                                    <textarea class="form-control bg-white" name="complementarity" id="complementarity" rows="5" onkeyup="wordLimit(this, 500)"></textarea>
+                                                    <p><span id="complementarity_word_left">500</span> words left.</p>
                                                     <span class="msg complementarity"></span>
                                                 </div>
 
@@ -369,7 +373,21 @@
 
         }
 
-        
+        function wordLimit(field, limit) {
+            var words = 0;
+
+            if ((field.value.match(/\S+/g)) != null) {
+                words = field.value.match(/\S+/g).length;
+            }
+
+            if (words > limit) {
+                var trimmed = $(field).val().split(/\s+/, limit).join(" ");
+                $(field).val(trimmed + " ");
+            } else {
+                // $('#'+field.id+'_display_count').text(words);
+                $('#'+field.id+'_word_left').text(limit - words);
+            }
+        }
 
         $(document).ready(function() {
             $('textarea').each(function() {

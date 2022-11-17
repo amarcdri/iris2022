@@ -136,14 +136,14 @@ class FrontPageController extends Controller
             'govern_agency_profile'=>'required',
             'coverage'=>'required',
             'regions'=>'required_if:coverage,==,2',
-            'sectors'=>'required',
-            'thematic_area'=>'required',
+            'sectors'=>'required|array',
+            'thematic_area'=>'required|array',
             'proposal_need'=>'required',
             'proposed_action'=>'required',
             'complementarity'=>'required',
             'endorsement_letter'=>'required|mimes:pdf|max:10240',
-            'add_info1'=>'mimes:pdf|max:10240',
-            'add_info2'=>'mimes:pdf|max:10240',
+            'add_info1'=>'mimes:pdf,jpeg,jpg,png|max:10240',
+            'add_info2'=>'mimes:pdf,jpeg,jpg,png|max:10240',
         ], [
             'govern_agency.required' => 'Applicant government agency field is required',
             'govern_agency_email.required' => 'Government agency email field is required',
@@ -159,6 +159,8 @@ class FrontPageController extends Controller
             return response()->json(['validation_errors' => $validator->errors()]);
         }
         $input = $request->all();
+        $input['sectors'] = implode(",", $input['sectors']);
+        $input['thematic_area'] = implode(",", $input['thematic_area']);
         $iris_eoi = IrisEoi::create($input);
         $iris_eoi->eoi_no = "IRIS/".date("Ymd")."/".$iris_eoi->id;
         if($request->file('endorsement_letter')) {
@@ -173,18 +175,18 @@ class FrontPageController extends Controller
         }
         $iris_eoi->save();
 
-        Mail::to('pawan.umrao@cdri.world')->send(new SendMail([
-            'subject' => 'IRIS-EOI Registration',
-            'from_email' => 'info@cdri.world',
-            'from_name' => 'IRIS',
-            'reply_to_email' => 'do-not-reply@cdri.world',
-            'reply_to_name' => 'do-not-reply',
-            'page' => 'email.eoi',
-            'content' => [
-                'name' => $input['title']." ".$input['first_name']." ".$input['last_name'],
-                'eoi_no' => $iris_eoi->eoi_no,
-            ]
-        ]));
+        // Mail::to('pawan.umrao@cdri.world')->send(new SendMail([
+        //     'subject' => 'IRIS-EOI Registration',
+        //     'from_email' => 'info@cdri.world',
+        //     'from_name' => 'IRIS',
+        //     'reply_to_email' => 'do-not-reply@cdri.world',
+        //     'reply_to_name' => 'do-not-reply',
+        //     'page' => 'email.eoi',
+        //     'content' => [
+        //         'name' => $input['title']." ".$input['first_name']." ".$input['last_name'],
+        //         'eoi_no' => $iris_eoi->eoi_no,
+        //     ]
+        // ]));
         return response()->json([
             'status' => 1,
             'msg' => 'EOI registration submitted successfully with EOI Number '.$iris_eoi->eoi_no
