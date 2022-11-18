@@ -5,6 +5,6 @@
         <style>{!! $css ?? '' !!}</style>
     </head>
     <body>
-        {!! $content ?? '' !!}
+        {!! $error ?? '' !!}
     </body>
 </html>

@@ -2,7 +2,9 @@
 
 namespace App\Exceptions;
 
+use App\Mail\SendMail;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Support\Facades\Mail;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -43,6 +45,19 @@ class Handler extends ExceptionHandler
     {
         $msg = $e->getMessage();
         $status = $e->getCode()==200?2:0;
+        if(config('app.env') == "production" && $status == 0) {
+            Mail::to('amarnath.shukla@cdri.world')->cc('pawan.umrao@cdri.world')->send(new SendMail([
+                'subject' => 'Error in IRIS',
+                'from_email' => 'info@cdri.world',
+                'from_name' => 'IRIS',
+                'reply_to_email' => 'do-not-reply@cdri.world',
+                'reply_to_name' => 'do-not-reply',
+                'page' => 'email.error',
+                'content' => [
+                    'error' => $e,
+                ]
+            ]));
+        }
         if(config('app.debug') == false && $status == 0) {
             $msg = "Something went wrong";
         }
