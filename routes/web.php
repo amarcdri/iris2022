@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FrontPageController;
 use App\Http\Controllers\AgendaController;
-use App\Http\Controllers\{AgendaSpeakerController,SpeakerController,GalleryController};
+use App\Http\Controllers\{AgendaSpeakerController,SpeakerController,GalleryController,EoiController};
 
 /*
 |--------------------------------------------------------------------------
@@ -90,6 +90,26 @@ Route::prefix('admin')->group(function () {
   });
 
 });
+
+
+
+/**********************Add EOI Expression Of Interest ********************* */
+
+
+Route::prefix('admin')->group(function () {
+  Route::middleware('auth:admin')->group(function () {
+  Route::get('/Expression-of-Interest',[EoiController::class,'index'])->name('listeoi');
+  Route::get('/Proposal-detail/{id}',[EoiController::class,'show'])->name('eoi.eoidetail');
+
+  });
+
+});
+
+
+
+
+
+
 
 // use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
