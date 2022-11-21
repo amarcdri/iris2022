@@ -5,6 +5,7 @@
         <style>{!! $css ?? '' !!}</style>
     </head>
     <body>
+        <p><strong>{{ $url?? '' }}</strong></p>
         {!! $error ?? '' !!}
     </body>
 </html>
