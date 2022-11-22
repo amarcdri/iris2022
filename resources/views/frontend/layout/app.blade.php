@@ -152,7 +152,7 @@
         <script src="{{asset('front/assets/vendors/owl-carousel/owl.carousel.min.js')}}"></script>
         <script src="{{asset('front/assets/vendors/bxslider/jquery.bxslider.min.js')}}"></script>
         <script src="{{asset('front/assets/vendors/bootstrap-select/js/bootstrap-select.min.js')}}"></script>
-        {{-- <script src="{{asset('front/assets/vendors/vegas/vegas.min.js')}}"></script> --}}
+        <script src="{{asset('front/assets/vendors/vegas/vegas.min.js')}}"></script>
         <script src="{{asset('front/assets/vendors/jquery-ui/jquery-ui.js')}}"></script>
         <script src="{{asset('front/assets/vendors/timepicker/timePicker.js')}}"></script>
         <!-- template js -->
