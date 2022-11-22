@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="{{asset('front/assets/vendors/nouislider/nouislider.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('front/assets/vendors/nouislider/nouislider.pips.css')}}"/>
     <link rel="stylesheet" href="{{asset('front/assets/vendors/odometer/odometer.min.css')}}"/>
-    <link rel="stylesheet" href="{{asset('front/assets/vendors/swiper/swiper.min.css')}}"/>
+    {{-- <link rel="stylesheet" href="{{asset('front/assets/vendors/swiper/swiper.min.css')}}"/> --}}
     <link rel="stylesheet" href="{{asset('front/assets/vendors/pifoxen-icons/style.css')}}">
     <link rel="stylesheet" href="{{asset('front/assets/vendors/tiny-slider/tiny-slider.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('front/assets/vendors/reey-font/stylesheet.css')}}"/>

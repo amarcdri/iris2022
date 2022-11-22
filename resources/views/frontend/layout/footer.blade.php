@@ -1,5 +1,5 @@
 <footer class="site-footer">
-    {{-- <div class="site-footer-bg" style="background-image: url(assets/images/backgrounds/site-footer-bg.jpg);"> --}}
+    <div class="site-footer-bg"> 
     </div>
     <div class="site-footer__top">
         <div class="container">
