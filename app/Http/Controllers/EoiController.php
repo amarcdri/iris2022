@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\IrisEoi;
+use App\Models\{IrisEoi,IrisEoiCoverage};
 use Illuminate\Http\Request;
 use App\Models\Country;
 
@@ -49,8 +49,10 @@ class EoiController extends Controller
      */
     public function show(Request $request,$id)
     {
-        // $eois=IrisEoi::where('id','=',0)->('status','=',0)->ORDERBY('id','DESC')->paginate(15);
-        return view('admin.proposaldetail');
+        $eois =IrisEoi::where('id','=',$id)->where('status',0)->get();
+        
+    
+        return view('admin.proposaldetail',compact('eois'));
     }
 
     /**

@@ -1,238 +1,219 @@
 @extends('admin.master')
-@section('content')
-<div class="content-wrapper">
-    <div class="container-full">
-
-      <!-- Main content -->
-    	<section class="content">
-		  <div class="row">
-			  <div class="col-12 col-lg-5 col-xl-4">
-				  
-				  <div class="box" data-overlay="2">
-					  <div class="flexbox px-20 pt-20">
-						<label class="toggler toggler-danger text-white">
-						  <input type="checkbox">
-						 
-						</label>
-						
-					  </div>
-					 
-					  <div class="box-body text-center pb-20">
-					
-						<h4 class="mt-2 mb-0"><a class="hover-primary text-white" href="#">{{ $driprofile->title.' '.$driprofile->first_name.' '.$driprofile->last_name }}</a></h4>
-						<span>Designation<i class="fa fa-map-marker w-20"></i> {{ $driprofile->designation }}</span>
-					  </div>
-					 		
-					 
-					</div>				
-                  
-				  <!-- Profile Image -->
-				  <div class="box">
-					<div class="box-body box-profile">            
-					  <div class="row">
-						<div class="col-12">
-							<div>
-								<p><strong>Organization :</strong><span class="text-gray pl-10">{{$driprofile->organization}}</span></p>
-								<p>Email :<span class="text-gray pl-10">{{$driprofile->email}}</span> </p>
-								
-								<p>Gender :<span class="text-gray pl-10">{{$driprofile->gender}}</span> </p>
-								<p>Phone :<span class="text-gray pl-10">{{$driprofile->mobile}}</span></p>
-								
-									<p>City :	<span class="text-gray pl-10">{{$driprofile->city}}</span></p>
-									<p>Country :<span class="text-gray pl-10">{{$driprofile->country->name}}</span></p>
-								
-							</div>
-						</div>
-		
-					
-					  </div>
-					</div>
-					<!-- /.box-body -->
-				  </div>
 
 
-				  <div class="box">
-					<div class="box-body box-profile">            
-					  <div class="row">
-						<div class="col-12">
-							<div>
-								<p>Lead Author :<span class="text-gray pl-10">{{$driprofile->author}}</span> </p>
-								<p>CV of Lead Author :<span class="text-gray pl-10"><a href="{{ route('dri.abstract.download', $driprofile->id) }}"><i class="fa fa-file "> </i></a></span></p> 
-									
+@section('admin')
+    <div class="container">
+	
 
-								@if($driprofile->co_author_name)
-								<p>Co-author :<span class="text-gray pl-10">{{$driprofile->co_author_name}}</span></p>
-								@endif
-								
-							</div>
-						</div>
-		
-					
-					  </div>
-					</div>
-					<!-- /.box-body -->
-				  </div>
-				  <!-- /.box -->
-		
-			  </div>
-		
-			  <div class="col-12 col-lg-7 col-xl-8">
-				
-			  <div class="nav-tabs-custom box-profile">
-				<ul class="nav nav-tabs">
-				  <li><a class="active" href="#usertimeline" data-toggle="tab">Abstract</a></li>
-		
-				</ul>
+        @foreach ($eois as $eoi)
+            <!-- start page title -->
+            <div class="row align-items-center mb-4" style="margin-top:80px;">
+                <div class="col-sm-6">
 
-				<div class="tab-content">
+                </div>
 
-				 <div class="active tab-pane" id="usertimeline">
-					 
-
-					
-
-
-					<div class="box p-15"> 
-						<div class="timeline timeline-single-column timeline-single-full-column">
+                <div class="col-sm-6">
+                    <div class="float-right d-none d-md-block">
+                        <div class="dropdown">
+                            <button onclick="ExportToDoc('exportContent','EXPRESSION OF INTEREST');" class="btn btn-primary dropdown-toggle waves-effect waves-light" type="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="mdi mdi-settings mr-2"></i> PDF
+                            </button>
 							
-					
+							
 
-							<div class="timeline-item">
-								<div class="timeline-point timeline-point-success">
-									<i class="fa fa-bookmark"></i>
-								</div>
-								<div class="timeline-event">
-									<div class="timeline-heading">
-										<h4 class="timeline-title"><a href="#">Nature of Proposed Paper</a></h4>
-									</div>
-									<div class="timeline-body">
-                                   
-									<p>{{$driprofile->proposed_paper}}</p>	
-									</div>
-									
-								</div>
-							</div>
+							<a href="javascript:window.print()" class="btn btn-primary"><i
+								class="fa fa-file-pdf"></i> Print
+						</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end page title -->
+			<div id="example" class="display">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
 
-							<div class="timeline-item">
-								<div class="timeline-point timeline-point-info">
-									<i class="ion ion-chatbubble-working"></i>
-								</div>
-								<div class="timeline-event">
-									<div class="timeline-heading">
-										<h4 class="timeline-title"> Abstract Title</h4>
-									</div>
-									<div class="timeline-body">
-										<p>{{$driprofile->abstract_title}}</p>									
-									</div>
-									
-								</div>
-							</div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="invoice-title">
+                                        <h4 class="mt-0 float-right font-size-16"><strong>{{ $eoi->eoi_no }}</strong></h4>
+                                        <div class="mb-4">
 
-							<div class="timeline-item">
-								<div class="timeline-point timeline-point-danger">
-									<i class="fa fa-tags"></i>
-								</div>
-								<div class="timeline-event">
-									<div class="timeline-heading">
-										<h4 class="timeline-title">Keywords</h4>
-									</div>
-									<div class="timeline-body">
-										<p>{{$driprofile->abstract_keyword}}</p>									
-									</div>
-									
-									
-								</div>
-							</div>
+                                            <img src="{{ asset('front/assets/img/logo.png') }}" alt="logo"
+                                                height="46">
+                                        </div>
+                                    </div>
+                               
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <table class="table table-bordered mb-4">
+
+                                                <thead>
+													<tr class="card-header bg-info text-white">
+                                                        <th colspan="6">Nodal Person
+														</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <td>{{ $eoi->title . ' ' . $eoi->first_name . ' ' . $eoi->last_name }}
+                                                        </td>
+
+                                                        <th>Gender</th>
+                                                        <td>{{ $eoi->gender }}</td>
+                                                        <th>Email</th>
+                                                        <td>{{ $eoi->email }}</td>
+                                                    </tr>
+
+                                                    <tr>
+
+                                                        <th>Mobile</th>
+                                                        <td>{{ $eoi->mobile }}</td>
+                                                        <th>Degination</th>
+                                                        <td>{{ $eoi->designation }}</td>
+                                                        <th>Organization/Affiliation</th>
+                                                        <td>{{ $eoi->organization }}</td>
+                                                    </tr>
 
 
-							<div class="timeline-item">
-								<div class="timeline-point timeline-point-danger">
-									<i class="fa fa-sticky-note"></i>
-								</div>
-								<div class="timeline-event">
-									<div class="timeline-heading">
-										<h4 class="timeline-title">Abstract (max. 600 words)</h4>
-									</div>
-									<div class="timeline-body">
-										<p>{{$driprofile->abstract_text}}</p>									
-									</div>
-									
-									
-								</div>
-							</div>
-							<div class="timeline-item">
-								<div class="timeline-point timeline-point-danger">
-									<i class="fa fa-pencil"></i>
-								</div>
-								<div class="timeline-event">
-									<div class="timeline-heading">
-										<h4 class="timeline-title">Relevance to the conference theme and subthemes (max. 200 words)</h4>
-									</div>
-									<div class="timeline-body">
-										<p>{{$driprofile->relevance}}</p>									
-									</div>
-									
-									
-								</div>
-							</div>
 
-							@if($driprofile->others_proposed_paper)
-								
-								<div class="timeline-item">
-								<div class="timeline-point timeline-point-danger">
-									<i class="fa fa-rss"></i>
-								</div>
-								<div class="timeline-event">
-									<div class="timeline-heading">
-										<h4 class="timeline-title">Any other information about the proposed paper (max. 200 words)</h4>
-									</div>
-									<div class="timeline-body">
-										<p>{{$driprofile->others_proposed_paper}}</p>									
-									</div>
-									
-									
-								</div>
-							</div>
-							@endif
+                                                    <tr>
+                                                     
+                                                        <th>Country</th>
+                                                        <td>{{ $eoi->countryid->name }}</td>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                        <div class="col-12">
+                                            <table class="table table-bordered">
 
-							<div class="timeline-item">
-								<div class="timeline-point timeline-point-danger">
-									<i class="fa fa-external-link"></i>
-								</div>
-								<div class="timeline-event">
-									<div class="timeline-heading">
-										<h4 class="timeline-title">Bibliographic References (max. 200 words)</h4>
-									</div>
-									<div class="timeline-body">
-										<p>{{$driprofile->reference}}</p>									
-									</div>
-									
-									
-								</div>
-							</div>
+                                                <thead>
+                                                    <tr class="card-header bg-info text-white">
+                                                        <th colspan="4">Proposal</th>
+                                                    </tr>
 
-						
-						</div>
-					</div>  
-				  </div>    
-				 
-				</div>
-				<!-- /.tab-content -->
-			  </div>
-			  <!-- /.nav-tabs-custom -->
-			</div>			  
-		  </div>
-		  <!-- /.row -->
+                                                    <tr>
+                                                        <th>Name of Project</th>
+                                                        <td>{{ $eoi->project_name }}</td>
+                                                        <th>Lead Country</th>
+                                                        <td>{{ $eoi->leadcountry->name }}</td>
+                                                    </tr>
 
-		</section>
-      <!-- /.content -->
+                                                    <tr>
+                                                        <th>Applicant Government Agency</th>
+                                                        <td>{{ $eoi->govern_agency }}</td>
+                                                        <th>Government Agency Email</th>
+                                                        <td>{{ $eoi->govern_agency_email }}</td>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12">
+
+                                    <div class="p-2">
+                                        <label class="label"> Applicant Government Agency Profile</label>
+                                    </div>
+                                    <div class="form-control bg-white" row="20" cols="40">{{ $eoi->govern_agency_profile }}</div>
+
+                                </div>
+                            </div> <!-- end row -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <table class="table table-bordered">
+
+                                        <thead>
+
+
+                                            <tr>
+                                                <th>Other Participating Government Agencies</th>
+                                                <td>{{ $eoi->other_govern_agency }}</td>
+                                                <th>Implementing Partners</th>
+                                                <td>{{ $eoi->implement_partner }}</td>
+
+
+                                            </tr>
+                                            <tr>
+                                                <th>Covrage</th>
+                                                <td>{{ $eoi->iriseoicoverage->name }}</td>
+
+                                                <th>Infrastructure Sectors</th>
+                                                <td>
+
+
+                                                    {{ $eoi->sectors }}
+
+
+
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Thematic Areas</th>
+                                                <td>{{ $eoi->thematicarea->name }}</td>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+
+                                <div class="col-12 mb-4">
+
+
+
+                                    <label class="label">Need for Proposal</label>
+                                    <div class="form-control bg-white">{{ $eoi->proposal_need }}</div>
+
+                                </div>
+
+
+                                <div class="col-12 mb-4">
+
+
+                                    <label class="label">Proposed Action</label>
+
+                                    <div class="form-control bg-white">{{ $eoi->proposed_action }}</div>
+
+                                </div>
+
+
+                                <div class="col-12 mb-4">
+
+
+                                    <label class="label">Alignment and Complementarity with IRIS outcomes & others SIDS
+                                        initiatives</label>
+
+                                    <div class="form-control bg-white" row="20" cols="40" style="height:120px;">{{ $eoi->complementarity }}</div>
+
+                                </div>
+
+
+                                <div class="col-12 mb-4">
+
+                                    <a href="javascript:window.print()" class="btn btn-success"><i
+                                            class="fa fa-file-pdf"></i> Download Letter of endorsement
+                                    </a>
+                                    <a href="javascript: void(0);" class="btn btn-primary ml-1">Download Additional
+                                        Information</a>
+                                    <a href="javascript: void(0);" class="btn btn-danger ml-1">Download Additional
+                                        Information 2</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+        @endforeach
+	</div>
     </div>
-</div>
-
+	
 @endsection
-
-<style>
-.timeline-body{
-	text-align: justify;
-}
-</style>
