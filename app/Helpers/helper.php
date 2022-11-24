@@ -9,7 +9,7 @@ function slugstr($str){
     return $slug;    
 }
 
-use App\Models\{Definition,User,AgendaSpeaker};
+use App\Models\{Definition,User,AgendaSpeaker,IrisEoiSector};
 use App\Models\ReviewerComment;
 use Illuminate\Support\Facades\Auth;
 
@@ -24,6 +24,20 @@ if(!function_exists('agenda_info')){
         $agenda_info_details=array('agenda_info_count' => $agenda_info_count, 'agenda_info' => $agenda_info);
         return $agenda_info_details;
     }
+}
+
+function eoi_sectors($sectors)
+{
+    $eoi_sectors='';
+    $eoi_sectors_names='';
+    
+    $sector_ids=explode(',',$sectors);
+    foreach($sector_ids as $key=>$id){
+        $eoi_sectors=IrisEoiSector::where('id', $id)->first();
+        $eoi_sectors_names.=$eoi_sectors->name.', ';
+    }
+    $eoi_sectors_names=substr($eoi_sectors_names,0,-2);
+    return $eoi_sectors_names;
 }
 
 

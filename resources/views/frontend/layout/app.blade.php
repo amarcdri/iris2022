@@ -50,7 +50,7 @@
     <link rel="stylesheet" href="{{asset('front/assets/vendors/owl-carousel/owl.theme.default.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('front/assets/vendors/bxslider/jquery.bxslider.css')}}"/>
     <link rel="stylesheet" href="{{asset('front/assets/vendors/bootstrap-select/css/bootstrap-select.min.css')}}"/>
-    <link rel="stylesheet" href="{{asset('front/assets/vendors/vegas/vegas.min.css')}}"/>
+    {{-- <link rel="stylesheet" href="{{asset('front/assets/vendors/vegas/vegas.min.css')}}"/> --}}
     <link rel="stylesheet" href="{{asset('front/assets/vendors/jquery-ui/jquery-ui.css')}}"/>
     <link rel="stylesheet" href="{{asset('front/assets/vendors/timepicker/timePicker.css')}}"/>
 

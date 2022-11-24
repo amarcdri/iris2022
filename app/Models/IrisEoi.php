@@ -37,10 +37,10 @@ class IrisEoi extends Model
 
     }
 
-    public function sectors()
+    public function eoisectors()
     {
 
-        return $this->hasOne(IrisEoiSector::class, 'id', 'sectors');
+        return $this->hasMany(IrisEoiSector::class, 'id', 'sectors');
 
 
     }

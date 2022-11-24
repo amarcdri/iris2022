@@ -88,4 +88,20 @@ class EoiController extends Controller
     {
         //
     }
+
+    public function proposaldownload($id)
+    {
+      $endorsement = IrisEoi::where('id', $id)->firstOrFail();
+      $pathToFile = storage_path('app/iris_eoi/' . $endorsement->endorsement_letter);
+      return response()->download($pathToFile);
+
+    }
+
+    public function exporteoi(){
+
+
+        $eois=IrisEoi::where('status','=',0)->ORDERBY('id','DESC')->paginate(500);
+        return view('admin.exporteoidetail',compact('eois'));
+    }
+
 }

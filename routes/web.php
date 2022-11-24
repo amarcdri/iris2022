@@ -99,8 +99,10 @@ Route::prefix('admin')->group(function () {
 Route::prefix('admin')->group(function () {
   Route::middleware('auth:admin')->group(function () {
   Route::get('/Expression-of-Interest',[EoiController::class,'index'])->name('listeoi');
+  Route::get('/Full-Report-Expression-of-Interest',[EoiController::class,'show'])->name('fullreporteoi');
   Route::get('/Proposal-detail/{id}',[EoiController::class,'show'])->name('eoi.eoidetail');
-
+  Route::get('Proposaldownload/{id}', [EoiController::class,'proposaldownload'])->name('eoi.proposaldownload');
+  Route::get('/ExportEoidetail',[EoiController::class,'exporteoi'])->name('eoi.export');
   });
 
 });

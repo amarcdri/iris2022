@@ -15,9 +15,8 @@
                 <div class="col-sm-6">
                     <div class="float-right d-none d-md-block">
                         <div class="dropdown">
-                            <button onclick="ExportToDoc('exportContent','EXPRESSION OF INTEREST');" class="btn btn-primary dropdown-toggle waves-effect waves-light" type="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="mdi mdi-settings mr-2"></i> PDF
+                            <button  id="btnExport" class="btn btn-primary">
+                                <i class="mdi mdi-settings mr-2"></i>Export PDF
                             </button>
 							
 							
@@ -30,7 +29,7 @@
                 </div>
             </div>
             <!-- end page title -->
-			<div id="example" class="display">
+			<div id="tbleoi" class="display">
             <div class="row">
                 <div class="col-12">
                     <div class="card">
@@ -197,13 +196,16 @@
 
                                 <div class="col-12 mb-4">
 
-                                    <a href="javascript:window.print()" class="btn btn-success"><i
+                                    <a href="{{ route('eoi.proposaldownload',$eoi->id) }}" class="btn btn-success" download><i
                                             class="fa fa-file-pdf"></i> Download Letter of endorsement
                                     </a>
-                                    <a href="javascript: void(0);" class="btn btn-primary ml-1">Download Additional
-                                        Information</a>
-                                    <a href="javascript: void(0);" class="btn btn-danger ml-1">Download Additional
-                                        Information 2</a>
+                                    @if($eoi->add_info1!='')
+
+                                    <a href="javascript: void(0);" class="btn btn-primary ml-1">Download Additional Information</a>
+                                        @endif
+                                     @if($eoi->add_info2!='')   
+                                    <a href="javascript: void(0);" class="btn btn-danger ml-1">Download Additional Information 2</a>
+                                        @endif
                                 </div>
                             </div>
 
@@ -216,4 +218,28 @@
 	</div>
     </div>
 	
+@yield('js')
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+<script type="text/javascript">
+    $("body").on("click", "#btnExport", function () {
+        html2canvas($('#tbleoi')[0], {
+            onrendered: function (canvas) {
+                var data = canvas.toDataURL();
+                var docDefinition = {
+                    content: [{
+                        image: data,
+                        width: 500
+                    }]
+                };
+                pdfMake.createPdf(docDefinition).download("Table.pdf");
+            }
+        });
+    });
+</script>
+
+
 @endsection

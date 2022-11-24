@@ -52,12 +52,12 @@
                             buttons on a page that will interact with a DataTable. The core library
                             provides the based framework upon which plug-ins can built.
                         </p> --}}
-
+                        <div class="table-responsive">
                         <table  id="myTable"  class="display nowrap" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>S.No.</th>
-                                    <th>Project Name</th>
+                                
                                     <th>Full Name</th>
                                   
                                      <th>Gender</th>
@@ -65,7 +65,20 @@
                                      <th>Mobile</th>
                                      <th>Designation/Organization</th>
                                      <th>Country</th>
-                                   
+                                     <th>Project Name</th>
+                                     <th>Lead Country</th>
+                                     <th>Applicant Government Agency</th>
+                                     <th>Applicant Government Email</th>
+                                     <th>Applicant Government Agency Profile</th>
+                                     <th>Other Participating Government Agencies</th> 
+                                     <th>Implementing Partners</th>
+                                     <th>Coverage</th>
+                                     <th>Infrastructure Sectors</th>
+                                     <th>Need for Proposal</th>
+                                     <th>Proposed Action</th>
+                                     <th>IRIS outcomes & others SIDS initiatives</th>
+                                     <th>Letter of endorsement</th>
+                                     <th>Additional Information </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -73,14 +86,36 @@
                                 <tr>
                                     
                                     <td>   {{ $eois->firstItem()+$loop->index}}</td> 
-                                    <td><a href="{{route('eoi.eoidetail',$eoi->id)}}">{{ $eoi->project_name }}</a></td> 
+                                   
                                     <td>{{ $eoi->title.' '.$eoi->first_name.' '.$eoi->last_name }}</td> 
                                     <td>{{ $eoi->gender }}</td> 
                                     <td>{{ $eoi->email }}</td> 
                                     <td>{{ $eoi->mobile }}</td> 
                                     <td>{{ $eoi->designation.' / '.$eoi->organization }}</td> 
                                     <td>{{ $eoi->countryid->name}}</td> 
-                                   
+                                    <td><a href="{{route('eoi.eoidetail',$eoi->id)}}">{{ $eoi->project_name }}</a></td> 
+                                    <td>{{ $eoi->leadcountry->name }}</td> 
+                                    <td>{{ $eoi->govern_agency }}</td> 
+                                    <td>{{ $eoi->govern_agency_email }}</td> 
+                                    <td>{{ $eoi->govern_agency_profile }}</td> 
+                                    <td>{{ $eoi->other_govern_agency }}</td>
+                                    <td>{{ $eoi->implement_partner }}</td>
+                                    <td>{{ $eoi->iriseoicoverage->name }}</td>
+                                    <td>{{ $sector_names=eoi_sectors($eoi->sectors);}} </td>
+                                    <td>{{ $eoi->proposal_need}} </td>
+                                    <td>{{ $eoi->proposed_action}} </td>
+                                    <td>{{ $eoi->complementarity}} </td>
+                                    <td><a href="{{ route('eoi.proposaldownload',$eoi->id) }}" class="btn btn-success" target="_blank"><i
+                                        class="fa fa-file-pdf">{{ $eoi->endorsement_letter}} </a></td>
+                                        <td>
+                                        @if($eoi->add_info1!='')
+
+                                  <a href="javascript: void(0);" class="btn btn-primary ml-1">Download Additional Information</a>
+                                            @endif
+                                         @if($eoi->add_info2!='')   
+                                        <a href="javascript: void(0);" class="btn btn-danger ml-1">Download Additional Information 2</a>
+                                            @endif
+                                        </td>
                                 </tr>
                             @endforeach
                             </tbody>				  
@@ -88,7 +123,7 @@
                         </table>
                      
           
-
+                    </div>
 
                     </div>
                     
