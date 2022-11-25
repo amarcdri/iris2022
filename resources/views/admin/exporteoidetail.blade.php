@@ -74,6 +74,7 @@
                                      <th>Implementing Partners</th>
                                      <th>Coverage</th>
                                      <th>Infrastructure Sectors</th>
+                                      <th>Thematic Areas</th>
                                      <th>Need for Proposal</th>
                                      <th>Proposed Action</th>
                                      <th>IRIS outcomes & others SIDS initiatives</th>
@@ -102,18 +103,25 @@
                                     <td>{{ $eoi->implement_partner }}</td>
                                     <td>{{ $eoi->iriseoicoverage->name }}</td>
                                     <td>{{ $sector_names=eoi_sectors($eoi->sectors);}} </td>
+                                    <td>{{ $thematic_names=thematic_area($eoi->thematic_area);}} </td>
                                     <td>{{ $eoi->proposal_need}} </td>
                                     <td>{{ $eoi->proposed_action}} </td>
                                     <td>{{ $eoi->complementarity}} </td>
                                     <td><a href="{{ route('eoi.proposaldownload',$eoi->id) }}" class="btn btn-success" target="_blank"><i
-                                        class="fa fa-file-pdf">{{ $eoi->endorsement_letter}} </a></td>
+                                        class="fa fa-file-pdf">
+                                        {{-- {{ $eoi->endorsement_letter}}  --}}
+                                    
+                                    </a></td>
                                         <td>
                                         @if($eoi->add_info1!='')
 
-                                  <a href="javascript: void(0);" class="btn btn-primary ml-1">Download Additional Information</a>
+                                  <a href="javascript: void(0);" class="btn btn-primary ml-1">
+                                    <i class="fa fa-file-pdf"></i>
+                                    {{-- Download Additional Information --}}
+                                </a>
                                             @endif
                                          @if($eoi->add_info2!='')   
-                                        <a href="javascript: void(0);" class="btn btn-danger ml-1">Download Additional Information 2</a>
+                                        <a href="javascript: void(0);" class="btn btn-danger ml-1">  <i class="fa fa-file-pdf"></i></a>
                                             @endif
                                         </td>
                                 </tr>

@@ -148,7 +148,7 @@
                                                 <td>
 
 
-                                                    {{ $eoi->sectors }}
+                                                    {{ $sector_names=eoi_sectors($eoi->sectors);}} 
 
 
 
@@ -157,7 +157,13 @@
                                             </tr>
                                             <tr>
                                                 <th>Thematic Areas</th>
-                                                <td>{{ $eoi->thematicarea->name }}</td>
+                                                <td>
+                                                    
+                                                    {{ $thematic_names=thematic_area($eoi->thematic_area);}}  
+                                                    
+                                                    {{-- {{ $eoi->thematicarea->name }} --}}
+                                                
+                                                </td>
                                             </tr>
                                         </thead>
                                     </table>
