@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class IrisEoiCoverage extends Model
 {
     use HasFactory;
+
+    
 }
