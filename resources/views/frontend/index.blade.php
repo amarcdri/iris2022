@@ -83,8 +83,11 @@
                         <div id="more">
                             {!!$iris->description!!} 
                         </div>
-                        <button class="btn btn-primary btn-sm" onclick="myFunction()" id="myBtn">Read more</button >
-                            
+                        {{-- <button class="btn btn-primary btn-sm" onclick="myFunction()" id="myBtn">Read more</button >
+                            about-iris --}}
+                        <button class="btn btn-primary btn-sm" id="myBtn"><a href="{{route('page.detail','about-iris')}}"><font color="white">Read more</font></a></button>
+                      
+                      
                     </div>
 
                
