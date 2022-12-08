@@ -97,19 +97,24 @@
                             <a href="{{route('page.detail','frequently-asked-questions')}}">Faqs</a>
                          
                         </li>
+
+                        <li>
+                            <a href=" https://iris.cdri.world/iris-call-for-proposals-information-webinar"  target="_blank" class="donate-btn main-header-one__btn cfproposal">&nbsp;&nbsp;&nbsp;&nbsp;Call for Proposals Webinar&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right"></i> </a>
+                         
+                        </li>
                        
                         {{-- <li  @if($menu_url === 'contact-us') class="current" @endif><a href="{{route('page.detail','contact-us')}}">Contact</a></li> --}}
                     </ul>
              
                 </div>
                 
-                <div class="main-menu-wrapper__right">
-                         {{-- <a href="{{route('iris.call.proposal')}}"  target="_blank" class="donate-btn main-header-one__btn">&nbsp;&nbsp;&nbsp;&nbsp;Call for Proposals1 Webinar&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right"></i> </a> --}}
+                {{-- <div class="main-menu-wrapper__right">
+                      
 
                          <a href=" https://iris.cdri.world/iris-call-for-proposals-information-webinar"  target="_blank" class="donate-btn main-header-one__btn">&nbsp;&nbsp;&nbsp;&nbsp;Call for Proposals Webinar&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right"></i> </a>
 
                         
-                </div>
+                </div> --}}
             </div>
         </nav>
     </header>

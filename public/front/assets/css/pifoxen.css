@@ -11764,3 +11764,9 @@ a.cfpa:hover {
   padding-left: 0px;
 
 }
+
+
+a.donate-btn.main-header-one__btn.cfproposal {
+  color: white;
+  font-size: 11px;
+}
