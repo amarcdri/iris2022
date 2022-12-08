@@ -68,6 +68,7 @@
                                     <ul>
                                         <li><a href="{{asset('./upload/pages/IRIS_Vision.pdf')}}" target="_blank">English</a></li>
                                         <li><a href="{{asset('./upload/pages/IRIS_Vision_French.pdf')}}" target="_blank">French</a></li>
+                                        <li><a href="{{asset('./upload/pages/IRIS_Vision_Spanish.pdf')}}" target="_blank">Spanish</a></li>
                                        
                                     </ul>
                                 </li>
