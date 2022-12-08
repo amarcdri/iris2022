@@ -93,7 +93,9 @@
            
                 <div class="mobile-nav__container"></div>
                 <!-- /.mobile-nav__container -->
-                <a href="https://iris.cdri.world/call-for-proposals-iris" target="_blank" class="donate-btn main-header-one__btn">Call for Proposals<i class="fa fa-arrow-right"></i> </a>
+                {{-- <a href="https://iris.cdri.world/call-for-proposals-iris" target="_blank" class="donate-btn main-header-one__btn">Call for Proposals<i class="fa fa-arrow-right"></i> </a> --}}
+
+                <a href="https://iris.cdri.world/iris-call-for-proposals-information-webinar" target="_blank" class="donate-btn main-header-one__btn">Call for Proposals Webinar<i class="fa fa-arrow-right"></i> </a>
            
                 <div class="mobile-nav__top" style="margin-top:20px;">
                     <div class="mobile-nav__social">
