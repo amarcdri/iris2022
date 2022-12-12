@@ -99,7 +99,11 @@
                         </li>
 
                         <li>
-                            <a href=" https://iris.cdri.world/iris-call-for-proposals-information-webinar"  target="_blank" class="donate-btn main-header-one__btn cfproposal">&nbsp;&nbsp;&nbsp;&nbsp;Call for Proposals Webinar&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right"></i> </a>
+                            {{-- <a href=" https://iris.cdri.world/iris-call-for-proposals-information-webinar"  target="_blank" class="donate-btn main-header-one__btn cfproposal">&nbsp;&nbsp;&nbsp;&nbsp;Call for Proposals Webinar&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right"></i> </a> --}}
+
+                            <a href="{{route('page.detail','call-for-proposals-iris')}}"  target="_blank" class="donate-btn main-header-one__btn cfproposal">&nbsp;&nbsp;&nbsp;&nbsp;Call for Proposals&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right"></i> </a>
+
+                            {{-- <a href="{{route('page.detail','call-for-proposals-iris')}}" class="thm-btn"> --}}
                          
                         </li>
                        
