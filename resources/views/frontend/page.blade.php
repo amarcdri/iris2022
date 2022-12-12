@@ -50,6 +50,15 @@
                             <h3 class="donation-details__title">{{$pages->title}}</h3>
                             {{-- <p class="donation-details__text-1">{{$pages->subtitle}}</p> --}}
                             <p class="donation-details__text-1">{!!$pages->description!!}</p>
+
+                            @if($pages->id==30)
+                            <p>  
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Ta41nYqVsk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </p>
+                            <p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/c91U6vtKopU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </p>
+                            @endif
                         </div>
 
 
