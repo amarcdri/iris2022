@@ -10031,6 +10031,7 @@ box-shadow: 4px 5px #888888;
   border-radius: var(--pifoxen-bdr-radius);
   padding: 10px 5px 12px 9px;
   margin-bottom: 30px;
+  height: 150px;
 }
 
 
