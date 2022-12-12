@@ -52,12 +52,17 @@
                             <p class="donation-details__text-1">{!!$pages->description!!}</p>
 
                             @if($pages->id==30)
-                            <p>  
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Ta41nYqVsk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </p>
-                            <p>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/c91U6vtKopU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Ta41nYqVsk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/c91U6vtKopU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            
                             @endif
                         </div>
 
