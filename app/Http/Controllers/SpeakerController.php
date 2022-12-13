@@ -110,6 +110,7 @@ class SpeakerController extends Controller
         $speakers->speakername=$request->speakername;
         $speakers->designation=$request->designation;
         $speakers->email=$request->email;
+        $speakers->shortdesc=$request->shortdesc;
         $speakers->profiledescription=$request->profiledescription;
         $speakers->published=$request->published;
         $speakers->sequence=$request->sequence;

@@ -62,6 +62,13 @@
                                 </div>
                             </div>
 
+                            <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label">Speaker Short Description&nbsp;</label>
+                                <div class="col-sm-10">
+                                  <input type="shortdesc" name="shortdesc" class="form-control" placeholder="" value="{{ $speakers->shortdesc }}">
+                                </div>
+                            </div>
+
 
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label">Profile Description</label>
