@@ -29,6 +29,7 @@ Route::get('/events',[FrontPageController::class,'events'])->name('iris.events')
 Route::post('/iris-eoi-post',[FrontPageController::class,'irisEoiPost'])->name('iris.eoi.post');
 Route::get('/call-for-proposals-iris',[FrontPageController::class,'irisCfp'])->name('iris.call.proposal');
 Route::get('/pmu-iris',[FrontPageController::class,'irisPmu'])->name('iris.pmu');
+Route::get('/steer-committee-iris',[FrontPageController::class,'irisSteer'])->name('iris.steer');
 Route::get('/pages/{id}',[FrontPageController::class,'irisOutcome'])->name('iris.page');
 Route::get('/{name?}',[FrontPageController::class,'pagedetail'])->name('page.detail');
 

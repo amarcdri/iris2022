@@ -110,6 +110,13 @@ class FrontPageController extends Controller
         return view('frontend.team',compact('pmuteams'));
     }
 
+    public function irisSteer()
+    {
+        $pmuteams=Speaker::where('published', 1)->where('stype','=',2)->where('published','=',1)->ORDERBY('sequence','ASC')->get();
+        return view('frontend.steer',compact('pmuteams'));
+    }
+
+
     public function events()
     {
         $agendas=Agenda::where('published', 1)->where('ctid','=',2)->ORDERBY('startdate','DESC')->get();
