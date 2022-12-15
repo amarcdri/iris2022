@@ -120,7 +120,7 @@ Route::prefix('admin')->group(function () {
   Route::get('/list-reviewer',[ReviewerController::class,'index'])->name('list.reviewer');
   Route::get('/edit-reviewer/{id}',[ReviewerController::class,'edit'])->name('edit.reviewer');
   Route::get('/delete-reviewer/{id}',[ReviewerController::class,'destroy'])->name('destroy.reviewer');
-  Route::get('/update-reviewer-post/{id}',[ReviewerController::class,'update'])->name('update.reviewer');
+  Route::put('/update-reviewer-post/{id}',[ReviewerController::class,'update'])->name('update.reviewer');
   });
 
 });

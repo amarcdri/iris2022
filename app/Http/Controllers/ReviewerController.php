@@ -127,11 +127,27 @@ class ReviewerController extends Controller
      * @param  \App\Models\Reviewer  $reviewer
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Reviewer $reviewer)
+    public function update(Request $request,$id)
     {
+        $reviewers=Reviewer::findOrFail($id);
+        $reviewers->title=$request->title;
+        $reviewers->name=$request->name;
+        $reviewers->email=$request->email;
+        $reviewers->password=$request->password;
+        $reviewers->organization=$request->organization;
+        $reviewers->profession=$request->profession;
+        $reviewers->gender=$request->gender;
+        $reviewers->mobile=$request->mobile;
+        
+        $reviewers->country_id=$request->country_id;
+        $reviewers->city=$request->city;
+        $reviewers->address=$request->address;
 
         $role = implode(',', $request->role);
             $reviewers->role= $role;
+
+            $reviewers->save();
+            $sid=$reviewers->id;
         return redirect()->route('list.reviewer')
         ->with('success','Reviwer Information Update successfully');
     }
