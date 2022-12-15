@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use App\Mail\SendMail;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\URL;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -54,6 +55,7 @@ class Handler extends ExceptionHandler
                 'reply_to_name' => 'do-not-reply',
                 'page' => 'email.error',
                 'content' => [
+                    'url' => URL::full(),
                     'error' => $e,
                 ]
             ]));
