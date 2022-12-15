@@ -63,7 +63,9 @@
                             provides the based framework upon which plug-ins can built.
                         </p> --}}
 
-                        <table id="example" class="table table-bordered table-hover display nowrap margin-top-10 w-p100">
+                          <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                        
+                        
                             <thead>
                                 <tr>
                                     <th>S.No.</th>

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FrontPageController;
 use App\Http\Controllers\AgendaController;
-use App\Http\Controllers\{AgendaSpeakerController,SpeakerController,GalleryController,EoiController};
+use App\Http\Controllers\{AgendaSpeakerController,SpeakerController,GalleryController,EoiController,ReviewerController};
 
 /*
 |--------------------------------------------------------------------------
@@ -103,10 +103,27 @@ Route::prefix('admin')->group(function () {
   Route::get('/Proposal-detail/{id}',[EoiController::class,'show'])->name('eoi.eoidetail');
   Route::get('Proposaldownload/{id}', [EoiController::class,'proposaldownload'])->name('eoi.proposaldownload');
   Route::get('/ExportEoidetail',[EoiController::class,'exporteoi'])->name('eoi.export');
+  
+    
   });
 
 });
 
+/**********************Add EOI Expression Of Interest ********************* */
+
+
+Route::prefix('admin')->group(function () {
+  Route::middleware('auth:admin')->group(function () {
+
+  Route::get('/add-reviewer',[ReviewerController::class,'addreviewer'])->name('addreviewer');
+  Route::post('/add-reviewer',[ReviewerController::class,'store'])->name('agenda.store');
+  Route::get('/list-reviewer',[ReviewerController::class,'index'])->name('list.reviewer');
+  Route::get('/edit-reviewer/{id}',[ReviewerController::class,'edit'])->name('edit.reviewer');
+  Route::get('/delete-reviewer/{id}',[ReviewerController::class,'destroy'])->name('destroy.reviewer');
+  Route::get('/update-reviewer-post/{id}',[ReviewerController::class,'update'])->name('update.reviewer');
+  });
+
+});
 
 
 

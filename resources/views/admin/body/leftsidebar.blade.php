@@ -61,6 +61,16 @@
                         </ul>
                 </li>
 
+                
+                <li>
+                    <a href="{{ route('list.reviewer') }}" class="waves-effect">
+                        {{-- <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end">3</span> --}}
+                        <span>Reviewer </span>
+                    </a>
+                </li>
+            </ul>
+
+
         </div>
         <!-- Sidebar -->
     </div>

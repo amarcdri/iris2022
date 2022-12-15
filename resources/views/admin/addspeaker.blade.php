@@ -45,7 +45,8 @@
                               </div>
                           
                             <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label">Image&nbsp;<span class="text-danger">*</span</label>
+                                <label class="col-sm-2 col-form-label">Image&nbsp;<span class="text-danger">
+                                    *</span></label>
                                 <div class="col-sm-10">
                                     <input name="image[]" id="image" type="file" multiple>
                                 </div>
