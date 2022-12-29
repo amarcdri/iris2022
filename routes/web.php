@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FrontPageController;
 use App\Http\Controllers\AgendaController;
-use App\Http\Controllers\{AgendaSpeakerController,SpeakerController,GalleryController,EoiController,ReviewerController};
+use App\Http\Controllers\{AgendaSpeakerController,SpeakerController,GalleryController,EoiController,ReviewerController,AssignmentController};
 
 /*
 |--------------------------------------------------------------------------
@@ -125,6 +125,20 @@ Route::prefix('admin')->group(function () {
 
 });
 
+
+
+Route::prefix('admin')->group(function () {
+  Route::middleware('auth:admin')->group(function () {
+
+  Route::get('/{reviwer_id}/add-assignment',[AssignmentController::class,'addassignment'])->name('add.assignment');
+  Route::post('/add-assignment',[AssignmentController::class,'store'])->name('store.assignment');
+  Route::get('/list-assignment',[AssignmentController::class,'index'])->name('list.assignment');
+  Route::get('/edit-reviewer/{id}',[ReviewerController::class,'edit'])->name('edit.reviewer');
+  Route::get('/delete-reviewer/{id}',[ReviewerController::class,'destroy'])->name('destroy.reviewer');
+  Route::put('/update-reviewer-post/{id}',[ReviewerController::class,'update'])->name('update.reviewer');
+  });
+
+});
 
 
 
