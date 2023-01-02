@@ -11,4 +11,17 @@ class Assignment extends Model
     protected $fillable = ['id','eoi_id','reviwer_id','created_at'];
 
 
+     public function reivername()
+    {
+      return $this->hasOne(Reviewer::class,'id','reviwer_id');
+     
+    }
+
+    public function eoiname()
+    {
+        return $this->hasOne(IrisEoi::class,'id','eoi_id');
+    }
+    
+
+
 }

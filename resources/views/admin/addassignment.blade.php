@@ -46,16 +46,32 @@
                     </thead>
                
                 <tbody>    
+                    @foreach($assignedeois as  $assignedeoi)
+                        
+                    
                 <tr>
-                    <td> 1 </td>
-                    <td> 1 </td>
-                    <td> 1 </td>
-                    <td> 1 </td>
-                    <td> 1 </td>
-                    <td><input id="demo_box_2" class="css-checkbox" type="checkbox" checked='checked'  onchange="cTrig('demo_box_2')">
-                        <label for="demo_box_2" name="demo_lbl_2" class="css-label"></label>
+                    <td> {{ $assignedeois->firstItem()+$loop->index}}</td>
+                    <td> {{ $assignedeoi->eoiname->title.' '.$assignedeoi->eoiname->first_name.' '.$assignedeoi->eoiname->last_name}} </td>
+                    <td> {{$assignedeoi->eoiname->eoi_no}} </td>
+                    <td> {{ $assignedeoi->eoiname->project_name}} </td>
+                   
+                    <td> {{ $assignedeoi->reivername->title.' '. $assignedeoi->reivername->name}} </td>
+                    <td>
+                         <form action="{{route('destroy.assignment',$assignedeoi->id)}}" method="POST">  @csrf
+                                            @method('delete')
+                                        <a href="{{route('destroy.assignment',$assignedeoi->id)}}"  class="btn btn-flat show_confirm" onclick="return confirm('Are you sure you want to Unassigned this EOI?');">
+                                            <i class="ri-delete-bin-2-fill"></i>
+
+                                        </a>
+                       
+                         </form>
+                   
+
+
+
                     </td>
                 </tr>
+                @endforeach
             </tbody>      
 
         </table> 
@@ -86,11 +102,20 @@
                     </thead>
                
                 <tbody>    
-                    @foreach ($eois as $key=>$eoi)
+                   
+                  
+                    
+                    
+                 
+
                     <form action="{{route('store.assignment')}}" method="post" enctype="multipart/form-data">
                         @csrf
                     <input type="hidden" name="reviwer_id" value="{{$reviwer_id}}">
+                    @foreach ($eois as $key=>$eoi)
+                    @if(!in_array($eoi->id,$assignments))
+                        
                 <tr>
+
                     <td> {{ $eois->firstItem()+$loop->index}}</td>
                     <td> {{ $eoi->title.' '.$eoi->first_name.' '.$eoi->last_name }} </td>
                     <td> {{ $eoi->eoi_no }} </td>
@@ -104,17 +129,20 @@
                       </div></td>
                   
                 </tr>
+                @endif
                 @endforeach
+                <tr>
+                   <td colspan="5" class="text-center"> <input type="submit" class="btn btn-primary submit" value="Save">  </td>  
+                </tr>
+            </form>
             </tbody>      
 
         </table> 
-        <div class="col-md-12 text-center">
-        <input type="submit" class="btn btn-primary submit" value="Save">    
-        </div>
+        
         </fieldset>
         
 
-        </form>
+        
             
     </div>
 </div> 

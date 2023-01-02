@@ -11,15 +11,19 @@ class AssignmentController extends Controller
     
 public function index(){
     $reviewers=Reviewer::latest()->paginate(10000000); 
-    return view('listassignment',compact('reviewers'));
+    return view('admin.listassignment',compact('reviewers'));
 }
 
 
 public function addassignment($reviwer_id){
 
+    
     $eois=IrisEoi::where('status','=',0)->ORDERBY('id','DESC')->paginate(15);
-
-    return view('admin.addassignment',compact('eois', 'reviwer_id'));
+    
+    $assignments = Assignment::where('reviwer_id',$reviwer_id)->pluck('eoi_id')->toArray();
+    $assignedeois = Assignment::latest()->where('reviwer_id',$reviwer_id)->paginate(10);
+      
+    return view('admin.addassignment',compact('eois', 'reviwer_id','assignments','assignedeois'));
 }
 
 public function store(Request $request){
@@ -34,7 +38,7 @@ public function store(Request $request){
     }
     Assignment::insert($assignments);
 
-    return view('listassignment',compact('reviewers'));
+    return view('admin.listassignment',compact('reviewers'));
 
            
 
@@ -42,7 +46,15 @@ public function store(Request $request){
   
     }
 
- 
+    public function destroy(Request $request,$id)
+    {
+       
+        $assignments = Assignment::findOrFail($id);
+        $assignments->delete();
+        return redirect()->route('list.assignment')
+                        ->with('success','deleted successfully');
+    }
+
 
 }
 

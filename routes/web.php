@@ -134,7 +134,7 @@ Route::prefix('admin')->group(function () {
   Route::post('/add-assignment',[AssignmentController::class,'store'])->name('store.assignment');
   Route::get('/list-assignment',[AssignmentController::class,'index'])->name('list.assignment');
   Route::get('/edit-reviewer/{id}',[ReviewerController::class,'edit'])->name('edit.reviewer');
-  Route::get('/delete-reviewer/{id}',[ReviewerController::class,'destroy'])->name('destroy.reviewer');
+  Route::get('/delete-assignment/{id}',[AssignmentController::class,'destroy'])->name('destroy.assignment');
   Route::put('/update-reviewer-post/{id}',[ReviewerController::class,'update'])->name('update.reviewer');
   });
 
