@@ -59,8 +59,8 @@
                     <td>
                          <form action="{{route('destroy.assignment',$assignedeoi->id)}}" method="POST">  @csrf
                                             @method('delete')
-                                        <a href="{{route('destroy.assignment',$assignedeoi->id)}}"  class="btn btn-flat show_confirm" onclick="return confirm('Are you sure you want to Unassigned this EOI?');">
-                                            <i class="ri-delete-bin-2-fill"></i>
+                                        <a href="{{route('destroy.assignment',$assignedeoi->id)}}"  class="btn btn-danger  btn-flat show_confirm" onclick="return confirm('Are you sure you want to Unassigned this EOI?');">
+                                            <i class="fa fa-times"></i>
 
                                         </a>
                        
@@ -111,9 +111,12 @@
                     <form action="{{route('store.assignment')}}" method="post" enctype="multipart/form-data">
                         @csrf
                     <input type="hidden" name="reviwer_id" value="{{$reviwer_id}}">
+                    @php $savecount = 0;
+                    @endphp
                     @foreach ($eois as $key=>$eoi)
                     @if(!in_array($eoi->id,$assignments))
-                        
+                    
+                     @php $savecount  = 1; @endphp
                 <tr>
 
                     <td> {{ $eois->firstItem()+$loop->index}}</td>
@@ -129,11 +132,26 @@
                       </div></td>
                   
                 </tr>
+            
+              
+             
                 @endif
                 @endforeach
+              
+                @if ($savecount > 0)
                 <tr>
-                   <td colspan="5" class="text-center"> <input type="submit" class="btn btn-primary submit" value="Save">  </td>  
+                
+                   
+                    <td colspan="5" class="text-center"> <input type="submit" class="btn btn-primary submit" value="Save">  </td>  
+                   
+                   
+                   
+            
                 </tr>
+                @endif
+             
+                 
+                
             </form>
             </tbody>      
 
