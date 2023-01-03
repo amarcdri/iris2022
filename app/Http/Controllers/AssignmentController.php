@@ -52,7 +52,7 @@ public function store(Request $request){
         $assignments = Assignment::findOrFail($id);
         $assignments->delete();
         return redirect()->route('list.assignment')
-                        ->with('success','deleted successfully');
+                        ->with('success','Unassigned successfully');
     }
 
 
